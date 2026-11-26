@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/platform/windows_cert_trust.dart';
+import 'package:etesaL/platform/windows_cert_trust.dart';
 
 // Отказ Dart переспрашиваем у Windows. Переспрос не должен ослаблять
 // проверку: чужое имя и мусор Windows отвергает так же, как отверг бы Dart.
