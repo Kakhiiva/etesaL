@@ -3,11 +3,11 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/bottom_nav.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/floating_bar.dart';
-import 'package:keqdroid/shared/ui/haptics.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/bottom_nav.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/floating_bar.dart';
+import 'package:etesaL/shared/ui/haptics.dart';
 
 part 'liquid_rail.dart';
 
