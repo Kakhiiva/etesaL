@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/raw_share_uri.dart';
+import 'package:etesaL/utils/raw_share_uri.dart';
 
 void main() {
   group('RawShareUri.parse', () {
