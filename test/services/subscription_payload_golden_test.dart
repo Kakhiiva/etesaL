@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/subscription_body_parser.dart';
+import 'package:etesaL/services/subscription_body_parser.dart';
 
 // Корпус форм payload'а: вход → список конфигов, побайтово.
 //
