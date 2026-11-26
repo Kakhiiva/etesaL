@@ -4,10 +4,10 @@ import 'dart:typed_data';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/linux_background_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/services/windows_tray_menu.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/linux_background_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/services/windows_tray_menu.dart';
 import 'package:path/path.dart' as p;
 
 List<int> _icoSizes(ByteData ico) => [
@@ -95,7 +95,7 @@ void main() {
     await service.showConnected(false);
 
     expect(icons, ['icon_connected.png', 'icon.png']);
-    expect(ids, everyElement('keqdroid'));
+    expect(ids, everyElement('etesaL'));
   });
 
   group('значки едут в сборке', () {
