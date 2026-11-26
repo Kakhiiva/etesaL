@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/utils/ssr_uri.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/utils/ssr_uri.dart';
 
 // Ручное добавление ссылок, у которых адрес не там, где его ищет Uri.
 //
