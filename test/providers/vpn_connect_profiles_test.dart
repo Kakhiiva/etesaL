@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/routing_profile.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/storage_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/routing_profile.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/storage_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 import '../helpers/test_storage.dart';
