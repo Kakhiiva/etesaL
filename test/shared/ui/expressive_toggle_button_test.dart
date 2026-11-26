@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/expressive_toggle_button.dart';
+import 'package:etesaL/shared/ui/expressive_toggle_button.dart';
 
 // Жалоба: морф у Авто выглядел так, будто края прыгают, достраивая
 // квадрат, а не меняется форма. Так и было: радиус ехал от 9999 к 8, и
