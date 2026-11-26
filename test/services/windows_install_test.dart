@@ -1,23 +1,23 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/windows_install.dart';
-import 'package:keqdroid/services/windows_setup_updater.dart';
+import 'package:etesaL/services/windows_install.dart';
+import 'package:etesaL/services/windows_setup_updater.dart';
 
 void main() {
   group('папка из записи Uninstall', () {
     test('та же папка, как её пишет Inno: с косой чертой в конце', () {
       expect(
         WindowsInstall.isSameInstallDir(
-          r'C:\Program Files\keqdroid\',
-          r'C:\Program Files\keqdroid',
+          r'C:\Program Files\etesaL\',
+          r'C:\Program Files\etesaL',
         ),
         isTrue,
       );
       expect(
         WindowsInstall.isSameInstallDir(
           'C:\\Program Files\\KEQDROID\n',
-          r'c:\program files\keqdroid',
+          r'c:\program files\etesaL',
         ),
         isTrue,
       );
@@ -26,15 +26,15 @@ void main() {
     test('портабельная копия в другой папке установленной не считается', () {
       expect(
         WindowsInstall.isSameInstallDir(
-          r'C:\Program Files\keqdroid\',
-          r'D:\Apps\keqdroid',
+          r'C:\Program Files\etesaL\',
+          r'D:\Apps\etesaL',
         ),
         isFalse,
       );
       expect(
         WindowsInstall.isSameInstallDir(
-          r'C:\Program Files\keqdroid\',
-          r'C:\Program Files\keqdroid-old',
+          r'C:\Program Files\etesaL\',
+          r'C:\Program Files\etesaL-old',
         ),
         isFalse,
       );
@@ -44,7 +44,7 @@ void main() {
   });
 
   group('установщик и приложение говорят об одном', () {
-    final iss = File('windows/installer/keqdroid.iss').readAsStringSync();
+    final iss = File('windows/installer/etesaL.iss').readAsStringSync();
 
     test('AppId записи Uninstall тот же, что ищет апдейтер', () {
       final id = RegExp(
@@ -75,7 +75,7 @@ void main() {
         multiLine: true,
       ).firstMatch(iss)!.group(1)!.trim();
       expect('$base.exe', endsWith(WindowsInstall.setupSuffix));
-      expect(base, startsWith('keqdroid-windows-x64-'));
+      expect(base, startsWith('etesaL-windows-x64-'));
     });
   });
 
