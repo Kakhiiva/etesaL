@@ -111,10 +111,10 @@ void FlutterWindow::ReportStartupFailure(HWND hwnd) {
   ::SetForegroundWindow(hwnd);
   ::MessageBoxW(
       hwnd,
-      L"keqdroid запустился, но не смог показать интерфейс.\n\n"
+      L"etesaL запустился, но не смог показать интерфейс.\n\n"
       L"Закройте это окно и пришлите файл app.log из папки\n"
-      L"%APPDATA%\\com.keqdroid\\keqdroid — по нему видно, что сломалось.",
-      L"keqdroid", MB_OK | MB_ICONERROR);
+      L"%APPDATA%\\com.etesaL\\etesaL — по нему видно, что сломалось.",
+      L"etesaL", MB_OK | MB_ICONERROR);
 }
 
 LRESULT
