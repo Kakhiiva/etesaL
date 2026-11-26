@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/linux_install.dart';
+import 'package:etesaL/services/linux_install.dart';
 
 void main() {
-  const exe = '/opt/keqdroid/keqdroid';
+  const exe = '/opt/etesaL/etesaL';
 
   Future<LinuxInstallKind> classify({
     String? appImage,
@@ -18,7 +18,7 @@ void main() {
         return tool == owner;
       },
       writable: (dir) {
-        expect(dir, '/opt/keqdroid');
+        expect(dir, '/opt/etesaL');
         return writable;
       },
     );
@@ -29,7 +29,7 @@ void main() {
     () async {
       expect(
         await classify(
-          appImage: '/home/u/keqdroid.AppImage',
+          appImage: '/home/u/etesaL.AppImage',
           owner: 'dpkg-query',
         ),
         LinuxInstallKind.appImage,
@@ -72,7 +72,7 @@ void main() {
     test('rpm на Silverblue и подобных не ставим через rpm -U', () {
       LinuxInstall.imageBasedSystem = () => true;
       expect(
-        LinuxInstall.packageInstallBlocker('/tmp/keqdroid_update.rpm'),
+        LinuxInstall.packageInstallBlocker('/tmp/etesaL_update.rpm'),
         contains('rpm-ostree'),
       );
     });
