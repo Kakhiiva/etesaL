@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get appTitle => 'keqdroid';
+  String get appTitle => 'etesaL';
 
   @override
   String vpnConnectedTo(Object serverName) {
@@ -206,7 +206,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get routingCheatSheetTitle => 'So schreibst du Regeln';
 
   @override
-  String get routingCheatSheetBody => 'Eine Route liest sich „wer → was → wohin“. Unter „Eigene Websites“ ist jede Zeile eine Domain, eine IP, ein Geo-Tag oder ein Link zu einer Liste; wohin sie gehen, wählt die Route selbst: direkt, über das VPN oder blockiert.\n\n## Domains\nvk.com – die Domain selbst und alle ihre Subdomains\nru – alles, was auf .ru endet (nur das Wort, ohne Punkt)\n.example.com und *.example.com – dasselbe wie example.com\nfull:example.com – genau dieser Host, ohne Subdomains\nregexp:… – ein regulärer Ausdruck, falls es wirklich knifflig wird\n\n## IP-Adressen\n1.2.3.4 – eine einzelne Adresse\n10.0.0.0/8 – ein ganzer Bereich (CIDR)\n\n## GeoIP: nach Land\ngeoip:ru – alle russischen IPs. Statt ru geht jedes Land: us, de, cn, ua, kz…\nDazu fertige Pakete: geoip:private (LAN), geoip:telegram, geoip:google.\nDu willst nach Land filtern? Dann hier, geoip kennt sie alle.\n\n## GeoSite: fertige Listen\ngeosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…\nDas sind keine Länder, sondern Kategorien von Diensten, die schon jemand für dich zusammengestellt hat.\nLänder gibt es hier kaum (nur geolocation-cn und geolocation-!cn), nach Land geht es also mit geoip.\n\n## Am PC\nGeo funktioniert wie auf dem Handy. Es braucht nur geoip.dat und geosite.dat neben keqdroid.exe. Im Release liegen sie schon dort. Wenn Geo-Regeln ignoriert werden, prüfe zuerst diese beiden Dateien.\n\n## Reihenfolge\nVon oben nach unten, wie auf dem Bildschirm: Blockieren, einzelne Apps, alle Apps. Bei allen Apps landet eine neue Route „Direkt“ über „Über das VPN“. Die Reihenfolge lässt sich ändern: Route gedrückt halten und nach oben oder unten ziehen. Dein Server geht immer zuerst direkt, sonst entsteht eine Schleife. Was zu keiner Route passt, folgt der Zeile „Alles andere“.';
+  String get routingCheatSheetBody => 'Eine Route liest sich „wer → was → wohin“. Unter „Eigene Websites“ ist jede Zeile eine Domain, eine IP, ein Geo-Tag oder ein Link zu einer Liste; wohin sie gehen, wählt die Route selbst: direkt, über das VPN oder blockiert.\n\n## Domains\nvk.com – die Domain selbst und alle ihre Subdomains\nru – alles, was auf .ru endet (nur das Wort, ohne Punkt)\n.example.com und *.example.com – dasselbe wie example.com\nfull:example.com – genau dieser Host, ohne Subdomains\nregexp:… – ein regulärer Ausdruck, falls es wirklich knifflig wird\n\n## IP-Adressen\n1.2.3.4 – eine einzelne Adresse\n10.0.0.0/8 – ein ganzer Bereich (CIDR)\n\n## GeoIP: nach Land\ngeoip:ru – alle russischen IPs. Statt ru geht jedes Land: us, de, cn, ua, kz…\nDazu fertige Pakete: geoip:private (LAN), geoip:telegram, geoip:google.\nDu willst nach Land filtern? Dann hier, geoip kennt sie alle.\n\n## GeoSite: fertige Listen\ngeosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…\nDas sind keine Länder, sondern Kategorien von Diensten, die schon jemand für dich zusammengestellt hat.\nLänder gibt es hier kaum (nur geolocation-cn und geolocation-!cn), nach Land geht es also mit geoip.\n\n## Am PC\nGeo funktioniert wie auf dem Handy. Es braucht nur geoip.dat und geosite.dat neben etesaL.exe. Im Release liegen sie schon dort. Wenn Geo-Regeln ignoriert werden, prüfe zuerst diese beiden Dateien.\n\n## Reihenfolge\nVon oben nach unten, wie auf dem Bildschirm: Blockieren, einzelne Apps, alle Apps. Bei allen Apps landet eine neue Route „Direkt“ über „Über das VPN“. Die Reihenfolge lässt sich ändern: Route gedrückt halten und nach oben oder unten ziehen. Dein Server geht immer zuerst direkt, sonst entsteht eine Schleife. Was zu keiner Route passt, folgt der Zeile „Alles andere“.';
 
   @override
   String settingsRoutingItemCount(int count) {
@@ -1700,16 +1700,16 @@ class AppLocalizationsDe extends AppLocalizations {
   String get desktopTunServiceTitle => 'Dienst für TUN';
 
   @override
-  String get desktopTunServiceMessage => 'Der TUN-Modus läuft über den keqdroid-Dienst. Er wird einmal installiert: Windows fragt nach der Erlaubnis, danach schaltet sich TUN ohne Nachfrage und ohne Neustart ein.';
+  String get desktopTunServiceMessage => 'Der TUN-Modus läuft über den etesaL-Dienst. Er wird einmal installiert: Windows fragt nach der Erlaubnis, danach schaltet sich TUN ohne Nachfrage und ohne Neustart ein.';
 
   @override
-  String get desktopTunServiceUpdateMessage => 'Die App wurde aktualisiert, der keqdroid-Dienst für TUN muss mit aktualisiert werden. Windows fragt nach der Erlaubnis.';
+  String get desktopTunServiceUpdateMessage => 'Die App wurde aktualisiert, der etesaL-Dienst für TUN muss mit aktualisiert werden. Windows fragt nach der Erlaubnis.';
 
   @override
-  String get desktopTunServiceMessageMacos => 'Der TUN-Modus läuft über den keqdroid-Dienst. Er wird einmal installiert: macOS fragt nach dem Administratorpasswort, danach schaltet sich TUN ohne Nachfrage und ohne Neustart ein.';
+  String get desktopTunServiceMessageMacos => 'Der TUN-Modus läuft über den etesaL-Dienst. Er wird einmal installiert: macOS fragt nach dem Administratorpasswort, danach schaltet sich TUN ohne Nachfrage und ohne Neustart ein.';
 
   @override
-  String get desktopTunServiceUpdateMessageMacos => 'Die App wurde aktualisiert, der keqdroid-Dienst für TUN muss mit aktualisiert werden. macOS fragt nach dem Administratorpasswort.';
+  String get desktopTunServiceUpdateMessageMacos => 'Die App wurde aktualisiert, der etesaL-Dienst für TUN muss mit aktualisiert werden. macOS fragt nach dem Administratorpasswort.';
 
   @override
   String get desktopTunServiceInstall => 'Dienst installieren';
@@ -1994,7 +1994,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get tvReceiveSubtitle => 'Abonnement vom Smartphone über WLAN';
 
   @override
-  String get tvReceiveHint => 'Scanne den Code mit keqdroid auf dem Smartphone. Smartphone und Fernseher müssen im selben WLAN sein.';
+  String get tvReceiveHint => 'Scanne den Code mit etesaL auf dem Smartphone. Smartphone und Fernseher müssen im selben WLAN sein.';
 
   @override
   String get tvReceiveWaiting => 'Warte auf ein Abonnement…';
@@ -2127,7 +2127,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get errorPolkitMissingMessage => 'Der TUN-Modus startet den Kern über pkexec als root, und polkit ist nicht installiert.';
 
   @override
-  String get errorPolkitMissingAction => 'Installiere polkit samt Authentifizierungsagent, starte die App als root (sudo -E keqdroid) oder wechsle in den Einstellungen zum Proxy-Modus.';
+  String get errorPolkitMissingAction => 'Installiere polkit samt Authentifizierungsagent, starte die App als root (sudo -E etesaL) oder wechsle in den Einstellungen zum Proxy-Modus.';
 
   @override
   String get errorPolkitNoAgentTitle => 'Polkit erforderlich';
@@ -3374,10 +3374,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get backupTransferRetry => 'Noch einmal';
 
   @override
-  String get backupTransferNotOurCode => 'Das ist kein Sicherungscode von keqdroid';
+  String get backupTransferNotOurCode => 'Das ist kein Sicherungscode von etesaL';
 
   @override
-  String get backupTransferUnreachable => 'Das Gerät antwortet nicht. Beide müssen im selben WLAN sein, und auf einem Computer muss keqdroid in der Firewall erlaubt sein';
+  String get backupTransferUnreachable => 'Das Gerät antwortet nicht. Beide müssen im selben WLAN sein, und auf einem Computer muss etesaL in der Firewall erlaubt sein';
 
   @override
   String get backupTransferExpired => 'Der Code wurde schon benutzt oder geschlossen. Öffne ihn auf dem anderen Gerät neu';
@@ -3388,5 +3388,5 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get backupFromReleaseBuild => 'Diese Sicherung stammt von einer keqdroid-Veröffentlichung, und diesem Build fehlt ihr Schlüssel';
+  String get backupFromReleaseBuild => 'Diese Sicherung stammt von einer etesaL-Veröffentlichung, und diesem Build fehlt ihr Schlüssel';
 }
