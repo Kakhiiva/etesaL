@@ -150,24 +150,24 @@ class SubscriptionService {
   final LocalProxyPortResolver? _localProxyPort;
   String? _cachedHwid;
   String? _cachedDeviceModel;
-  static const MethodChannel _platform = MethodChannel('keqdroid_vpn_channel');
+  static const MethodChannel _platform = MethodChannel('etesaL_vpn_channel');
 
   static const browserUserAgent =
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
   static const clientUserAgents = ClientUaPresets.rotation;
 
-  static String _appUserAgentCache = 'keqdroid';
+  static String _appUserAgentCache = 'etesaL';
   static bool _appUserAgentResolved = false;
   static Future<String> appUserAgent() async {
     if (!_appUserAgentResolved) {
       try {
         final info = await PackageInfo.fromPlatform();
         if (info.version.isNotEmpty) {
-          _appUserAgentCache = 'keqdroid/${info.version}';
+          _appUserAgentCache = 'etesaL/${info.version}';
         }
       } on Object {
-        // нет платформы, остаётся голый keqdroid
+        // нет платформы, остаётся голый etesaL
       }
       _appUserAgentResolved = true;
     }
@@ -415,10 +415,10 @@ class SubscriptionService {
   }) async {
     String? usedUserAgent;
     var profile = SubscriptionProfileHeaders.empty;
-    // свой UA из сохранённого не берём: в нём версия с первой загрузки, панель видела keqdroid/0.8.7 на 0.34.1
+    // свой UA из сохранённого не берём: в нём версия с первой загрузки, панель видела etesaL/0.8.7 на 0.34.1
     final ownSaved =
-        savedUserAgent == 'keqdroid' ||
-        (savedUserAgent?.startsWith('keqdroid/') ?? false);
+        savedUserAgent == 'etesaL' ||
+        (savedUserAgent?.startsWith('etesaL/') ?? false);
     final initialUa =
         pinnedUserAgent ??
         ((savedUserAgent != null && savedUserAgent.isNotEmpty && !ownSaved)
