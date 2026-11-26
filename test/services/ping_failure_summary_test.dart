@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/ping_service.dart';
+import 'package:etesaL/services/ping_service.dart';
 
 // Строка в журнал о том, почему серверы не ответили на замер.
 //
