@@ -68,7 +68,7 @@ class UpdateInfo {
 
 class UpdateService {
   static const _owner = 'Lemonochka';
-  static const _repo = 'keqdroid';
+  static const _repo = 'etesaL';
 
   // ведущая v необязательна: в репозитории есть теги обоих видов
   static final _releaseTagPattern = RegExp(
@@ -246,7 +246,7 @@ class UpdateService {
     return UpdateInfo(
       currentVersion: currentVersion,
       latestVersion: latestTag,
-      // pacman обновляет pacman: ведём на страницу релиза, keqdroid-bin в AUR может и не быть
+      // pacman обновляет pacman: ведём на страницу релиза, etesaL-bin в AUR может и не быть
       downloadUrl: linuxKind == LinuxInstallKind.pacman
           ? (latestRelease['html_url'] as String? ??
                 'https://github.com/$_owner/$_repo/releases/latest')
@@ -732,7 +732,7 @@ class UpdateService {
     return false;
   }
 
-  static const _leftoverPrefix = 'keqdroid_update_';
+  static const _leftoverPrefix = 'etesaL_update_';
 
   // у каждой версии своё имя, и после установки файл оставался: на ПК за неделю 13.11.2026 набралось 258 МБ.
   // свежие не трогаем, после перезапуска их ещё может держать установщик или скрипт обновления
