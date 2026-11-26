@@ -2,9 +2,9 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
-import 'package:keqdroid/utils/geo_dat_reader.dart';
-import 'package:keqdroid/utils/geo_rule_sanitizer.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/geo_dat_reader.dart';
+import 'package:etesaL/utils/geo_rule_sanitizer.dart';
 
 void _varint(List<int> out, int value) {
   var v = value;
