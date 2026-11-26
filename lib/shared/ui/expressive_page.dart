@@ -2,9 +2,9 @@ library;
 
 import 'package:flutter/material.dart';
 
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/scrolled_under.dart';
-import 'package:keqdroid/shared/ui/smooth_scroll.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/scrolled_under.dart';
+import 'package:etesaL/shared/ui/smooth_scroll.dart';
 
 class ExpressivePage extends StatelessWidget {
   final String title;
