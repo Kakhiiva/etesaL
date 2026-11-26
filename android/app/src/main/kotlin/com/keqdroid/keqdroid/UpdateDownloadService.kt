@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -104,8 +104,8 @@ class UpdateDownloadService : Service() {
 object UpdateNotices {
     const val PROGRESS_ID = 4101
     const val RESULT_ID = 4102
-    private const val PROGRESS_CHANNEL = "keqdroid_update_download"
-    private const val RESULT_CHANNEL = "keqdroid_update_result"
+    private const val PROGRESS_CHANNEL = "etesaL_update_download"
+    private const val RESULT_CHANNEL = "etesaL_update_result"
 
     fun manager(context: Context) =
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
