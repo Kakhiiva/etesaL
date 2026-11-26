@@ -2,13 +2,13 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/settings_tab.dart';
-import 'package:keqdroid/services/update_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/settings_tab.dart';
+import 'package:etesaL/services/update_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 import '../helpers/test_storage.dart';
@@ -107,7 +107,7 @@ void main() {
           return UpdateInfo(
             currentVersion: '0.26.0',
             latestVersion: '0.27.0',
-            downloadUrl: 'https://example.invalid/keqdroid.apk',
+            downloadUrl: 'https://example.invalid/etesaL.apk',
             apkSize: 40 * 1024 * 1024,
           );
         };
