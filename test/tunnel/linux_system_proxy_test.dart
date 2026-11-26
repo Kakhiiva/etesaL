@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/linux_system_proxy.dart';
+import 'package:etesaL/tunnel/linux_system_proxy.dart';
 
 // gsettings и kreadconfig/kwriteconfig в памяти. gsettings отдаёт значения в
 // записи GVariant (строки в кавычках, числа и списки как есть), так же, как
@@ -65,7 +65,7 @@ void main() {
   late File backup;
 
   setUp(() {
-    tmp = Directory.systemTemp.createTempSync('keq_sysproxy_');
+    tmp = Directory.systemTemp.createTempSync('etesaL_sysproxy_');
     backup = File('${tmp.path}/system_proxy_backup.json');
   });
   tearDown(() => tmp.deleteSync(recursive: true));
