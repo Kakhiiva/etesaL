@@ -341,7 +341,7 @@ class AppInternalsService {
   // не локализован намеренно: отчёт читают как техданные
   static String report(AppInternals data) {
     final out = StringBuffer()
-      ..writeln('# keqdroid internals')
+      ..writeln('# etesaL internals')
       ..writeln('app: ${data.build.appVersion} (${data.build.buildNumber})')
       ..writeln('package: ${data.build.packageName}')
       ..writeln('os: ${data.build.osVersion}')
