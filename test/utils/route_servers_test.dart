@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/route_servers.dart';
-import 'package:keqdroid/utils/rule_lists.dart';
-import 'package:keqdroid/utils/traffic_routes.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/route_servers.dart';
+import 'package:etesaL/utils/rule_lists.dart';
+import 'package:etesaL/utils/traffic_routes.dart';
 
 const _vless =
     'vless://00000000-0000-4000-8000-000000000000@de.example:443'
