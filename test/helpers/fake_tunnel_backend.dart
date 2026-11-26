@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:keqdroid/tunnel/tunnel_backend.dart';
-import 'package:keqdroid/tunnel/tunnel_session_request.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
+import 'package:etesaL/tunnel/tunnel_backend.dart';
+import 'package:etesaL/tunnel/tunnel_session_request.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
 
 // Бэкенд-пустышка для виджет-тестов.
 //
