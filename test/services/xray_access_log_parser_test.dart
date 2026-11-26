@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/services/xray_access_log_parser.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/services/xray_access_log_parser.dart';
 
 // Строки в том виде, как их пишет xray: forkexec на Android дублирует вывод ядра в файл,
 // добавляя свой префикс MM-DD HH:MM:SS, поэтому парсер обязан искать образцы
