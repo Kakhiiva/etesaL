@@ -24,7 +24,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:keqdroid/utils/geo_dat_reader.dart';
+import 'package:etesaL/utils/geo_dat_reader.dart';
 
 Future<int> main(List<String> args) async {
   final opts = _parseArgs(args);
