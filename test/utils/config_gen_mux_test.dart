@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Mux надстраивается над протоколом, а не над транспортом: клиент дозванивается
 // до служебного адреса v1.mux.cool, а пачку разбирает сервер. Отсюда все
