@@ -1,11 +1,11 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/linux_background_service.dart';
-import 'package:keqdroid/services/linux_tray_vpn.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/linux_background_service.dart';
+import 'package:etesaL/services/linux_tray_vpn.dart';
+import 'package:etesaL/services/vpn_engine.dart';
 import 'package:tray_manager/tray_manager.dart';
 
 class _Servers extends ServersNotifier {
