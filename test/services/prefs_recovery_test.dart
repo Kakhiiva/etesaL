@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/prefs_recovery.dart';
+import 'package:etesaL/services/prefs_recovery.dart';
 
 // Разбор реальной поломки: после принудительного обновления Windows файл
 // настроек оказался нужной длины, но целиком из нулей. json.decode падает на
