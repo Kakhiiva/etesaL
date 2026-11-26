@@ -1,2 +1,2 @@
-Lcom/keqdroid/keqdroid/MainActivity;
-Lcom/keqdroid/keqdroid/KeqdisVpnService;
+Lcom/etesaL/etesaL/MainActivity;
+Lcom/etesaL/etesaL/KeqdisVpnService;
