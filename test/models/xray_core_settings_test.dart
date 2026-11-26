@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
 
 void main() {
   group('XrayCoreSettings', () {
