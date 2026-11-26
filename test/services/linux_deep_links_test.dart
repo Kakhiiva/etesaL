@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/platform/vpn_native_bridge.dart';
-import 'package:keqdroid/services/linux_background_service.dart';
-import 'package:keqdroid/services/linux_deep_links.dart';
+import 'package:etesaL/platform/vpn_native_bridge.dart';
+import 'package:etesaL/services/linux_background_service.dart';
+import 'package:etesaL/services/linux_deep_links.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -33,11 +33,11 @@ void main() {
     test('takes the link the desktop entry passed as %u', () {
       expect(
         LinuxDeepLinks.fromCommandLine([
-          '/opt/keqdroid/keqdroid',
-          'keqdroid://install-config?url=https%3A%2F%2Fsub.example%2Fx',
+          '/opt/etesaL/etesaL',
+          'etesaL://install-config?url=https%3A%2F%2Fsub.example%2Fx',
           '',
         ]),
-        'keqdroid://install-config?url=https%3A%2F%2Fsub.example%2Fx',
+        'etesaL://install-config?url=https%3A%2F%2Fsub.example%2Fx',
       );
     });
 
@@ -51,7 +51,7 @@ void main() {
     test('ignores the binary itself, flags and foreign links', () {
       expect(
         LinuxDeepLinks.fromCommandLine([
-          'keqdroid://looks-like-a-link-but-is-argv0',
+          'etesaL://looks-like-a-link-but-is-argv0',
           '--autostart',
           'https://example.com',
           'vless://uuid@host:443',
@@ -64,13 +64,13 @@ void main() {
 
   test('a launch link waits for the servers tab and is taken once', () {
     LinuxDeepLinks.commandLine = () => [
-      '/usr/bin/keqdroid',
-      'keqdroid://add?url=https://s.example/1',
+      '/usr/bin/etesaL',
+      'etesaL://add?url=https://s.example/1',
     ];
     LinuxDeepLinks.captureLaunchLink();
     expect(
       LinuxDeepLinks.takePending(),
-      'keqdroid://add?url=https://s.example/1',
+      'etesaL://add?url=https://s.example/1',
     );
     expect(LinuxDeepLinks.takePending(), isNull);
   });
@@ -79,8 +79,8 @@ void main() {
     test('passes its link to the running app, or just asks to show it', () {
       expect(LinuxBackgroundService.peerMessage(null), 'show');
       expect(
-        LinuxBackgroundService.peerMessage('keqdroid://add?url=https://s/1'),
-        'link keqdroid://add?url=https://s/1',
+        LinuxBackgroundService.peerMessage('etesaL://add?url=https://s/1'),
+        'link etesaL://add?url=https://s/1',
       );
     });
 
@@ -89,14 +89,14 @@ void main() {
       var notified = 0;
       LinuxDeepLinks.onArrived = () => notified++;
 
-      service.handlePeerMessage('link keqdroid://add?url=https://s.example/3');
+      service.handlePeerMessage('link etesaL://add?url=https://s.example/3');
       await Future<void>.delayed(Duration.zero);
 
       expect(windowCalls, containsAllInOrder(['show', 'focus']));
       expect(notified, 1);
       expect(
         LinuxDeepLinks.takePending(),
-        'keqdroid://add?url=https://s.example/3',
+        'etesaL://add?url=https://s.example/3',
       );
     });
 
@@ -108,14 +108,14 @@ void main() {
       });
       addTearDown(() => VpnNativeBridge.registerLaunchHandler(null));
 
-      service.handlePeerMessage('link keqdroid://add?url=https://s.example/2');
+      service.handlePeerMessage('link etesaL://add?url=https://s.example/2');
       await Future<void>.delayed(Duration.zero);
 
       expect(windowCalls, containsAllInOrder(['show', 'focus']));
       expect(arrived, ['onDeepLink']);
       expect(
         await VpnNativeBridge.getPendingDeepLink(),
-        'keqdroid://add?url=https://s.example/2',
+        'etesaL://add?url=https://s.example/2',
       );
     }, testOn: 'linux');
 
