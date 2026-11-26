@@ -18,7 +18,7 @@ class WindowsSetupUpdater {
     }
     final scriptPath = p.join(
       p.dirname(setupPath),
-      'keqdroid_setup_${DateTime.now().millisecondsSinceEpoch}.ps1',
+      'etesaL_setup_${DateTime.now().millisecondsSinceEpoch}.ps1',
     );
     // BOM обязателен: Windows PowerShell 5.1 иначе читает .ps1 в ANSI
     await File(scriptPath).writeAsString('\u{FEFF}$script', flush: true);
@@ -62,7 +62,7 @@ param(
 )
 
 $ErrorActionPreference = 'Continue'
-$log = Join-Path $env:TEMP 'keqdroid_update.log'
+$log = Join-Path $env:TEMP 'etesaL_update.log'
 function Log($m) {
   try { "$(Get-Date -Format o)  $m" | Out-File -FilePath $log -Append -Encoding utf8 } catch {}
 }
@@ -74,7 +74,7 @@ for ($i = 0; $i -lt 120; $i++) {
 }
 Start-Sleep -Seconds 1
 
-$setupLog = Join-Path $env:TEMP 'keqdroid_setup.log'
+$setupLog = Join-Path $env:TEMP 'etesaL_setup.log'
 $code = -1
 try {
   $p = Start-Process -FilePath $Setup -PassThru -Wait -ArgumentList @(
