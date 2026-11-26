@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build and package separate arm64 (Apple Silicon) and x86_64 (Intel) macOS DMGs
-# in release/<version>/keqdroid-<version>-macos-<arch>.dmg.
+# in release/<version>/etesaL-<version>-macos-<arch>.dmg.
 #
 # Usage:
 #   bash tool/package_macos.sh [all|native|arm64|x86_64] [--skip-cores] [--skip-flutter]
@@ -74,7 +74,7 @@ if [ "$SKIP_FLUTTER" -eq 0 ]; then
   )
 fi
 
-APP_SRC="$REPO_ROOT/build/macos/Build/Products/Release/keqdroid.app"
+APP_SRC="$REPO_ROOT/build/macos/Build/Products/Release/etesaL.app"
 if [ ! -d "$APP_SRC" ]; then
   echo "Built app bundle not found: $APP_SRC" >&2
   exit 1
@@ -103,7 +103,7 @@ thin_bundle_to_arch() {
   done < <(find "$app_dir" -type f -print0)
 }
 
-STAGE_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/keqdroid-dmg.XXXXXX")"
+STAGE_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/etesaL-dmg.XXXXXX")"
 ATTACHED_DEV=""
 cleanup() {
   if [ -n "$ATTACHED_DEV" ]; then
@@ -174,8 +174,8 @@ on run argv
         set arrangement to not arranged
       end tell
 
-      set extension hidden of item "keqdroid.app" to true
-      set position of item "keqdroid.app" to {185, 185}
+      set extension hidden of item "etesaL.app" to true
+      set position of item "etesaL.app" to {185, 185}
       set position of item "Applications" to {475, 185}
 
       close
@@ -227,19 +227,19 @@ mkdir -p "$OUT_DIR"
 for arch in "${ARCHS[@]}"; do
   STAGE_DIR="$STAGE_ROOT/$arch"
   mkdir -p "$STAGE_DIR"
-  cp -R "$APP_SRC" "$STAGE_DIR/keqdroid.app"
-  APP_DST="$STAGE_DIR/keqdroid.app"
+  cp -R "$APP_SRC" "$STAGE_DIR/etesaL.app"
+  APP_DST="$STAGE_DIR/etesaL.app"
 
   BIN_DST="$APP_DST/Contents/Resources/bin"
   rm -rf "$BIN_DST"
 
-  echo "Thinning keqdroid.app to $arch ..."
+  echo "Thinning etesaL.app to $arch ..."
   thin_bundle_to_arch "$APP_DST" "$arch"
   codesign --force --deep --sign "$SIGN_IDENTITY" "$APP_DST"
 
   mkdir -p "$BIN_DST"
   CORE_SRC="$REPO_ROOT/assets/bin/macos/$arch"
-  for bin in xray mihomo keqdroid-tun; do
+  for bin in xray mihomo etesaL-tun; do
     if [ ! -f "$CORE_SRC/$bin" ]; then
       echo "Missing $arch binary: $CORE_SRC/$bin (run tool/build_macos_cores.sh $arch)" >&2
       exit 1
@@ -248,7 +248,7 @@ for arch in "${ARCHS[@]}"; do
     chmod 0755 "$BIN_DST/$bin"
   done
 
-  # Re-sign cores and rebuild keqdroid-tun if needed so embedded SHA-256 always matches signed bytes.
+  # Re-sign cores and rebuild etesaL-tun if needed so embedded SHA-256 always matches signed bytes.
   codesign --force --sign "$SIGN_IDENTITY" "$BIN_DST/xray"
   codesign --force --sign "$SIGN_IDENTITY" "$BIN_DST/mihomo"
   XRAY_SHA="$(sha256_file "$BIN_DST/xray")"
@@ -260,12 +260,12 @@ for arch in "${ARCHS[@]}"; do
       GOTOOLCHAIN=go1.27.3 CGO_ENABLED=0 GOOS=darwin GOARCH="$goarch" \
         go build -trimpath -buildvcs=false \
         -ldflags "-s -w -X main.xraySHA256=$XRAY_SHA -X main.mihomoSHA256=$MIHOMO_SHA" \
-        -o "$BIN_DST/keqdroid-tun" \
+        -o "$BIN_DST/etesaL-tun" \
         .
     )
-    chmod 0755 "$BIN_DST/keqdroid-tun"
+    chmod 0755 "$BIN_DST/etesaL-tun"
   fi
-  codesign --force --sign "$SIGN_IDENTITY" "$BIN_DST/keqdroid-tun"
+  codesign --force --sign "$SIGN_IDENTITY" "$BIN_DST/etesaL-tun"
 
   for geo in geoip.dat geosite.dat; do
     if [ -f "$REPO_ROOT/assets/bin/macos/$geo" ]; then
@@ -283,10 +283,10 @@ for arch in "${ARCHS[@]}"; do
   codesign --verify --deep --strict "$APP_DST"
 
   ln -s /Applications "$STAGE_DIR/Applications"
-  DMG_PATH="$OUT_DIR/keqdroid-${VERSION}-macos-${arch}.dmg"
+  DMG_PATH="$OUT_DIR/etesaL-${VERSION}-macos-${arch}.dmg"
 
   echo "Creating $DMG_PATH ..."
-  create_styled_dmg "$STAGE_DIR" "keqdroid $VERSION" "$DMG_PATH"
+  create_styled_dmg "$STAGE_DIR" "etesaL $VERSION" "$DMG_PATH"
 
   echo "Done: $DMG_PATH ($(wc -c < "$DMG_PATH" | tr -d ' ') bytes)"
   rm -rf "$STAGE_DIR"
