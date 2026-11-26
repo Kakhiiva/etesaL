@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
 
 // Русские счётчики склоняются по последней цифре, а не по числу целиком.
 //
