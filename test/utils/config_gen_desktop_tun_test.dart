@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/utils/app_routes.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/desktop_tun.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/utils/app_routes.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/desktop_tun.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // TUN на ПК держит сам xray. Здесь то, что раньше решал sing-box перед
 // xray: кто идёт мимо туннеля, куда девается IPv6, как ведут себя режимы
@@ -59,13 +59,13 @@ void main() {
         const DesktopTunOptions(
           windows: true,
           mtu: 9000,
-          appProcessName: 'keqdroid.exe',
+          appProcessName: 'etesaL.exe',
         ),
       ),
       'tun-own',
     )!;
     expect(own['inboundTag'], ['tun-in']);
-    expect(own['process'], ['keqdroid.exe', 'xray', 'mihomo']);
+    expect(own['process'], ['etesaL.exe', 'xray', 'mihomo']);
     expect(own['outboundTag'], 'direct');
   });
 
