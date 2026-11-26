@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/shape_morph.dart';
+import 'package:etesaL/shared/ui/shape_morph.dart';
 
 // Жалоба звучала так: пингуешь пачку серверов, крутилки идут, прокручиваешь
 // список, и анимация будто начинается заново. Так и было: тайлы строятся
