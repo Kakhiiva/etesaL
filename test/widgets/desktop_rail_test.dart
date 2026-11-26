@@ -4,14 +4,14 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
-import 'package:keqdroid/ui/desktop/desktop_rail.dart';
-import 'package:keqdroid/ui/desktop/sidebar_group_nav.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
+import 'package:etesaL/ui/desktop/desktop_rail.dart';
+import 'package:etesaL/ui/desktop/sidebar_group_nav.dart';
 
 import '../helpers/test_storage.dart';
 
