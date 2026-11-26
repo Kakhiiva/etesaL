@@ -2,7 +2,7 @@ import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
 import '../core/exceptions.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
 
 enum UiErrorKind { permission, network, config, auth, providerConfig, unknown }
 
@@ -73,7 +73,7 @@ UiErrorMessage explainError(Object error) {
           'is not installed.',
       action:
           'Install polkit together with an authentication agent, run the '
-          'app as root (sudo -E keqdroid), or switch to Proxy mode in '
+          'app as root (sudo -E etesaL), or switch to Proxy mode in '
           'settings.',
     );
   }
