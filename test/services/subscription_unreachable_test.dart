@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/subscription_service.dart';
+import 'package:etesaL/services/subscription_service.dart';
 
 import '../helpers/test_storage.dart';
 
