@@ -15,11 +15,11 @@
 namespace {
 
 constexpr wchar_t kWindowClassName[] = L"FLUTTER_RUNNER_WIN32_WINDOW";
-constexpr wchar_t kWindowTitle[] = L"keqdroid";
+constexpr wchar_t kWindowTitle[] = L"etesaL";
 constexpr wchar_t kSingleInstanceMutex[] = L"Local\\KeqDroid.SingleInstance";
 constexpr wchar_t kAdminRestartFlag[] = L"--admin-restart";
 constexpr wchar_t kAutostartFlag[] = L"--autostart";
-// зовёт установщик (windows/installer/keqdroid.iss), окно не создаётся
+// зовёт установщик (windows/installer/etesaL.iss), окно не создаётся
 constexpr wchar_t kUninstallCleanupFlag[] = L"--uninstall-cleanup";
 constexpr wchar_t kAdoptAutostartFlag[] = L"--adopt-autostart";
 constexpr UINT kAutostartConnectMsg = WM_APP + 100;
@@ -184,7 +184,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   window.SetShowOnFirstFrame(!start_in_tray);
   const Win32Window::Size size(920, 720);
   const Win32Window::Point origin = Win32Window::ComputeCenteredOrigin(size);
-  if (!window.Create(L"keqdroid", origin, size)) {
+  if (!window.Create(L"etesaL", origin, size)) {
     return EXIT_FAILURE;
   }
   bool restore_maximized = false;
