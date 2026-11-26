@@ -52,7 +52,7 @@ static int is_server_dial_failure(const char *line) {
 }
 
 JNIEXPORT jlong JNICALL
-Java_com_keqdroid_keqdroid_NativeHelper_nativeDialFailures(JNIEnv *env, jclass clazz) {
+Java_com_etesaL_etesaL_NativeHelper_nativeDialFailures(JNIEnv *env, jclass clazz) {
     (void)env; (void)clazz;
     return (jlong)__atomic_load_n(&g_dial_failures, __ATOMIC_RELAXED);
 }
@@ -62,7 +62,7 @@ Java_com_keqdroid_keqdroid_NativeHelper_nativeDialFailures(JNIEnv *env, jclass c
 static int g_log_threshold = 0;
 
 JNIEXPORT void JNICALL
-Java_com_keqdroid_keqdroid_NativeHelper_nativeSetCoreLogLevel(
+Java_com_etesaL_etesaL_NativeHelper_nativeSetCoreLogLevel(
         JNIEnv *env, jclass clazz, jint level) {
     (void)env; (void)clazz;
     __atomic_store_n(&g_log_threshold, (int)level, __ATOMIC_RELAXED);
@@ -73,7 +73,7 @@ Java_com_keqdroid_keqdroid_NativeHelper_nativeSetCoreLogLevel(
 static long g_tun_ready = 0;
 
 JNIEXPORT jlong JNICALL
-Java_com_keqdroid_keqdroid_NativeHelper_nativeTunReadyCount(JNIEnv *env, jclass clazz) {
+Java_com_etesaL_etesaL_NativeHelper_nativeTunReadyCount(JNIEnv *env, jclass clazz) {
     (void)env; (void)clazz;
     return (jlong)__atomic_load_n(&g_tun_ready, __ATOMIC_RELAXED);
 }
@@ -131,7 +131,7 @@ static void core_log_line(const char *logpath, const char *line) {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_keqdroid_keqdroid_NativeHelper_nativeStartCore(
+Java_com_etesaL_etesaL_NativeHelper_nativeStartCore(
         JNIEnv *env, jclass clazz,
         jstring jBinPath, jstring jConfigPath, jstring jAssetDir, jstring jLogName,
         jstring jCoreKind, jint jTunFd, jstring jOwnerSocket) {
