@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import java.io.File
 import java.util.Collections
@@ -33,7 +33,7 @@ internal class CoreLaunches {
 }
 
 object NativeHelper {
-    init { System.loadLibrary("keqdroid_native") }
+    init { System.loadLibrary("etesaL_native") }
 
     private const val TAG = "KEQDIS"
 
