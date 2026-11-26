@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/accent_edge_card.dart';
+import 'package:etesaL/shared/ui/accent_edge_card.dart';
 
 // Карточка всегда живёт в вертикальном списке, а он раздаёт детям
 // неограниченную высоту: проверять её в чём-то с конечной высотой
