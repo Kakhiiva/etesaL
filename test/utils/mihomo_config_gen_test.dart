@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
-import 'package:keqdroid/utils/tls_fingerprint.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
+import 'package:etesaL/utils/tls_fingerprint.dart';
 
 Map<String, dynamic> _proxy(Map<String, dynamic> config) =>
     (config['proxies'] as List).cast<Map<String, dynamic>>().single;
@@ -1619,7 +1619,7 @@ void main() {
                   ),
                   routingMode: mode,
                   managedProcessNames: managed,
-                  appProcessName: 'keqdroid.exe',
+                  appProcessName: 'etesaL.exe',
                   windows: true,
                 )['rules']
                 as List)
@@ -1632,7 +1632,7 @@ void main() {
       expect(rules.first, contains('NOT,((IN-TYPE,TUN))'));
       expect(
         rules[1],
-        r'AND,((IN-TYPE,TUN),(PROCESS-NAME-REGEX,^keqdroid\x2eexe$)),DIRECT',
+        r'AND,((IN-TYPE,TUN),(PROCESS-NAME-REGEX,^etesaL\x2eexe$)),DIRECT',
       );
     });
 
@@ -1713,7 +1713,7 @@ void main() {
         settings,
         socksPort: 2080,
         managedProcessNames: const ['Telegram.exe'],
-        appProcessName: 'keqdroid.exe',
+        appProcessName: 'etesaL.exe',
       );
       expect(config['find-process-mode'], 'off');
       expect(
