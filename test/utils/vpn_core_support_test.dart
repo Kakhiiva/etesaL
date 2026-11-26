@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/vpn_core_support.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/vpn_core_support.dart';
 
 // Ядро выбирает формат сервера, а настройка решает только там, где формат берут
 // оба. Раньше несовпадение молча откатывалось на xray, и выглядело это так:
