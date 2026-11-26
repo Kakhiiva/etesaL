@@ -1,10 +1,10 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.Application
 import android.content.Intent
-import com.keqdroid.keqdroid.RoboSession.context
-import com.keqdroid.keqdroid.RoboSession.prefs
-import com.keqdroid.keqdroid.RoboSession.saveSnapshot
+import com.etesaL.etesaL.RoboSession.context
+import com.etesaL.etesaL.RoboSession.prefs
+import com.etesaL.etesaL.RoboSession.saveSnapshot
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Before
