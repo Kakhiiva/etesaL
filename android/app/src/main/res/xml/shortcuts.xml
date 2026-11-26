@@ -10,8 +10,8 @@
         android:shortcutLongLabel="@string/shortcut_connect_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.keqdroid.keqdroid"
-            android:targetClass="com.keqdroid.keqdroid.LaunchAction">
+            android:targetPackage="com.etesaL.etesaL"
+            android:targetClass="com.etesaL.etesaL.LaunchAction">
             <extra
                 android:name="action"
                 android:value="connect_from_notification" />
@@ -26,8 +26,8 @@
         android:shortcutLongLabel="@string/shortcut_disconnect_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.keqdroid.keqdroid"
-            android:targetClass="com.keqdroid.keqdroid.LaunchAction">
+            android:targetPackage="com.etesaL.etesaL"
+            android:targetClass="com.etesaL.etesaL.LaunchAction">
             <extra
                 android:name="action"
                 android:value="disconnect_from_shortcut" />
