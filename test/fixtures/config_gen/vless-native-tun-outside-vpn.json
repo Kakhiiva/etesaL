@@ -141,7 +141,7 @@
           "tun-in"
         ],
         "process": [
-          "keqdroid:outside-vpn"
+          "etesaL:outside-vpn"
         ],
         "outboundTag": "block",
         "ruleTag": "outside-vpn"
