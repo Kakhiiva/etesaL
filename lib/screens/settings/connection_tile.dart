@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/services/xray_access_log_parser.dart';
-import 'package:keqdroid/shared/ui/accent_edge_card.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/services/xray_access_log_parser.dart';
+import 'package:etesaL/shared/ui/accent_edge_card.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 class ConnectionTile extends StatelessWidget {
   const ConnectionTile({
