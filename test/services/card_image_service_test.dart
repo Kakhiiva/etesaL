@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/subscription_card_theme.dart';
-import 'package:keqdroid/services/card_image_service.dart';
+import 'package:etesaL/models/subscription_card_theme.dart';
+import 'package:etesaL/services/card_image_service.dart';
 import 'package:path/path.dart' as p;
 
 // Сам выбор файла (диалог) не тестируется, тестируется всё вокруг:
