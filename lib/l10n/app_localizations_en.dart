@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'keqdroid';
+  String get appTitle => 'etesaL';
 
   @override
   String vpnConnectedTo(Object serverName) {
@@ -206,7 +206,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get routingCheatSheetTitle => 'How to write rules';
 
   @override
-  String get routingCheatSheetBody => 'A route reads “who → what → where”. In Custom sites each line is a domain, an IP, a geo tag or a link to a list, and where they go is the route’s own choice: direct, via VPN or blocked.\n\n## Domains\nvk.com — the domain itself and all its subdomains\nru — anything ending in .ru (a bare word, no dot)\n.example.com and *.example.com — the same as example.com\nfull:example.com — exactly this host, no subdomains\nregexp:… — a regex, if you really need to get fancy\n\n## IP addresses\n1.2.3.4 — a single address\n10.0.0.0/8 — a whole range (CIDR)\n\n## GeoIP: by country\ngeoip:ru — every Russian IP. Swap ru for any country: us, de, cn, ua, kz…\nPlus ready-made bundles: geoip:private (LAN), geoip:telegram, geoip:google.\nNeed it by country? This is the one, geoip knows them all.\n\n## GeoSite: ready-made lists\ngeosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…\nThese aren\'t countries but service categories someone already put together for you.\nHardly any countries here (just geolocation-cn and geolocation-!cn), so by-country is really geoip\'s job.\n\n## On PC\nGeo works the same as on the phone. It just needs geoip.dat and geosite.dat sitting next to keqdroid.exe. A release build already has them there. If geo rules look ignored, check those two files first.\n\n## Order\nTop to bottom, as on the screen: blocking, specific apps, all apps. Among all apps, a new Direct route lands above Via VPN. You can change the order: press and hold a route, then drag it up or down. Your server always goes direct before anything else, or you would get a loop. Whatever matches no route follows the Everything else row.';
+  String get routingCheatSheetBody => 'A route reads “who → what → where”. In Custom sites each line is a domain, an IP, a geo tag or a link to a list, and where they go is the route’s own choice: direct, via VPN or blocked.\n\n## Domains\nvk.com — the domain itself and all its subdomains\nru — anything ending in .ru (a bare word, no dot)\n.example.com and *.example.com — the same as example.com\nfull:example.com — exactly this host, no subdomains\nregexp:… — a regex, if you really need to get fancy\n\n## IP addresses\n1.2.3.4 — a single address\n10.0.0.0/8 — a whole range (CIDR)\n\n## GeoIP: by country\ngeoip:ru — every Russian IP. Swap ru for any country: us, de, cn, ua, kz…\nPlus ready-made bundles: geoip:private (LAN), geoip:telegram, geoip:google.\nNeed it by country? This is the one, geoip knows them all.\n\n## GeoSite: ready-made lists\ngeosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…\nThese aren\'t countries but service categories someone already put together for you.\nHardly any countries here (just geolocation-cn and geolocation-!cn), so by-country is really geoip\'s job.\n\n## On PC\nGeo works the same as on the phone. It just needs geoip.dat and geosite.dat sitting next to etesaL.exe. A release build already has them there. If geo rules look ignored, check those two files first.\n\n## Order\nTop to bottom, as on the screen: blocking, specific apps, all apps. Among all apps, a new Direct route lands above Via VPN. You can change the order: press and hold a route, then drag it up or down. Your server always goes direct before anything else, or you would get a loop. Whatever matches no route follows the Everything else row.';
 
   @override
   String settingsRoutingItemCount(int count) {
@@ -1700,16 +1700,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get desktopTunServiceTitle => 'Service for TUN';
 
   @override
-  String get desktopTunServiceMessage => 'TUN mode runs through the keqdroid service. It is installed once: Windows asks for permission, and after that TUN turns on without it and without a restart.';
+  String get desktopTunServiceMessage => 'TUN mode runs through the etesaL service. It is installed once: Windows asks for permission, and after that TUN turns on without it and without a restart.';
 
   @override
-  String get desktopTunServiceUpdateMessage => 'The app was updated, and the keqdroid service for TUN needs updating too. Windows asks for permission.';
+  String get desktopTunServiceUpdateMessage => 'The app was updated, and the etesaL service for TUN needs updating too. Windows asks for permission.';
 
   @override
-  String get desktopTunServiceMessageMacos => 'TUN mode runs through the keqdroid service. It is installed once: macOS asks for an administrator password, and after that TUN turns on without it and without a restart.';
+  String get desktopTunServiceMessageMacos => 'TUN mode runs through the etesaL service. It is installed once: macOS asks for an administrator password, and after that TUN turns on without it and without a restart.';
 
   @override
-  String get desktopTunServiceUpdateMessageMacos => 'The app was updated, and the keqdroid service for TUN needs updating too. macOS asks for an administrator password.';
+  String get desktopTunServiceUpdateMessageMacos => 'The app was updated, and the etesaL service for TUN needs updating too. macOS asks for an administrator password.';
 
   @override
   String get desktopTunServiceInstall => 'Install the service';
@@ -1994,7 +1994,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tvReceiveSubtitle => 'A subscription from your phone over Wi-Fi';
 
   @override
-  String get tvReceiveHint => 'Scan the code in keqdroid on your phone. The phone and the TV must be on the same Wi-Fi network.';
+  String get tvReceiveHint => 'Scan the code in etesaL on your phone. The phone and the TV must be on the same Wi-Fi network.';
 
   @override
   String get tvReceiveWaiting => 'Waiting for a subscription…';
@@ -2127,7 +2127,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorPolkitMissingMessage => 'TUN mode starts the core as root through pkexec, and polkit is not installed.';
 
   @override
-  String get errorPolkitMissingAction => 'Install polkit together with an authentication agent, run the app as root (sudo -E keqdroid), or switch to Proxy mode in settings.';
+  String get errorPolkitMissingAction => 'Install polkit together with an authentication agent, run the app as root (sudo -E etesaL), or switch to Proxy mode in settings.';
 
   @override
   String get errorPolkitNoAgentTitle => 'Polkit Required';
@@ -3374,10 +3374,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get backupTransferRetry => 'Try again';
 
   @override
-  String get backupTransferNotOurCode => 'This is not a keqdroid backup code';
+  String get backupTransferNotOurCode => 'This is not a etesaL backup code';
 
   @override
-  String get backupTransferUnreachable => 'The device does not answer. Both must be on the same Wi-Fi network, and on a computer keqdroid must be allowed in the firewall';
+  String get backupTransferUnreachable => 'The device does not answer. Both must be on the same Wi-Fi network, and on a computer etesaL must be allowed in the firewall';
 
   @override
   String get backupTransferExpired => 'The code was already used or closed. Open it again on the other device';
@@ -3388,5 +3388,5 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get backupFromReleaseBuild => 'This backup was made by a keqdroid release, and this build does not have its key';
+  String get backupFromReleaseBuild => 'This backup was made by a etesaL release, and this build does not have its key';
 }
