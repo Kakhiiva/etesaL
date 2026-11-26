@@ -20,7 +20,7 @@
     }
   ],
   "rules": [
-    "AND,((IN-TYPE,TUN),(PROCESS-NAME,keqdroid:outside-vpn)),REJECT",
+    "AND,((IN-TYPE,TUN),(PROCESS-NAME,etesaL:outside-vpn)),REJECT",
     "AND,((NOT,((IN-TYPE,TUN))),(DOMAIN,www.cloudflare.com)),Proxy",
     "IP-CIDR,198.51.100.23/32,DIRECT,no-resolve",
     "IP-CIDR,198.18.0.0/30,DIRECT,no-resolve",
@@ -106,7 +106,7 @@
     ],
     "respect-rules": true
   },
-  "keqdroid-owner-guard": "all",
+  "etesaL-owner-guard": "all",
   "tun": {
     "enable": true,
     "stack": "gvisor",
