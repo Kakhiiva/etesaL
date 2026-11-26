@@ -5,10 +5,10 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/services/macos_tun_service.dart';
-import 'package:keqdroid/tunnel/macos_core_paths.dart';
-import 'package:keqdroid/ui/desktop/desktop_connection_mode.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/services/macos_tun_service.dart';
+import 'package:etesaL/tunnel/macos_core_paths.dart';
+import 'package:etesaL/ui/desktop/desktop_connection_mode.dart';
 import 'package:path/path.dart' as p;
 
 Uint8List _encodeFrame(String text) {
@@ -80,19 +80,19 @@ void main() {
   }
 
   setUp(() {
-    tmp = Directory.systemTemp.createTempSync('keq_macos_tun_svc_');
+    tmp = Directory.systemTemp.createTempSync('etesaL_macos_tun_svc_');
     final binDir = Directory(
-      p.join(tmp.path, 'keqdroid.app', 'Contents', 'Resources', 'bin'),
+      p.join(tmp.path, 'etesaL.app', 'Contents', 'Resources', 'bin'),
     )..createSync(recursive: true);
-    File(p.join(binDir.path, 'keqdroid-tun')).writeAsStringSync('daemon');
+    File(p.join(binDir.path, 'etesaL-tun')).writeAsStringSync('daemon');
     File(p.join(binDir.path, 'xray')).writeAsStringSync('xray');
     File(p.join(binDir.path, 'mihomo')).writeAsStringSync('mihomo');
     MacosCorePaths.executableOverride = p.join(
       tmp.path,
-      'keqdroid.app',
+      'etesaL.app',
       'Contents',
       'MacOS',
-      'keqdroid',
+      'etesaL',
     );
 
     plistExists = true;
