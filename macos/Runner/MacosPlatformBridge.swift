@@ -19,15 +19,15 @@ final class MacosPlatformBridge {
   init(messenger: FlutterBinaryMessenger, appDelegate: AppDelegate?) {
     self.appDelegate = appDelegate
     self.vpnChannel = FlutterMethodChannel(
-      name: "keqdroid_vpn_channel",
+      name: "etesaL_vpn_channel",
       binaryMessenger: messenger
     )
     self.hotkeyChannel = FlutterMethodChannel(
-      name: "keqdroid/macos_hotkeys",
+      name: "etesaL/macos_hotkeys",
       binaryMessenger: messenger
     )
     self.screenChannel = FlutterMethodChannel(
-      name: "keqdroid/macos_screen",
+      name: "etesaL/macos_screen",
       binaryMessenger: messenger
     )
 
@@ -253,7 +253,7 @@ final class MacosPlatformBridge {
 
   private static func captureScreenPng() -> String? {
     let tmpDir = FileManager.default.temporaryDirectory
-    let fileUrl = tmpDir.appendingPathComponent("keqdroid-qr-\(UUID().uuidString).png")
+    let fileUrl = tmpDir.appendingPathComponent("etesaL-qr-\(UUID().uuidString).png")
     let process = Process()
     process.executableURL = URL(fileURLWithPath: "/usr/sbin/screencapture")
     process.arguments = ["-x", "-t", "png", fileUrl.path]
