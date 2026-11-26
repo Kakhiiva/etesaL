@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build patched xray, mihomo, and the keqdroid-tun LaunchDaemon for macOS.
+# Build patched xray, mihomo, and the etesaL-tun LaunchDaemon for macOS.
 #
 # Usage:
 #   bash tool/build_macos_cores.sh          # build both arm64 and x86_64 separately
@@ -7,7 +7,7 @@
 #   bash tool/build_macos_cores.sh arm64    # Apple Silicon only
 #   bash tool/build_macos_cores.sh x86_64   # Intel only
 #
-# Output goes to assets/bin/macos/<arch>/{xray,mihomo,keqdroid-tun} and
+# Output goes to assets/bin/macos/<arch>/{xray,mihomo,etesaL-tun} and
 # assets/bin/macos/{geoip.dat,geosite.dat} (gitignored).
 
 set -euo pipefail
@@ -57,7 +57,7 @@ for cmd in go git; do
   fi
 done
 
-WORK_DIR="$(mktemp -d "${TMPDIR:-/tmp}/keqdroid-macos-cores.XXXXXX")"
+WORK_DIR="$(mktemp -d "${TMPDIR:-/tmp}/etesaL-macos-cores.XXXXXX")"
 trap 'chmod -R u+w "$WORK_DIR" 2>/dev/null || true; rm -rf "$WORK_DIR"' EXIT
 
 mkdir -p "$OUT_DIR"
@@ -111,7 +111,7 @@ download_module() {
   local mod_dir="$WORK_DIR/mod-dl"
   mkdir -p "$mod_dir"
   if [ ! -f "$mod_dir/go.mod" ]; then
-    (cd "$mod_dir" && go mod init keqdroid-macos-cores >/dev/null 2>&1)
+    (cd "$mod_dir" && go mod init etesaL-macos-cores >/dev/null 2>&1)
   fi
   echo "Downloading ${module}@${version} ..."
   (cd "$mod_dir" && go mod download "${module}@${version}")
@@ -196,23 +196,23 @@ for arch in "${ARCHS[@]}"; do
   report_binary "$arch_dir/mihomo"
 done
 
-# ---- Build keqdroid-tun LaunchDaemon ---------------------------------------
+# ---- Build etesaL-tun LaunchDaemon ---------------------------------------
 # Build after signing xray and mihomo so embedded SHA-256 digests match the exact signed bytes.
 for arch in "${ARCHS[@]}"; do
   goarch="$(goarch_for "$arch")"
   arch_dir="$OUT_DIR/$arch"
   XRAY_SHA="$(sha256_file "$arch_dir/xray")"
   MIHOMO_SHA="$(sha256_file "$arch_dir/mihomo")"
-  echo "Building keqdroid-tun for darwin/$goarch ($arch) [xray=${XRAY_SHA:0:12} mihomo=${MIHOMO_SHA:0:12}] ..."
+  echo "Building etesaL-tun for darwin/$goarch ($arch) [xray=${XRAY_SHA:0:12} mihomo=${MIHOMO_SHA:0:12}] ..."
   (
     cd "$DAEMON_DIR"
     CGO_ENABLED=0 GOOS=darwin GOARCH="$goarch" \
       go build -trimpath -buildvcs=false \
       -ldflags "-s -w -X main.xraySHA256=$XRAY_SHA -X main.mihomoSHA256=$MIHOMO_SHA" \
-      -o "$arch_dir/keqdroid-tun" \
+      -o "$arch_dir/etesaL-tun" \
       .
   )
-  report_binary "$arch_dir/keqdroid-tun"
+  report_binary "$arch_dir/etesaL-tun"
   printf '%s  xray\n%s  mihomo\n' "$XRAY_SHA" "$MIHOMO_SHA" > "$arch_dir/cores.sha256"
 done
 
