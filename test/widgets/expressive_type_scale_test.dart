@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
 
 // Шкала обязана совпадать с TypeScaleTokens из androidx.compose.material3:
 // выразительность M3E живёт в дельте между базой и усиленным вариантом, и
