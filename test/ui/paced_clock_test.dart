@@ -1,6 +1,6 @@
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/paced_clock.dart';
+import 'package:etesaL/shared/ui/paced_clock.dart';
 
 const _hz60 = Duration(microseconds: 16667);
 const _hz120 = Duration(microseconds: 8333);
