@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/subscription.dart';
+import 'package:etesaL/models/subscription.dart';
 
 // Две настройки автовыбора у подписки, и они не одно и то же: одна про то,
 // видно ли переключатель, вторая про то, включён ли он.
