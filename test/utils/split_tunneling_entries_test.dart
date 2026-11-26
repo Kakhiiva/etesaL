@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_info.dart';
-import 'package:keqdroid/utils/split_tunnel_routing.dart';
-import 'package:keqdroid/utils/split_tunneling_entries.dart';
+import 'package:etesaL/models/app_info.dart';
+import 'package:etesaL/utils/split_tunnel_routing.dart';
+import 'package:etesaL/utils/split_tunneling_entries.dart';
 
 AppInfo _app(String pkg, {String? path}) =>
     AppInfo(packageName: pkg, appName: pkg, installPath: path);
