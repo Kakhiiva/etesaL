@@ -1,4 +1,4 @@
-// keqdroid-tun.exe: служба SYSTEM, через которую приложение без прав администратора поднимает ядро в режиме TUN.
+// etesaL-tun.exe: служба SYSTEM, через которую приложение без прав администратора поднимает ядро в режиме TUN.
 // модель как у FlClash services/helper и хелпера Linux: запускаются только ядра из сборки (sha256 вшиты при сборке),
 // из своей копии в каталоге, куда пишут только SYSTEM и администраторы
 #include <windows.h>
@@ -26,8 +26,8 @@
 namespace {
 
 constexpr wchar_t kServiceName[] = L"KeqdroidTun";
-constexpr wchar_t kDisplayName[] = L"keqdroid TUN";
-constexpr wchar_t kPipeName[] = L"\\\\.\\pipe\\keqdroid-tun";
+constexpr wchar_t kDisplayName[] = L"etesaL TUN";
+constexpr wchar_t kPipeName[] = L"\\\\.\\pipe\\etesaL-tun";
 constexpr wchar_t kParamsKey[] =
     L"SYSTEM\\CurrentControlSet\\Services\\KeqdroidTun\\Parameters";
 constexpr DWORD kMaxFrame = 64u << 20;
@@ -82,12 +82,12 @@ std::wstring KnownFolder(REFKNOWNFOLDERID id, const wchar_t* fallback) {
 
 std::wstring InstallDir() {
   return KnownFolder(FOLDERID_ProgramFiles, L"C:\\Program Files") +
-         L"\\keqdroid TUN";
+         L"\\etesaL TUN";
 }
 
 std::wstring RunDir() { return InstallDir() + L"\\run"; }
 
-std::wstring ServiceExePath() { return InstallDir() + L"\\keqdroid-tun.exe"; }
+std::wstring ServiceExePath() { return InstallDir() + L"\\etesaL-tun.exe"; }
 
 std::wstring SelfPath() {
   std::wstring buf(MAX_PATH, L'\0');
@@ -843,7 +843,7 @@ int Install(const std::wstring& sid) {
     return 5;
   }
   SERVICE_DESCRIPTIONW description = {
-      const_cast<wchar_t*>(L"Runs the keqdroid core in TUN mode for the user "
+      const_cast<wchar_t*>(L"Runs the etesaL core in TUN mode for the user "
                            L"who installed it.")};
   ::ChangeServiceConfig2W(service, SERVICE_CONFIG_DESCRIPTION, &description);
 
