@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/ui/responsive/desktop_page_layout.dart';
-import 'package:keqdroid/ui/responsive/window_breakpoints.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/ui/responsive/desktop_page_layout.dart';
+import 'package:etesaL/ui/responsive/window_breakpoints.dart';
 
 // Раскладка выбирается по ширине окна, а не по платформе. До этого телефон
 // боком получал ту же вертикальную раскладку, и шапка экрана серверов съедала
