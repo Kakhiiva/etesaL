@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/tun_settings.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/tun_settings.dart';
 
 void main() {
   test('defaults are gvisor/9000 — what sing-box itself would pick', () {
