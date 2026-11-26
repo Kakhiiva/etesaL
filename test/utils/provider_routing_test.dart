@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/utils/provider_routing.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/utils/provider_routing.dart';
 
 // пример своего профиля из dev-docs/routing.md Happ
 const _happChina = {
@@ -72,7 +72,7 @@ void main() {
         for (final link in [
           _link('happ', _happChina, kind: 'add'),
           _link('incy', _happChina),
-          _link('keqdroid', _happChina),
+          _link('etesaL', _happChina),
           _link('keqdis', _happChina, kind: 'add'),
           _link('HAPP', _happChina),
         ])
@@ -149,7 +149,7 @@ void main() {
         isA<ProviderRoutingOff>(),
       );
       expect(
-        parseProviderRouting('keqdroid://routing/off'),
+        parseProviderRouting('etesaL://routing/off'),
         isA<ProviderRoutingOff>(),
       );
       expect(parseProviderRouting('happ://routing/onadd/не-base64'), isNull);
@@ -294,7 +294,7 @@ void main() {
         ],
       );
       expect(share.skipped, 0);
-      expect(share.link, startsWith('keqdroid://routing/add/'));
+      expect(share.link, startsWith('etesaL://routing/add/'));
       expect(isRoutingLink(share.link), isTrue);
 
       final rules = _rules(parseProviderRouting(share.link));
