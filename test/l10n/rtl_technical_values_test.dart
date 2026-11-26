@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/bidi.dart';
+import 'package:etesaL/utils/bidi.dart';
 
 // Технические значения в RTL-локали.
 //
