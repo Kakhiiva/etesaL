@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_flag.dart';
-import 'package:keqdroid/models/server_name_utils.dart';
+import 'package:etesaL/models/server_flag.dart';
+import 'package:etesaL/models/server_name_utils.dart';
 
 void main() {
   group('findFlags: региональные индикаторы', () {
