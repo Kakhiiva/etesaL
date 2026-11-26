@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_group.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
+import 'package:etesaL/models/server_group.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
 
 // Разбиение на группы общее у списка серверов и у бокового навигатора.
 // Кнопка перейти к группе, которой в списке нет (или которая там не на своём
