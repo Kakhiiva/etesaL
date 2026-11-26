@@ -1,7 +1,7 @@
 // схема и имя параметра вписаны в настройки чужих панелей, переименование сломает их кнопки
 library;
 
-const _appSchemes = {'keqdroid', 'keqdis'};
+const _appSchemes = {'etesaL', 'keqdis'};
 
 // хост не проверяем: панели пишут туда что угодно (install-config, add, subscribe)
 String? subscriptionUrlFromDeepLink(String raw) {
