@@ -46,7 +46,7 @@ class LinuxCorePaths {
 
   // отдельный дом: ядро создаёт в нём config.yaml, а рядом с бинарём на Linux обычно нельзя писать (/opt, монт AppImage)
   static Future<String> mihomoHomeDir() async {
-    final dir = Directory(p.join(await _cacheRoot(), 'keqdroid', 'mihomo'));
+    final dir = Directory(p.join(await _cacheRoot(), 'etesaL', 'mihomo'));
     if (!dir.existsSync()) dir.createSync(recursive: true);
     final geoDir = await geoAssetDir();
     if (geoDir != null && geoDir != dir.path) {
@@ -106,7 +106,7 @@ class LinuxCorePaths {
             Platform.environment['HOME'] ?? Directory.systemTemp.path,
             '.cache',
           );
-      final outDir = Directory(p.join(base, 'keqdroid', 'geo'));
+      final outDir = Directory(p.join(base, 'etesaL', 'geo'));
       if (!outDir.existsSync()) outDir.createSync(recursive: true);
 
       var extracted = false;
@@ -171,7 +171,7 @@ class LinuxCorePaths {
           Platform.environment['HOME'] ?? Directory.systemTemp.path,
           '.cache',
         );
-    final dir = Directory(p.join(base, 'keqdroid', 'cores'));
+    final dir = Directory(p.join(base, 'etesaL', 'cores'));
     if (!dir.existsSync()) dir.createSync(recursive: true);
     return dir.path;
   }
