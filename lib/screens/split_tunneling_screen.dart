@@ -1,20 +1,20 @@
 import 'dart:async';
 import 'dart:io' show Platform;
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/expressive_elements.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
-import 'package:keqdroid/shared/ui/haptics.dart';
-import 'package:keqdroid/shared/ui/scrolled_under.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive_elements.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
+import 'package:etesaL/shared/ui/haptics.dart';
+import 'package:etesaL/shared/ui/scrolled_under.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/add_process_dialog.dart';
-import 'package:keqdroid/shared/ui/app_list_tile.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/shape_loading_indicator.dart';
-import 'package:keqdroid/shared/ui/smooth_scroll.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/add_process_dialog.dart';
+import 'package:etesaL/shared/ui/app_list_tile.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/shape_loading_indicator.dart';
+import 'package:etesaL/shared/ui/smooth_scroll.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 import '../core/app_logger.dart';
 import '../models/app_info.dart';
@@ -25,7 +25,7 @@ import '../tunnel/tunnel_state.dart';
 import '../utils/process_name_utils.dart';
 import '../utils/russian_apps.dart';
 import '../utils/split_tunneling_entries.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
 
 enum TunnelMode { all, includeOnly, excludeOnly }
 
