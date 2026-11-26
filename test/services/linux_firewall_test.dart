@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/tun_settings.dart';
-import 'package:keqdroid/services/linux_firewall.dart';
+import 'package:etesaL/models/tun_settings.dart';
+import 'package:etesaL/services/linux_firewall.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
@@ -12,7 +12,7 @@ void main() {
   late List<String> calls;
 
   setUp(() {
-    tmp = Directory.systemTemp.createTempSync('keqdroid_fw_');
+    tmp = Directory.systemTemp.createTempSync('etesaL_fw_');
     LinuxFirewalls.firewalldPidFile = p.join(tmp.path, 'firewalld.pid');
     calls = [];
   });
