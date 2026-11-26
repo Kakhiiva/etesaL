@@ -44,7 +44,7 @@
 
 namespace {
 
-constexpr char kChannel[] = "keqdroid_vpn_channel";
+constexpr char kChannel[] = "etesaL_vpn_channel";
 
 static const wchar_t kProxyBypass[] = L"127.0.0.1;<local>;::1;localhost";
 // per-connection API WinINet отвергает <local> с 0x57
