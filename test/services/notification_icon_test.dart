@@ -46,7 +46,7 @@ void main() {
 
   test('quick settings tile uses the same drawable', () {
     final tile = File(
-      'android/app/src/main/kotlin/com/keqdroid/keqdroid/'
+      'android/app/src/main/kotlin/com/etesaL/etesaL/'
       'VpnQuickTileService.kt',
     ).readAsStringSync();
     expect(
