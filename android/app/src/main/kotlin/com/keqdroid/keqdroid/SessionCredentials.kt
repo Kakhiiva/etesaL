@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 data class ProxyCredentials(val username: String, val password: String) {
     val isComplete: Boolean get() = username.isNotEmpty() && password.isNotEmpty()
