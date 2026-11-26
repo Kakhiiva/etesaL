@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart' show visibleForTesting;
 class LinuxDeepLinks {
   LinuxDeepLinks._();
 
-  static const _schemes = {'keqdroid', 'keqdis'};
+  static const _schemes = {'etesaL', 'keqdis'};
 
   static String? _pending;
 
