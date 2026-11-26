@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
+import 'package:etesaL/models/app_settings.dart';
 
 // До 15.10.2026 в выборе ядра был пункт Автоматически (auto). Ядро он
 // выбирал то же, что xray, и был убран; сохранённое auto читается как xray.
