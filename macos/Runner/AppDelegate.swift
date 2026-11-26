@@ -3,7 +3,7 @@ import FlutterMacOS
 
 @main
 class AppDelegate: FlutterAppDelegate {
-  private static let supportedSchemes: Set<String> = ["keqdroid", "keqdis"]
+  private static let supportedSchemes: Set<String> = ["etesaL", "keqdis"]
 
   var platformBridge: MacosPlatformBridge?
   private var pendingDeepLink: String?
