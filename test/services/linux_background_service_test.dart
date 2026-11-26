@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/linux_background_service.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
+import 'package:etesaL/services/linux_background_service.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tray_manager/tray_manager.dart';
 
