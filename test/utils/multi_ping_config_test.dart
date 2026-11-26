@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/multi_ping_config.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/multi_ping_config.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Общий конфиг замера: вся пачка меряется одним ядром вместо ядра на сервер.
 //
