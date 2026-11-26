@@ -4,8 +4,8 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/linux_install.dart';
-import 'package:keqdroid/services/update_service.dart';
+import 'package:etesaL/services/linux_install.dart';
+import 'package:etesaL/services/update_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Сетевой слой по сценарию: каждый ответ либо исключение, которое бросил бы
@@ -35,7 +35,7 @@ class _ScriptedAdapter implements HttpClientAdapter {
 // Dio получает его от dart:io как HttpException и заворачивает в unknown.
 final _brokenTls = HttpException(
   '\n\tWRONG_VERSION_NUMBER(tls_record.cc:127) error 268435703',
-  uri: Uri.parse('https://api.github.com/repos/Lemonochka/keqdroid/releases'),
+  uri: Uri.parse('https://api.github.com/repos/Kakhiiva/etesaL/releases'),
 );
 
 ResponseBody _releases() => ResponseBody.fromString(
@@ -121,7 +121,7 @@ void main() {
     UpdateInfo info(String version) => UpdateInfo(
       currentVersion: '0.26.0',
       latestVersion: version,
-      downloadUrl: 'https://example.invalid/keqdroid.apk',
+      downloadUrl: 'https://example.invalid/etesaL.apk',
       apkSize: 1,
     );
     late int calls;
@@ -295,24 +295,24 @@ void main() {
 
   group('UpdateService asset selection', () {
     final assets = [
-      {'name': 'keqdroid-0.5.1.apk'},
-      {'name': 'keqdroid-windows-x64-0.5.1.zip'},
-      {'name': 'keqdroid-0.5.1-linux-x64.tar.gz'},
-      {'name': 'keqdroid-0.5.1-x86_64.AppImage'},
-      {'name': 'keqdroid_0.5.1_amd64.deb'},
+      {'name': 'etesaL-0.5.1.apk'},
+      {'name': 'etesaL-windows-x64-0.5.1.zip'},
+      {'name': 'etesaL-0.5.1-linux-x64.tar.gz'},
+      {'name': 'etesaL-0.5.1-x86_64.AppImage'},
+      {'name': 'etesaL_0.5.1_amd64.deb'},
     ];
 
     test('selects APK for Android', () {
       expect(
         UpdateService.findAssetNameForPlatform(assets, 'android'),
-        'keqdroid-0.5.1.apk',
+        'etesaL-0.5.1.apk',
       );
     });
 
     test('selects Windows archive for Windows', () {
       expect(
         UpdateService.findAssetNameForPlatform(assets, 'windows'),
-        'keqdroid-windows-x64-0.5.1.zip',
+        'etesaL-windows-x64-0.5.1.zip',
       );
     });
 
@@ -321,23 +321,23 @@ void main() {
       () {
         final withSetup = [
           ...assets,
-          {'name': 'keqdroid-windows-x64-0.5.1-setup.exe'},
+          {'name': 'etesaL-windows-x64-0.5.1-setup.exe'},
         ];
         expect(
           UpdateService.findAssetNameForPlatform(
             withSetup,
             'windows-installed',
           ),
-          'keqdroid-windows-x64-0.5.1-setup.exe',
+          'etesaL-windows-x64-0.5.1-setup.exe',
         );
         expect(
           UpdateService.findAssetNameForPlatform(withSetup, 'windows'),
-          'keqdroid-windows-x64-0.5.1.zip',
+          'etesaL-windows-x64-0.5.1.zip',
         );
         // релиз без установщика: установленная копия всё равно обновится
         expect(
           UpdateService.findAssetNameForPlatform(assets, 'windows-installed'),
-          'keqdroid-windows-x64-0.5.1.zip',
+          'etesaL-windows-x64-0.5.1.zip',
         );
       },
     );
@@ -345,7 +345,7 @@ void main() {
     test('selects the AppImage for a Linux AppImage install', () {
       expect(
         UpdateService.findAssetNameForPlatform(assets, 'linux'),
-        'keqdroid-0.5.1-x86_64.AppImage',
+        'etesaL-0.5.1-x86_64.AppImage',
       );
     });
   });
@@ -355,19 +355,19 @@ void main() {
         '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08';
 
     test('reads a bare hash sidecar', () {
-      expect(UpdateService.extractSha256(hash, 'keqdroid-0.5.0.apk'), hash);
+      expect(UpdateService.extractSha256(hash, 'etesaL-0.5.0.apk'), hash);
     });
 
     test('trims trailing whitespace/newline from a sidecar', () {
       expect(
-        UpdateService.extractSha256('$hash\n', 'keqdroid-0.5.0.apk'),
+        UpdateService.extractSha256('$hash\n', 'etesaL-0.5.0.apk'),
         hash,
       );
     });
 
     test('normalizes uppercase hex to lowercase', () {
       expect(
-        UpdateService.extractSha256(hash.toUpperCase(), 'keqdroid-0.5.0.apk'),
+        UpdateService.extractSha256(hash.toUpperCase(), 'etesaL-0.5.0.apk'),
         hash,
       );
     });
@@ -376,11 +376,11 @@ void main() {
       const other =
           '0000000000000000000000000000000000000000000000000000000000000000';
       final manifest =
-          '$other  keqdroid-windows-x64-0.5.0.zip\n'
-          '$hash  keqdroid-0.5.0.apk\n';
-      expect(UpdateService.extractSha256(manifest, 'keqdroid-0.5.0.apk'), hash);
+          '$other  etesaL-windows-x64-0.5.0.zip\n'
+          '$hash  etesaL-0.5.0.apk\n';
+      expect(UpdateService.extractSha256(manifest, 'etesaL-0.5.0.apk'), hash);
       expect(
-        UpdateService.extractSha256(manifest, 'keqdroid-windows-x64-0.5.0.zip'),
+        UpdateService.extractSha256(manifest, 'etesaL-windows-x64-0.5.0.zip'),
         other,
       );
     });
@@ -391,20 +391,20 @@ void main() {
   });
 
   group('два APK в релизе: arm64 и armeabi-v7a', () {
-    const main = 'keqdroid-0.30.0-android.apk';
-    const arm32 = 'keqdroid-0.30.0-armeabi-v7a-android.apk';
+    const main = 'etesaL-0.30.0-android.apk';
+    const arm32 = 'etesaL-0.30.0-armeabi-v7a-android.apk';
     const names = [
       'PKGBUILD',
       'SHA256SUMS',
       'geoip.dat',
       'geoip.dat.sha256',
-      'keqdroid-0.30.0-1.x86_64.rpm',
+      'etesaL-0.30.0-1.x86_64.rpm',
       main,
       arm32,
-      'keqdroid-0.30.0-linux-x64.tar.gz',
-      'keqdroid-0.30.0-x86_64.AppImage',
-      'keqdroid-windows-x64-0.30.0.zip',
-      'keqdroid_0.30.0_amd64.deb',
+      'etesaL-0.30.0-linux-x64.tar.gz',
+      'etesaL-0.30.0-x86_64.AppImage',
+      'etesaL-windows-x64-0.30.0.zip',
+      'etesaL_0.30.0_amd64.deb',
     ];
     List<Map<String, dynamic>> assetsOf(List<String> order) => [
       for (final n in order)
@@ -469,13 +469,13 @@ void main() {
     const names = [
       'PKGBUILD',
       'geoip.dat',
-      'keqdroid-0.19.0-1.x86_64.rpm',
-      'keqdroid-0.19.0-android.apk',
-      'keqdroid-0.19.0-linux-x64.tar.gz',
-      'keqdroid-0.19.0-x86_64.AppImage',
-      'keqdroid-windows-x64-0.19.0.zip',
-      'keqdroid-windows-x64-0.19.0-setup.exe',
-      'keqdroid_0.19.0_amd64.deb',
+      'etesaL-0.19.0-1.x86_64.rpm',
+      'etesaL-0.19.0-android.apk',
+      'etesaL-0.19.0-linux-x64.tar.gz',
+      'etesaL-0.19.0-x86_64.AppImage',
+      'etesaL-windows-x64-0.19.0.zip',
+      'etesaL-windows-x64-0.19.0-setup.exe',
+      'etesaL_0.19.0_amd64.deb',
     ];
     String hashOf(int i) => (i + 1).toRadixString(16).padLeft(64, '0');
     final manifest = [
@@ -539,16 +539,16 @@ void main() {
           );
       expect(
         pick(LinuxInstallKind.appImage),
-        'keqdroid-0.19.0-x86_64.AppImage',
+        'etesaL-0.19.0-x86_64.AppImage',
       );
-      expect(pick(LinuxInstallKind.deb), 'keqdroid_0.19.0_amd64.deb');
-      expect(pick(LinuxInstallKind.rpm), 'keqdroid-0.19.0-1.x86_64.rpm');
+      expect(pick(LinuxInstallKind.deb), 'etesaL_0.19.0_amd64.deb');
+      expect(pick(LinuxInstallKind.rpm), 'etesaL-0.19.0-1.x86_64.rpm');
       for (final kind in [
         LinuxInstallKind.pacman,
         LinuxInstallKind.portable,
         LinuxInstallKind.readOnly,
       ]) {
-        expect(pick(kind), 'keqdroid-0.19.0-linux-x64.tar.gz', reason: '$kind');
+        expect(pick(kind), 'etesaL-0.19.0-linux-x64.tar.gz', reason: '$kind');
       }
     });
   });
@@ -562,10 +562,10 @@ void main() {
         'body': '',
         'assets': [
           for (final n in [
-            'keqdroid-0.25.0-x86_64.AppImage',
-            'keqdroid_0.25.0_amd64.deb',
-            'keqdroid-0.25.0-1.x86_64.rpm',
-            'keqdroid-0.25.0-linux-x64.tar.gz',
+            'etesaL-0.25.0-x86_64.AppImage',
+            'etesaL_0.25.0_amd64.deb',
+            'etesaL-0.25.0-1.x86_64.rpm',
+            'etesaL-0.25.0-linux-x64.tar.gz',
             'SHA256SUMS',
           ])
             {
@@ -600,7 +600,7 @@ void main() {
       expect(arch.openInBrowser, isTrue);
       expect(arch.downloadUrl, 'https://example.invalid/releases/tag/v0.25.0');
       // Размер архива, из которого PKGBUILD собирает пакет.
-      expect(arch.apkSize, 'keqdroid-0.25.0-linux-x64.tar.gz'.length);
+      expect(arch.apkSize, 'etesaL-0.25.0-linux-x64.tar.gz'.length);
     });
 
     test('архив в папке без записи скачивается браузером', () {
@@ -608,7 +608,7 @@ void main() {
       expect(ro.openInBrowser, isTrue);
       expect(
         ro.downloadUrl,
-        'https://example.invalid/keqdroid-0.25.0-linux-x64.tar.gz',
+        'https://example.invalid/etesaL-0.25.0-linux-x64.tar.gz',
       );
     });
 
@@ -626,7 +626,7 @@ void main() {
       }
       expect(
         UpdateService.extensionFromUrl(
-          'https://example.invalid/keqdroid-0.25.0-1.x86_64.rpm',
+          'https://example.invalid/etesaL-0.25.0-1.x86_64.rpm',
         ),
         '.rpm',
       );
@@ -655,43 +655,43 @@ void main() {
 
   group('macOS release assets', () {
     final assets = [
-      {'name': 'keqdroid-0.39.2-macos-arm64.dmg'},
-      {'name': 'keqdroid-0.39.2-macos-x86_64.dmg'},
-      {'name': 'keqdroid-0.39.2-macos-universal.dmg'},
-      {'name': 'keqdroid-0.39.2-android.apk'},
+      {'name': 'etesaL-0.39.2-macos-arm64.dmg'},
+      {'name': 'etesaL-0.39.2-macos-x86_64.dmg'},
+      {'name': 'etesaL-0.39.2-macos-universal.dmg'},
+      {'name': 'etesaL-0.39.2-android.apk'},
     ];
 
     test('selects matching arm64 and x86_64 dmg assets', () {
       expect(
         UpdateService.findAssetNameForPlatform(assets, 'macos-arm64'),
-        'keqdroid-0.39.2-macos-arm64.dmg',
+        'etesaL-0.39.2-macos-arm64.dmg',
       );
       expect(
         UpdateService.findAssetNameForPlatform(assets, 'macos'),
-        'keqdroid-0.39.2-macos-x86_64.dmg',
+        'etesaL-0.39.2-macos-x86_64.dmg',
       );
     });
 
     test('falls back to universal dmg when arch-specific asset is absent', () {
       final universalOnly = [
-        {'name': 'keqdroid-0.39.2-macos-universal.dmg'},
+        {'name': 'etesaL-0.39.2-macos-universal.dmg'},
       ];
       expect(
         UpdateService.findAssetNameForPlatform(universalOnly, 'macos-arm64'),
-        'keqdroid-0.39.2-macos-universal.dmg',
+        'etesaL-0.39.2-macos-universal.dmg',
       );
       expect(
         UpdateService.findAssetNameForPlatform(universalOnly, 'macos'),
-        'keqdroid-0.39.2-macos-universal.dmg',
+        'etesaL-0.39.2-macos-universal.dmg',
       );
     });
 
     test('does not select an asset built for the other architecture', () {
       final intelOnly = [
-        {'name': 'keqdroid-0.39.2-macos-x86_64.dmg'},
+        {'name': 'etesaL-0.39.2-macos-x86_64.dmg'},
       ];
       final armOnly = [
-        {'name': 'keqdroid-0.39.2-macos-arm64.dmg'},
+        {'name': 'etesaL-0.39.2-macos-arm64.dmg'},
       ];
       expect(
         UpdateService.findAssetNameForPlatform(intelOnly, 'macos-arm64'),
@@ -702,12 +702,12 @@ void main() {
 
     test('accepts a macOS asset without an architecture marker', () {
       final unlabelled = [
-        {'name': 'keqdroid-0.39.2-macos.dmg'},
+        {'name': 'etesaL-0.39.2-macos.dmg'},
       ];
       for (final platform in ['macos', 'macos-arm64']) {
         expect(
           UpdateService.findAssetNameForPlatform(unlabelled, platform),
-          'keqdroid-0.39.2-macos.dmg',
+          'etesaL-0.39.2-macos.dmg',
         );
       }
     });
@@ -715,7 +715,7 @@ void main() {
     test('recognizes .dmg extension for updates', () {
       expect(
         UpdateService.extensionFromUrl(
-          'https://example.invalid/keqdroid-0.39.2-macos-universal.dmg',
+          'https://example.invalid/etesaL-0.39.2-macos-universal.dmg',
         ),
         '.dmg',
       );
