@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/custom_xray_config.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
-import 'package:keqdroid/utils/import_payload.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/custom_xray_config.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/import_payload.dart';
 
 // Готовый конфиг ядра, каким его отдают провайдеры: своя цепочка аутбаундов,
 // свои правила роутинга и свой dns, имя в корневом remarks (v2rayNG).
