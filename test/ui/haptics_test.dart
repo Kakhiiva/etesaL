@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/haptics.dart';
+import 'package:etesaL/shared/ui/haptics.dart';
 
 void main() {
   test('отдача идёт только когда включена И платформа её умеет', () {
