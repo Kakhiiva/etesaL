@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/utils/clipboard_import.dart';
-import 'package:keqdroid/utils/import_payload.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/utils/clipboard_import.dart';
+import 'package:etesaL/utils/import_payload.dart';
 
 const _vless = 'vless://uuid@de.example.com:443?security=tls&type=tcp#DE';
 const _trojan = 'trojan://pass@nl.example.com:8443?sni=nl.example.com#NL';
@@ -51,7 +51,7 @@ void main() {
     test('кнопка панели отдаёт вложенный адрес', () {
       expect(
         subscriptionUrlFromPastedLine(
-          'keqdroid://install-config?url=https%3A%2F%2Fsub.example%2Fs%2Fx',
+          'etesaL://install-config?url=https%3A%2F%2Fsub.example%2Fs%2Fx',
         ),
         'https://sub.example/s/x',
       );
