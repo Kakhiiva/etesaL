@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:keqdroid/utils/zip_layout.dart';
+import 'package:etesaL/utils/zip_layout.dart';
 
 class FixtureEntry {
   FixtureEntry(
