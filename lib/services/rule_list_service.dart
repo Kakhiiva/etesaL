@@ -137,7 +137,7 @@ class RuleListService {
 
     final client = HttpClient()
       ..connectionTimeout = const Duration(seconds: 15)
-      ..userAgent = 'keqdroid';
+      ..userAgent = 'etesaL';
     final resolver = _localProxyPort;
     if (resolver != null) configureHttpClientForLocalVpnProxy(client, resolver);
     try {
