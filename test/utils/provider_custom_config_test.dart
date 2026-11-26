@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
 
 // Реальный конфиг из подписки: провайдер отдаёт его вместо ссылки, когда
 // клиент представился Happ. Всё, ради чего такой сервер и берут, лежит здесь:
