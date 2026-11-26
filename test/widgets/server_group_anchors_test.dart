@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/server_group_anchors.dart';
+import 'package:etesaL/shared/ui/server_group_anchors.dart';
 
 // Прыжок к группе из бокового навигатора.
 //
