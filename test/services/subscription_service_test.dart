@@ -2,17 +2,17 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/services/storage_service.dart';
-import 'package:keqdroid/services/subscription_body_parser.dart';
-import 'package:keqdroid/services/subscription_service.dart';
-import 'package:keqdroid/utils/mieru_uri.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
-import 'package:keqdroid/utils/ssr_uri.dart';
-import 'package:keqdroid/utils/vpn_core_support.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/services/storage_service.dart';
+import 'package:etesaL/services/subscription_body_parser.dart';
+import 'package:etesaL/services/subscription_service.dart';
+import 'package:etesaL/utils/mieru_uri.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
+import 'package:etesaL/utils/ssr_uri.dart';
+import 'package:etesaL/utils/vpn_core_support.dart';
 import 'package:mocktail/mocktail.dart';
 
 class _MockStorageService extends Mock implements StorageService {}
@@ -198,8 +198,8 @@ void main() {
   });
 
   group('SubscriptionService User-Agent handling', () {
-    // в тестах PackageInfo недоступен → appUserAgent() падает в 'keqdroid'
-    const appUaPrefix = 'keqdroid';
+    // в тестах PackageInfo недоступен → appUserAgent() падает в 'etesaL'
+    const appUaPrefix = 'etesaL';
 
     late _UaGateAdapter adapter;
 
@@ -336,7 +336,7 @@ void main() {
       'saved own UA of an older version is replaced by the current one',
       () async {
         // Regression: подписка, добавленная на 0.8.7, после обновлений
-        // продолжала слать панели keqdroid/0.8.7
+        // продолжала слать панели etesaL/0.8.7
         final current = await SubscriptionService.appUserAgent();
         service = buildService((ua) => ua.startsWith(appUaPrefix));
 
@@ -345,7 +345,7 @@ void main() {
             id: 's1',
             name: 'S',
             url: 'https://example.com/sub',
-            userAgent: 'keqdroid/0.8.7',
+            userAgent: 'etesaL/0.8.7',
           ),
         );
 
