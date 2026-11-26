@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/custom_xray_config.dart';
-import 'package:keqdroid/utils/deprecated_xray_fields.dart';
+import 'package:etesaL/utils/custom_xray_config.dart';
+import 'package:etesaL/utils/deprecated_xray_fields.dart';
 
 // Поля, которые xray объявил к удалению, в готовых конфигах провайдеров
 // переводятся в новую запись по правилам самого ядра (xray 26.9.9,
