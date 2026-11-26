@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 import '../../utils/bidi.dart';
 import 'editor_layers.dart';
