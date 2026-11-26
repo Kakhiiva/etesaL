@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/tunnel/local_port_plan.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/tunnel/local_port_plan.dart';
 
 // Локальные порты остаются пожеланием, а не фактом.
 //
