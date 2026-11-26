@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
-import 'package:keqdroid/shared/ui/server_row.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
+import 'package:etesaL/shared/ui/server_row.dart';
 
 // В две колонки на вертикальном телефоне строка сервера сжимала имя до
 // Росс…, а пинг до 42 …. Там ряд теперь встаёт карточкой, и тест сторожит
