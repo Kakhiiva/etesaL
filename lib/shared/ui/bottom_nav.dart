@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/halloween/halloween_icons.dart';
-import 'package:keqdroid/shared/ui/haptics.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/halloween/halloween_icons.dart';
+import 'package:etesaL/shared/ui/haptics.dart';
 
 List<({IconData icon, String label, bool badge})> appNavDestinations(
   AppLocalizations l10n, {
