@@ -16,7 +16,7 @@ struct ProcessResources {
   uint32_t user_objects = 0;
 };
 
-// pid 0 указывает на сам keqdroid.exe
+// pid 0 указывает на сам etesaL.exe
 ProcessResources QueryProcessResources(uint32_t pid);
 
 // в трее Windows выгружает нас до 10-35 МБ из 200-300, и страницы возвращались по одной уже под
