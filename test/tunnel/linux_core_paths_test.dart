@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/linux_core_paths.dart';
+import 'package:etesaL/tunnel/linux_core_paths.dart';
 
 // Ядро в кэше меняется только переименованием готового файла: прямая запись
 // с обрезкой давала полузаписанный бинарь тем замерам, что запускали его в
@@ -9,7 +9,7 @@ import 'package:keqdroid/tunnel/linux_core_paths.dart';
 void main() {
   late Directory tmp;
 
-  setUp(() => tmp = Directory.systemTemp.createTempSync('keq_stage_'));
+  setUp(() => tmp = Directory.systemTemp.createTempSync('etesaL_stage_'));
   tearDown(() => tmp.deleteSync(recursive: true));
 
   test('the new file replaces the old one whole', () async {
@@ -93,7 +93,7 @@ void main() {
       ]).timeout(const Duration(seconds: 5));
 
       expect(paths.toSet(), hasLength(1));
-      expect(Directory('${tmp.path}/keqdroid/cores').listSync(), hasLength(1));
+      expect(Directory('${tmp.path}/etesaL/cores').listSync(), hasLength(1));
     });
 
     test('an updated core of another size replaces the cached one', () async {
