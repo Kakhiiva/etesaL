@@ -2,8 +2,8 @@
 
 Proxy and VPN client for Android, Android TV, Windows, Linux and macOS, built on Xray-core and mihomo. etesaL manages subscriptions, server configurations and traffic routing in a single application.
 
-[![Release](https://img.shields.io/github/v/release/Lemonochka/etesaL?label=release)](https://github.com/Lemonochka/etesaL/releases)
-[![Build](https://img.shields.io/github/actions/workflow/status/Lemonochka/etesaL/ci.yml?branch=master&label=build)](https://github.com/Lemonochka/etesaL/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Kakhiiva/etesaL?label=release)](https://github.com/Kakhiiva/etesaL/releases)
+[![Build](https://img.shields.io/github/actions/workflow/status/Kakhiiva/etesaL/ci.yml?branch=master&label=build)](https://github.com/Kakhiiva/etesaL/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-chat-26A5E4?logo=telegram&logoColor=white)](https://t.me/etesaL)
 
@@ -15,7 +15,7 @@ https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
 
 ## Download
 
-Builds are published on the [Releases](https://github.com/Lemonochka/etesaL/releases) page.
+Builds are published on the [Releases](https://github.com/Kakhiiva/etesaL/releases) page.
 
 | Platform | Package |
 |----------|---------|
@@ -104,7 +104,7 @@ A ready-made configuration keeps its own routing, DNS and outbounds. Inbounds an
 
 **Windows.** The installer places the application in Program Files and can remove it together with its data; the portable version runs from any folder. The application can start with the system, connect automatically and stay in the tray. Settings are stored in `%APPDATA%\com.etesaL\etesaL\` and are shared by both versions.
 
-**Linux.** The application can start at login and connect automatically. On Arch Linux, install with `makepkg -si` using the `PKGBUILD` from the release. On NixOS, add `github:Lemonochka/etesaL/nix` to flake inputs and include `inputs.etesaL.packages.x86_64-linux.default` in `environment.systemPackages`.
+**Linux.** The application can start at login and connect automatically. On Arch Linux, install with `makepkg -si` using the `PKGBUILD` from the release. On NixOS, add `github:Kakhiiva/etesaL/nix` to flake inputs and include `inputs.etesaL.packages.x86_64-linux.default` in `environment.systemPackages`.
 
 **macOS.** Separate builds are provided for Apple Silicon and Intel. The application can start at login, connect automatically and stay in the menu bar.
 
@@ -144,10 +144,10 @@ Free code signing provided by [SignPath.io](https://signpath.io), certificate by
 
 macOS builds are ad-hoc signed and are not notarized by Apple.
 
-- Committers and reviewers: [Lemonochka](https://github.com/Lemonochka)
-- Approvers: [Lemonochka](https://github.com/Lemonochka)
+- Committers and reviewers: [Kakhiiva](https://github.com/Kakhiiva)
+- Approvers: [Kakhiiva](https://github.com/Kakhiiva)
 
-Releases after 0.35.0 are built from this repository by [GitHub Actions](.github/workflows/release.yml). `gh attestation verify <file> --repo Lemonochka/etesaL` confirms that a file came from that build. Signing covers `etesaL.exe` and the installer; the bundled `xray.exe` and `mihomo.exe` are builds of the upstream Xray-core and mihomo.
+Releases after 0.35.0 are built from this repository by [GitHub Actions](.github/workflows/release.yml). `gh attestation verify <file> --repo Kakhiiva/etesaL` confirms that a file came from that build. Signing covers `etesaL.exe` and the installer; the bundled `xray.exe` and `mihomo.exe` are builds of the upstream Xray-core and mihomo.
 
 ## Security
 
