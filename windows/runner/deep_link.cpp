@@ -10,7 +10,7 @@ namespace {
 constexpr ULONG_PTR kCopyDataId = 0x4B455144;  // 'KEQD'
 
 // схемы вписаны в настройки чужих панелей, переименовать нельзя (lib/utils/subscription_deep_link.dart)
-const wchar_t* const kSchemes[] = {L"keqdroid", L"keqdis"};
+const wchar_t* const kSchemes[] = {L"etesaL", L"keqdis"};
 
 std::string WideToUtf8(const std::wstring& text) {
   if (text.empty()) {
