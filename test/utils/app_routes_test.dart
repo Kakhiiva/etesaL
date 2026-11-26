@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/app_routes.dart';
-import 'package:keqdroid/utils/route_servers.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/app_routes.dart';
+import 'package:etesaL/utils/route_servers.dart';
 
 const _de = 'trojan://pw@de.example:443?security=tls&sni=de.example#DE';
 const _nl = 'trojan://pw@nl.example:443?security=tls&sni=nl.example#NL';
