@@ -1,16 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/linux_autostart.dart';
+import 'package:etesaL/services/linux_autostart.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
   test('the autostart entry launches the app with the login flag', () {
-    final text = LinuxAutostart.contentFor('/home/u/Apps/keqdroid.AppImage');
+    final text = LinuxAutostart.contentFor('/home/u/Apps/etesaL.AppImage');
     expect(
       text,
       contains(
-        'Exec="/home/u/Apps/keqdroid.AppImage" ${LinuxAutostart.flag}\n',
+        'Exec="/home/u/Apps/etesaL.AppImage" ${LinuxAutostart.flag}\n',
       ),
     );
     expect(text, contains('X-GNOME-Autostart-enabled=true\n'));
@@ -19,8 +19,8 @@ void main() {
 
   test('a path with spaces stays one argument', () {
     expect(
-      LinuxAutostart.contentFor('/home/u/My Apps/keqdroid'),
-      contains('Exec="/home/u/My Apps/keqdroid" --autostart'),
+      LinuxAutostart.contentFor('/home/u/My Apps/etesaL'),
+      contains('Exec="/home/u/My Apps/etesaL" --autostart'),
     );
   });
 
@@ -29,11 +29,11 @@ void main() {
       LinuxAutostart.startLines(
         'hyprland',
         'hypr-user.lua',
-        '/home/u/Загрузки/keqdroid.AppImage',
+        '/home/u/Загрузки/etesaL.AppImage',
       ),
       endsWith(
         '\nhl.on("hyprland.start", function() '
-        'hl.exec_cmd("\'/home/u/Загрузки/keqdroid.AppImage\' --autostart") end)\n',
+        'hl.exec_cmd("\'/home/u/Загрузки/etesaL.AppImage\' --autostart") end)\n',
       ),
     );
     expect(
@@ -57,12 +57,12 @@ void main() {
 
   test('sway starts it with exec, river from init in the background', () {
     expect(
-      LinuxAutostart.startLines('sway', 'config', '/home/u/keqdroid'),
-      endsWith("\nexec '/home/u/keqdroid' --autostart\n"),
+      LinuxAutostart.startLines('sway', 'config', '/home/u/etesaL'),
+      endsWith("\nexec '/home/u/etesaL' --autostart\n"),
     );
     expect(
-      LinuxAutostart.startLines('river', 'init', '/home/u/keqdroid'),
-      endsWith("\n'/home/u/keqdroid' --autostart &\n"),
+      LinuxAutostart.startLines('river', 'init', '/home/u/etesaL'),
+      endsWith("\n'/home/u/etesaL' --autostart &\n"),
     );
   });
 
@@ -83,9 +83,9 @@ void main() {
 
   test('niri gets spawn-at-startup with the path as its own KDL string', () {
     expect(
-      LinuxAutostart.startLines('niri', 'config.kdl', r'/home/u/"x"\keqdroid'),
+      LinuxAutostart.startLines('niri', 'config.kdl', r'/home/u/"x"\etesaL'),
       endsWith(
-        '\nspawn-at-startup "/home/u/\\"x\\"\\\\keqdroid" "--autostart"\n',
+        '\nspawn-at-startup "/home/u/\\"x\\"\\\\etesaL" "--autostart"\n',
       ),
     );
   });
@@ -101,14 +101,14 @@ void main() {
     final realEnvironment = LinuxAutostart.environment;
     final realFileExists = LinuxAutostart.fileExists;
 
-    File entry() => File(p.join(config.path, 'autostart', 'keqdroid.desktop'));
+    File entry() => File(p.join(config.path, 'autostart', 'etesaL.desktop'));
     File hyprlandDropIn() => File(
       p.join(
         config.path,
         'systemd',
         'user',
         'hyprland-session.target.d',
-        'keqdroid.conf',
+        'etesaL.conf',
       ),
     );
     // так systemd-xdg-autostart-generator называет службу из ярлыка
@@ -187,7 +187,7 @@ void main() {
       enabledEarlier();
       put(
         caelestia(),
-        '-- mine\n${LinuxAutostart.startLines('hyprland', caelestia().path, '/old/keqdroid.AppImage')}',
+        '-- mine\n${LinuxAutostart.startLines('hyprland', caelestia().path, '/old/etesaL.AppImage')}',
       );
 
       await LinuxAutostart.refresh();
@@ -214,7 +214,7 @@ void main() {
 
     test('a line the user put under our mark by hand survives', () async {
       const own =
-          '-- keqdroid autostart, added and removed by the app\n'
+          '-- etesaL autostart, added and removed by the app\n'
           'hl.exec_cmd("waybar")\n';
       put(caelestia(), own);
 
@@ -398,7 +398,7 @@ void main() {
     });
 
     test('an entry the user made by hand is not taken over', () async {
-      const own = '[Desktop Entry]\nExec=keqdroid\n';
+      const own = '[Desktop Entry]\nExec=etesaL\n';
       entry()
         ..parent.createSync(recursive: true)
         ..writeAsStringSync(own);
@@ -415,8 +415,8 @@ void main() {
       'path',
       () async {
         const storeExe =
-            '/nix/store/9f0a-keqdroid-0.39.1/lib/keqdroid/keqdroid';
-        const profileExe = '/run/current-system/sw/bin/keqdroid';
+            '/nix/store/9f0a-etesaL-0.39.1/lib/etesaL/etesaL';
+        const profileExe = '/run/current-system/sw/bin/etesaL';
         wm = 'hyprland';
         put(hyprConf(), '');
         LinuxAutostart.executablePath = () => storeExe;
@@ -438,10 +438,10 @@ void main() {
     test('on NixOS a user profile link is picked when the package is not '
         'system-wide, and refresh replaces an old store path', () async {
       const oldStoreExe =
-          '/nix/store/0001-keqdroid-0.39.0/lib/keqdroid/keqdroid';
+          '/nix/store/0001-etesaL-0.39.0/lib/etesaL/etesaL';
       const newStoreExe =
-          '/nix/store/0002-keqdroid-0.39.1/lib/keqdroid/keqdroid';
-      const userProfileExe = '/etc/profiles/per-user/alice/bin/keqdroid';
+          '/nix/store/0002-etesaL-0.39.1/lib/etesaL/etesaL';
+      const userProfileExe = '/etc/profiles/per-user/alice/bin/etesaL';
       wm = 'hyprland';
       put(entry(), LinuxAutostart.contentFor(oldStoreExe));
       put(
@@ -468,9 +468,9 @@ void main() {
       'without a Nix profile link autostart falls back to the GTK wrapper in '
       'the same store package',
       () async {
-        const storeDir = '/nix/store/9f0a-keqdroid-0.39.1';
-        const storeExe = '$storeDir/lib/keqdroid/keqdroid';
-        const wrappedExe = '$storeDir/bin/keqdroid';
+        const storeDir = '/nix/store/9f0a-etesaL-0.39.1';
+        const storeExe = '$storeDir/lib/etesaL/etesaL';
+        const wrappedExe = '$storeDir/bin/etesaL';
         LinuxAutostart.homeOverride = '/home/alice';
         LinuxAutostart.executablePath = () => storeExe;
         LinuxAutostart.environment = () => const {'USER': 'alice'};
@@ -500,7 +500,7 @@ void main() {
     setUp(() {
       data = Directory.systemTemp.createTempSync('kq_in_tray_');
       LinuxAutostart.dataHomeOverride = data.path;
-      args = ['/opt/keqdroid/keqdroid'];
+      args = ['/opt/etesaL/etesaL'];
       LinuxAutostart.commandLine = () => args;
     });
 
