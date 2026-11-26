@@ -26,7 +26,7 @@ void KeqdroidNotifyHotkeyPressed(const std::string& action);
 // Dart по нему ставит на паузу анимацию и опрос трафика: жизненный цикл Flutter отдаёт SW_HIDE как inactive, не hidden
 void KeqdroidNotifyWindowVisibility(bool visible);
 
-// чтобы после перезагрузки интернет был до запуска keqdroid
+// чтобы после перезагрузки интернет был до запуска etesaL
 void KeqdroidClearSystemProxyOnSessionEnd();
 
 // после удаления приложение больше не стартует и свой зависший прокси уже не снимет
