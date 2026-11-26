@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
+import 'package:etesaL/app/app.dart';
 
 ColorScheme _scheme(Brightness brightness) => ColorScheme.fromSeed(
   seedColor: const Color(0xFF6750A4),
