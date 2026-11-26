@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_flag.dart';
-import 'package:keqdroid/services/exit_ip_service.dart';
+import 'package:etesaL/models/server_flag.dart';
+import 'package:etesaL/services/exit_ip_service.dart';
 
 // Выход подключения: адрес и страна из трассировки Cloudflare, и только
 // через локальный инбаунд ядра: прямой запрос показал бы адрес без VPN.
