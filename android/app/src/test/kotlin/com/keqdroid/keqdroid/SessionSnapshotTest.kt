@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -7,7 +7,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class SessionSnapshotTest {
-    private val config = "/data/user/0/com.keqdroid.keqdroid/files/xray_config.json"
+    private val config = "/data/user/0/com.etesaL.etesaL/files/xray_config.json"
 
     private fun snapshot(
         backend: String = KeqdisVpnService.VPN_BACKEND_MIHOMO,
