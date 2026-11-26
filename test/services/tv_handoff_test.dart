@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/tv_handoff.dart';
+import 'package:etesaL/services/tv_handoff.dart';
 
 // Подписка с телефона на телевизор: код из QR, выбор адреса и сам обмен по
 // HTTP. Обмен гоняется на 127.0.0.1 настоящими сокетами: так проверяется
@@ -35,7 +35,7 @@ void main() {
       for (final h in ['8.8.8.8', 'evil.example.com', '172.32.0.1', '::1']) {
         expect(
           TvPairing.parse(
-            'keqdroid://tv-send?h=$h&p=8080&t=AbCdEfGhIjKlMnOpQrStUv',
+            'etesaL://tv-send?h=$h&p=8080&t=AbCdEfGhIjKlMnOpQrStUv',
           ),
           isNull,
           reason: h,
@@ -45,10 +45,10 @@ void main() {
 
     test('без ключа, с битым портом или чужой ссылкой — не код телевизора', () {
       for (final raw in [
-        'keqdroid://tv-send?h=192.168.1.2&p=8080',
-        'keqdroid://tv-send?h=192.168.1.2&p=8080&t=short',
-        'keqdroid://tv-send?h=192.168.1.2&p=70000&t=AbCdEfGhIjKlMnOpQrStUv',
-        'keqdroid://install-config?url=https://example.com/sub',
+        'etesaL://tv-send?h=192.168.1.2&p=8080',
+        'etesaL://tv-send?h=192.168.1.2&p=8080&t=short',
+        'etesaL://tv-send?h=192.168.1.2&p=70000&t=AbCdEfGhIjKlMnOpQrStUv',
+        'etesaL://install-config?url=https://example.com/sub',
         'https://192.168.1.2:8080/add',
       ]) {
         expect(TvPairing.parse(raw), isNull, reason: raw);
