@@ -48,7 +48,7 @@ class MacosCorePaths {
     return null;
   }
 
-  static String? daemonExecutable() => bundledCorePath('keqdroid-tun');
+  static String? daemonExecutable() => bundledCorePath('etesaL-tun');
 
   static Future<String?> xrayExecutable() => _resolveExecutable('xray');
 
@@ -82,13 +82,13 @@ class MacosCorePaths {
   }
 
   static Future<String> _coresCacheDir() async {
-    final dir = Directory(p.join(_cacheRoot(), 'keqdroid', 'cores'));
+    final dir = Directory(p.join(_cacheRoot(), 'etesaL', 'cores'));
     if (!dir.existsSync()) dir.createSync(recursive: true);
     return dir.path;
   }
 
   static Future<String> mihomoHomeDir() async {
-    final dir = Directory(p.join(_cacheRoot(), 'keqdroid', 'mihomo'));
+    final dir = Directory(p.join(_cacheRoot(), 'etesaL', 'mihomo'));
     if (!dir.existsSync()) dir.createSync(recursive: true);
     final geoDir = await geoAssetDir();
     if (geoDir != null && geoDir != dir.path) {
@@ -119,7 +119,7 @@ class MacosCorePaths {
   }
 
   static Future<String?> geoAssetDir() async {
-    final cachedGeo = p.join(_cacheRoot(), 'keqdroid', 'geo');
+    final cachedGeo = p.join(_cacheRoot(), 'etesaL', 'geo');
     if (geoFileNames.any((f) => File(p.join(cachedGeo, f)).existsSync())) {
       return cachedGeo;
     }
