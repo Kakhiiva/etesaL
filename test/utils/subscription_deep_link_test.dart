@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/subscription_deep_link.dart';
+import 'package:etesaL/utils/subscription_deep_link.dart';
 
 void main() {
   group('subscriptionUrlFromDeepLink', () {
     test('вытаскивает подписку из ссылки, как её собирает панель', () {
       expect(
         subscriptionUrlFromDeepLink(
-          'keqdroid://install-config?url=https://panel.example.com/sub/abc123',
+          'etesaL://install-config?url=https://panel.example.com/sub/abc123',
         ),
         'https://panel.example.com/sub/abc123',
       );
@@ -25,7 +25,7 @@ void main() {
       for (final host in const ['install-config', 'add', 'subscribe', '']) {
         expect(
           subscriptionUrlFromDeepLink(
-            'keqdroid://$host?url=https://panel.example.com/sub',
+            'etesaL://$host?url=https://panel.example.com/sub',
           ),
           'https://panel.example.com/sub',
           reason: 'хост "$host"',
@@ -36,7 +36,7 @@ void main() {
     test('percent-кодированный адрес разворачивается', () {
       expect(
         subscriptionUrlFromDeepLink(
-          'keqdroid://install-config?url=https%3A%2F%2Fp.example.com%2Fsub%3Ftoken%3D1',
+          'etesaL://install-config?url=https%3A%2F%2Fp.example.com%2Fsub%3Ftoken%3D1',
         ),
         'https://p.example.com/sub?token=1',
       );
@@ -47,7 +47,7 @@ void main() {
       // становится нашим query, но параметр url доносит строку целиком.
       expect(
         subscriptionUrlFromDeepLink(
-          'keqdroid://install-config?url=https://p.example.com/sub?token=1',
+          'etesaL://install-config?url=https://p.example.com/sub?token=1',
         ),
         'https://p.example.com/sub?token=1',
       );
@@ -66,19 +66,19 @@ void main() {
     });
 
     test('мусор вместо адреса отбрасывается', () {
-      expect(subscriptionUrlFromDeepLink('keqdroid://install-config'), isNull);
+      expect(subscriptionUrlFromDeepLink('etesaL://install-config'), isNull);
       expect(
-        subscriptionUrlFromDeepLink('keqdroid://install-config?url='),
+        subscriptionUrlFromDeepLink('etesaL://install-config?url='),
         isNull,
       );
       expect(
-        subscriptionUrlFromDeepLink('keqdroid://install-config?url=not-a-url'),
+        subscriptionUrlFromDeepLink('etesaL://install-config?url=not-a-url'),
         isNull,
       );
       // ftp/file и прочее в подписку не пускаем.
       expect(
         subscriptionUrlFromDeepLink(
-          'keqdroid://install-config?url=ftp://x.example.com/s',
+          'etesaL://install-config?url=ftp://x.example.com/s',
         ),
         isNull,
       );
