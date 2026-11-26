@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/models/app_settings.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/models/app_settings.dart';
 
 // Своя тема: цвет приходит строкой из настроек, из резервной копии и из чужих
 // рук, а на выходе обязан быть палитрой, либо своей, либо честным умолчанием.
