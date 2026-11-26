@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
+import 'package:etesaL/models/app_settings.dart';
 
 void main() {
   group('размер интерфейса', () {
