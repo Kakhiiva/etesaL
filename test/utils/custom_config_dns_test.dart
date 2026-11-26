@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/custom_xray_config.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/custom_xray_config.dart';
 
 // DNS в готовом (custom) конфиге.
 //
