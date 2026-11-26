@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/screens/settings/connection_tile.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/screens/settings/connection_tile.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 // Экран Соединения дважды показывал пустоту при непустом счётчике: оба раза
 // плитка падала внутри списка (сначала в paint на разноцветной рамке со
