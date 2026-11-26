@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
 
 Future<BuildContext> _pump(
   WidgetTester tester, {
