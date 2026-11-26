@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/wintun_adapters.dart';
-import 'package:keqdroid/utils/desktop_tun.dart';
+import 'package:etesaL/tunnel/wintun_adapters.dart';
+import 'package:etesaL/utils/desktop_tun.dart';
 
 // ID устройств сверены с журналом Kernel-PnP/Configuration на ПК, где
 // 27.10.2026 Windows отказывала в адаптере: так их видит Windows.
