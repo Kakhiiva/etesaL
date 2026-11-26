@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/mieru_uri.dart';
+import 'package:etesaL/utils/mieru_uri.dart';
 
 // Одна ссылка mieru описывает столько серверов, сколько в ней пар
 // порт/протокол. У нас одна ссылка даёт один сервер, поэтому на импорте она
