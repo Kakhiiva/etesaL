@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.Activity
 import android.app.WallpaperManager
@@ -52,9 +52,9 @@ import java.net.Socket
 class MainActivity : FlutterFragmentActivity() {
 
     companion object {
-        const val METHOD_CHANNEL = "keqdroid_vpn_channel"
-        const val EVENT_CHANNEL = "keqdroid_vpn_status"
-        const val PING_PROGRESS_CHANNEL = "keqdroid_ping_progress"
+        const val METHOD_CHANNEL = "etesaL_vpn_channel"
+        const val EVENT_CHANNEL = "etesaL_vpn_status"
+        const val PING_PROGRESS_CHANNEL = "etesaL_ping_progress"
         const val EXTRA_LAUNCH_ACTION = "action"
         // те же строки в res/xml/shortcuts.xml и в servers_tab на стороне Dart
         const val LAUNCH_ACTION_CONNECT = "connect_from_notification"
@@ -1467,7 +1467,7 @@ class MainActivity : FlutterFragmentActivity() {
 }
 
 // окно открыто наружу, extra может прислать любое приложение; закрытый алиас запускают только мы и лаунчер
-private const val LAUNCH_ALIAS = "com.keqdroid.keqdroid.LaunchAction"
+private const val LAUNCH_ALIAS = "com.etesaL.etesaL.LaunchAction"
 private val LAUNCH_ACTIONS = setOf(
     MainActivity.LAUNCH_ACTION_CONNECT,
     MainActivity.LAUNCH_ACTION_DISCONNECT,
