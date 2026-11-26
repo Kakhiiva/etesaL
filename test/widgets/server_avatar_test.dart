@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_flag.dart';
-import 'package:keqdroid/shared/ui/server_avatar.dart';
+import 'package:etesaL/models/server_flag.dart';
+import 'package:etesaL/shared/ui/server_avatar.dart';
 
 // Раньше кругляш умел ровно один вид флага, страновой, и только тот, что
 // знает таблица кодов пакета. Всё остальное (🇪🇺, 🏴󠁧󠁢󠁳󠁣󠁴󠁿, 🏴‍☠️) сваливалось
