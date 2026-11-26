@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/shared/ui/halloween/pumpkin_button.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/shared/ui/halloween/pumpkin_button.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 Widget _button({
   bool connected = false,
