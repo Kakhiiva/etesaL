@@ -52,7 +52,7 @@
           "tun-in"
         ],
         "process": [
-          "keqdroid:outside-vpn"
+          "etesaL:outside-vpn"
         ],
         "outboundTag": "keq-block"
       },
