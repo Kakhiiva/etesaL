@@ -7,7 +7,7 @@ import 'windows_desktop_service.dart';
 class WindowsZipUpdater {
   WindowsZipUpdater._();
 
-  static const exeName = 'keqdroid.exe';
+  static const exeName = 'etesaL.exe';
 
   static String? findPayloadRoot(Directory extractDir) {
     final atRoot = File(p.join(extractDir.path, exeName));
@@ -150,7 +150,7 @@ param(
 # Keep going on non-terminating errors so robocopy failures don't abort the
 # relaunch, and log everything to a file for diagnosing failed updates.
 $ErrorActionPreference = 'Continue'
-$log = Join-Path $env:TEMP 'keqdroid_update.log'
+$log = Join-Path $env:TEMP 'etesaL_update.log'
 function Log($m) {
   try { "$(Get-Date -Format o)  $m" | Out-File -FilePath $log -Append -Encoding utf8 } catch {}
 }
@@ -167,7 +167,7 @@ Start-Sleep -Seconds 3
 # 2) stop leftover processes that may lock binaries in the install dir.
 #    Match by executable path, not just name: the same names (xray, sing-box,
 #    mihomo) may belong to other apps on this machine.
-foreach ($name in @('keqdroid', 'keqrnel', 'mihomo', 'xray', 'sing-box')) {
+foreach ($name in @('etesaL', 'keqrnel', 'mihomo', 'xray', 'sing-box')) {
   Get-Process -Name $name -ErrorAction SilentlyContinue | Where-Object {
     try {
       $_.Path -and $_.Path.StartsWith($TargetDir, [System.StringComparison]::OrdinalIgnoreCase)
@@ -214,7 +214,7 @@ for ($attempt = 1; $attempt -le 8; $attempt++) {
   Log "robocopy attempt $attempt exit=$code"
 
   $critical = @(
-    (Join-Path $SourceDir 'keqdroid.exe'),
+    (Join-Path $SourceDir 'etesaL.exe'),
     (Join-Path $SourceDir 'data\app.so')
   )
   $allMatch = $true
