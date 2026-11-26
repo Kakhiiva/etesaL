@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/screens/tv_send_dialog.dart';
-import 'package:keqdroid/services/tv_handoff.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/screens/tv_send_dialog.dart';
+import 'package:etesaL/services/tv_handoff.dart';
 
 // Телефон после скана кода телевизора: выбор подписки и отправка. Отправка
 // идёт настоящим сокетом на сервер приёма на 127.0.0.1.
