@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
 
 const _de =
     'vless://uuid-de@de.example.com:443?security=tls&type=tcp#%F0%9F%87%A9%F0%9F%87%AA%20DE-1';
