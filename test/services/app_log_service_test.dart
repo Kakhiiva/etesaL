@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/app_logger.dart';
-import 'package:keqdroid/services/app_log_service.dart';
+import 'package:etesaL/core/app_logger.dart';
+import 'package:etesaL/services/app_log_service.dart';
 
 void main() {
   group('журнал файлом', () {
@@ -33,7 +33,7 @@ void main() {
         now: DateTime(2026, 11, 19, 19, 7),
       );
 
-      expect(file.uri.pathSegments.last, 'keqdroid-log-2026-11-19-1907.txt');
+      expect(file.uri.pathSegments.last, 'etesaL-log-2026-11-19-1907.txt');
       final text = await file.readAsString();
       expect(text, contains('record 000'));
       expect(text, contains('record 309'));
@@ -53,7 +53,7 @@ void main() {
         '2026-09-27T22:51:39.123456 [INFO] VPN connected\n'
         '2026-09-27T22:51:40.000 [ERROR] KEQDIS: startVpn failed: boom\n'
         'java.lang.IllegalStateException: boom\n'
-        '\tat com.keqdroid.keqdroid.KeqdisVpnService.startXray(Unknown)\n'
+        '\tat com.etesaL.etesaL.KeqdisVpnService.startXray(Unknown)\n'
         '2026-09-27T22:51:41.000 [WARN] handover: mihomo API did not answer\n'
         '2026-09-27T22:51:42.000 [DEBUG] syncFromNative failed\n';
 
@@ -67,7 +67,7 @@ void main() {
         LogLevel.debug,
       ]);
       expect(entries[1].text, contains('startVpn failed'));
-      expect(entries[1].text, contains('\tat com.keqdroid.keqdroid'));
+      expect(entries[1].text, contains('\tat com.etesaL.etesaL'));
       expect(entries[2].text, isNot(contains('\tat')));
     });
 
