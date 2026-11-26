@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/local_proxy_probe.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/tunnel/local_proxy_probe.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Локальный вход ядра в режиме TUN: без пароля сессии отвечает 407, с ним
 // пропускает проверочный запрос.
