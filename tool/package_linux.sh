@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 #
 # Package the built Linux desktop bundle into distributable artifacts:
-#   release/<ver>/keqdroid_<ver>_amd64.deb            (Debian/Ubuntu)
-#   release/<ver>/keqdroid-<ver>-1.x86_64.rpm         (Fedora/openSUSE)
-#   release/<ver>/keqdroid-<ver>-x86_64.AppImage      (universal incl. Arch)
-#   release/<ver>/keqdroid-<ver>-linux-x64.tar.gz     (portable; AUR source)
+#   release/<ver>/etesaL_<ver>_amd64.deb            (Debian/Ubuntu)
+#   release/<ver>/etesaL-<ver>-1.x86_64.rpm         (Fedora/openSUSE)
+#   release/<ver>/etesaL-<ver>-x86_64.AppImage      (universal incl. Arch)
+#   release/<ver>/etesaL-<ver>-linux-x64.tar.gz     (portable; AUR source)
 #   release/<ver>/PKGBUILD                            (Arch, manual makepkg)
 #   release/<ver>/aur/PKGBUILD + aur/.SRCINFO         (tool/publish_aur.sh)
 #   release/<ver>/SHA256SUMS                          (the updater reads it)
 #
 # Run inside WSL/Linux AFTER tool/build_linux_wsl.sh:
-#   wsl -e bash /mnt/c/.../keqdroid/tool/package_linux.sh
+#   wsl -e bash /mnt/c/.../etesaL/tool/package_linux.sh
 #
 set -euo pipefail
 umask 022
@@ -18,13 +18,13 @@ umask 022
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_DIR"
 
-APP=keqdroid
-GH_OWNER=Lemonochka
-GH_REPO=keqdroid
-MAINTAINER="Lemonochka <noreply@users.noreply.github.com>"
+APP=etesaL
+GH_OWNER=Kakhiiva
+GH_REPO=etesaL
+MAINTAINER="Kakhiiva <noreply@users.noreply.github.com>"
 ARCH_DEB=amd64
 ARCH_AI=x86_64
-PKGDESC="keqdroid proxy/VPN client (Xray, mihomo, sing-box; proxy + TUN)"
+PKGDESC="etesaL proxy/VPN client (Xray, mihomo, sing-box; proxy + TUN)"
 # у -bin-пакета лицензий больше своей: внутри лежат ядра, у Xray MPL, у mihomo GPL
 LICENSES=(AGPL-3.0-only GPL-3.0-only MPL-2.0)
 
@@ -151,22 +151,22 @@ ICON_SRC="$REPO_DIR/assets/icon.png"
 
 # Окно называет себя id приложения (g_set_prgname в linux/runner), и этот id служит
 # его WM_CLASS на X11 и app_id на Wayland. Окно с ярлыком, а с ним и с иконкой,
-# среда связывает по StartupWMClass; со значением keqdroid связи не было, и
+# среда связывает по StartupWMClass; со значением etesaL связи не было, и
 # иконки не было нигде. Имя файла ярлыка прежнее, иначе после обновления
 # пропали бы значки, закреплённые в доке. Иконка ставится и под именем окна:
 # доки на wlroots ищут её в теме прямо по app_id.
 # KWin (Alt+Tab, обзор окон) ищет ярлык только по имени $APP_ID.desktop, иначе
 # рисует значок Wayland, поэтому рядом скрытый двойник под этим именем.
-APP_ID=com.keqdroid.keqdroid
+APP_ID=com.etesaL.etesaL
 
 write_desktop() { # $1 = exec name, $2 = dest file
   cat > "$2" <<EOF
 [Desktop Entry]
 Type=Application
 Name=KeqDroid
-Comment=keqdroid proxy/VPN client
+Comment=etesaL proxy/VPN client
 Exec=$1 %u
-MimeType=x-scheme-handler/keqdroid;x-scheme-handler/keqdis;
+MimeType=x-scheme-handler/etesaL;x-scheme-handler/keqdis;
 Icon=$APP
 Categories=Network;
 Terminal=false
@@ -227,17 +227,17 @@ Maintainer: $MAINTAINER
 Installed-Size: $INSTALLED_KB
 Depends: libgtk-3-0, libglib2.0-0, libstdc++6, zlib1g, libayatana-appindicator3-1
 Recommends: polkit-1 | policykit-1, gnome-shell-extension-appindicator, xdg-desktop-portal-gtk | xdg-desktop-portal-kde | xdg-desktop-portal-gnome | zenity
-Description: keqdroid proxy/VPN client
+Description: etesaL proxy/VPN client
  Xray, mihomo and sing-box client with proxy and TUN modes.
  TUN mode requests root via pkexec (polkit) at connect time, so polkit and a
  polkit authentication agent have to be installed for it.
 EOF
-# 0.35.0 и раньше ставили /opt/keqdroid с 0777, а права существующего каталога dpkg при обновлении не меняет
+# 0.35.0 и раньше ставили /opt/etesaL с 0777, а права существующего каталога dpkg при обновлении не меняет
 cat > "$DEBROOT/DEBIAN/postinst" <<'EOF'
 #!/bin/sh
 set -e
 if [ "$1" = configure ]; then
-  chmod -R go-w "$DPKG_ROOT/opt/keqdroid"
+  chmod -R go-w "$DPKG_ROOT/opt/etesaL"
 fi
 EOF
 normalize_modes "$DEBROOT" "opt/$APP/$APP" "opt/$APP/mihomo" "opt/$APP/xray" DEBIAN/postinst
@@ -278,7 +278,7 @@ cat > "$RPMTOP/SPECS/$APP.spec" <<EOF
 Name:           $APP
 Version:        $VERSION
 Release:        1
-Summary:        keqdroid proxy/VPN client
+Summary:        etesaL proxy/VPN client
 License:        AGPL-3.0-only AND GPL-3.0-only AND MPL-2.0
 URL:            https://github.com/$GH_OWNER/$GH_REPO
 BuildArch:      $ARCH_AI
@@ -412,9 +412,9 @@ package() {
 [Desktop Entry]
 Type=Application
 Name=KeqDroid
-Comment=keqdroid proxy/VPN client
+Comment=etesaL proxy/VPN client
 Exec=$APP %u
-MimeType=x-scheme-handler/keqdroid;x-scheme-handler/keqdis;
+MimeType=x-scheme-handler/etesaL;x-scheme-handler/keqdis;
 Icon=$APP
 Categories=Network;
 Terminal=false
