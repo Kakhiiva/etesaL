@@ -1,16 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/custom_clash_config.dart';
-import 'package:keqdroid/utils/custom_xray_config.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
-import 'package:keqdroid/utils/geo_rule_sanitizer.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/provider_routing.dart';
-import 'package:keqdroid/utils/rule_lists.dart';
-import 'package:keqdroid/utils/traffic_routes.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/custom_clash_config.dart';
+import 'package:etesaL/utils/custom_xray_config.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/geo_rule_sanitizer.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/provider_routing.dart';
+import 'package:etesaL/utils/rule_lists.dart';
+import 'package:etesaL/utils/traffic_routes.dart';
 
 // ru-direct из huzgnm/ru-direct собран из category-ru, ru-available-only-inside и российских зон
 const _index = GeoAssetIndex(
