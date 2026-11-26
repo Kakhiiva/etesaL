@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:keqdroid/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:keqdroid/shared/extensions/build_context_l10n.dart';
+import 'package:etesaL/shared/extensions/build_context_l10n.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../providers/providers.dart';
@@ -14,7 +14,7 @@ import '../../services/update_download_notice.dart';
 import '../../services/update_service.dart';
 import '../../tunnel/local_port_plan.dart';
 import '../../tunnel/tunnel_state.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
 
 class UpdatePrompt {
   UpdatePrompt._();
