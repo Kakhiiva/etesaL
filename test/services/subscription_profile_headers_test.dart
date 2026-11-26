@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/models/subscription_card_layout.dart';
-import 'package:keqdroid/models/subscription_card_theme.dart';
-import 'package:keqdroid/services/subscription_service.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/models/subscription_card_layout.dart';
+import 'package:etesaL/models/subscription_card_theme.dart';
+import 'package:etesaL/services/subscription_service.dart';
 
 // Косметические заголовки подписки по XTLS Subscription Standards:
 // profile-title и announce приходят с префиксом base64:, ссылки как
