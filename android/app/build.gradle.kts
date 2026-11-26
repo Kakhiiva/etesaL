@@ -21,7 +21,7 @@ val targetAbi =
     if (project.findProperty("target-platform") == "android-arm") "armeabi-v7a" else "arm64-v8a"
 
 android {
-    namespace = "com.keqdroid.keqdroid"
+    namespace = "com.etesaL.etesaL"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -32,7 +32,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.keqdroid.keqdroid"
+        applicationId = "com.etesaL.etesaL"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
