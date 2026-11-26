@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
-import 'package:keqdroid/utils/geo_dat_reader.dart';
-import 'package:keqdroid/utils/routing_presets.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/geo_dat_reader.dart';
+import 'package:etesaL/utils/routing_presets.dart';
 
 // Вшитая в APK база стран урезана до кодов, которые приложение выпускает само
 // (tool/geo_lite.dart). Всё, чего в ней нет, санитайзер выбрасывает до
