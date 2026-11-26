@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -11,7 +11,7 @@ class ConnectionOwnerTest {
 
     @Test
     fun `the guard name matches the one in Dart and the core patches`() {
-        assertEquals("keqdroid:outside-vpn", outside)
+        assertEquals("etesaL:outside-vpn", outside)
     }
 
     @Test
@@ -75,7 +75,7 @@ class ConnectionOwnerTest {
     @Test
     fun `only our own core binaries count as orphans`() {
         val nul = Char.MIN_VALUE
-        val dir = "/data/app/~~x/com.keqdroid.keqdroid-1/lib/arm64"
+        val dir = "/data/app/~~x/com.etesaL.etesaL-1/lib/arm64"
         assertEquals("libxray.so", orphanCoreName("$dir/libxray.so${nul}run$nul-c${nul}config.json$nul".toByteArray()))
         assertEquals("libmihomo.so", orphanCoreName("$dir/libmihomo.so$nul-d$nul/files$nul".toByteArray()))
         assertEquals("libxray.so", orphanCoreName("libxray.so".toByteArray()))
@@ -84,7 +84,7 @@ class ConnectionOwnerTest {
     @Test
     fun `the app itself and anything else in proc is left alone`() {
         val nul = Char.MIN_VALUE
-        assertNull(orphanCoreName("com.keqdroid.keqdroid$nul".toByteArray()))
+        assertNull(orphanCoreName("com.etesaL.etesaL$nul".toByteArray()))
         assertNull(orphanCoreName("/system/bin/sh$nul-c${nul}libxray.so$nul".toByteArray()))
         assertNull(orphanCoreName("/data/libxray.so.bak$nul".toByteArray()))
         assertNull(orphanCoreName(ByteArray(0)))
