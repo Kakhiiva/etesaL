@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/desktop_tun.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/desktop_tun.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // узел, который не обслуживает имена: адрес ищет ядро, выходу пишется targetStrategy (жалоба 20.11)
 const _uuid = '00000000-0000-4000-8000-000000000000';
