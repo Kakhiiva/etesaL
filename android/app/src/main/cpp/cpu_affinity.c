@@ -7,7 +7,7 @@
 /* как fml::RequestAffinity(kNotEfficiency) в движке: все ядра, кроме самых медленных по cpuinfo_max_freq;
  * если ядра одинаковые или частоты не читаются, маску не трогаем */
 JNIEXPORT jboolean JNICALL
-Java_com_keqdroid_keqdroid_NativeHelper_nativeAvoidEfficiencyCores(JNIEnv *env, jclass clazz) {
+Java_com_etesaL_etesaL_NativeHelper_nativeAvoidEfficiencyCores(JNIEnv *env, jclass clazz) {
     (void)env; (void)clazz;
     long count = sysconf(_SC_NPROCESSORS_CONF);
     if (count <= 1 || count > CPU_SETSIZE) return JNI_FALSE;
