@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
 
 // Словарь немецкого и китайского сверен с клиентами на этих языках (Clash
 // Verge, Mullvad, Proton, WireGuard, AOSP; v2rayN, v2rayNG, NekoBox, Hiddify,
