@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
 
 // Собирает v2fly-подобный .dat: repeated entry = 1, у записи первое поле
 // string country_code = 1, за ним произвольное тело (у нас bytes-поле 2).
