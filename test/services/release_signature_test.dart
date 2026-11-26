@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/geo_base_downloader.dart';
-import 'package:keqdroid/services/release_signature.dart';
-import 'package:keqdroid/services/update_service.dart';
+import 'package:etesaL/services/geo_base_downloader.dart';
+import 'package:etesaL/services/release_signature.dart';
+import 'package:etesaL/services/update_service.dart';
 
 // Фикстуры подписаны openssl (pkeyutl -sign -rawin), как это делает
 // tool/sign_sums.sh на GitHub: тест сверяет формат подписи с тем, что
@@ -104,7 +104,7 @@ void main() {
         signatureUrl: 'https://x.invalid/SHA256SUMS.sig',
       );
       expect(
-        UpdateService.extractSha256(text, 'keqdroid-0.36.0-android.apk'),
+        UpdateService.extractSha256(text, 'etesaL-0.36.0-android.apk'),
         '3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f',
       );
     });
@@ -154,11 +154,11 @@ void main() {
     const signed = [
       'geoip.dat',
       'geoip.dat.sha256',
-      'keqdroid-0.36.0-android.apk',
-      'keqdroid-0.36.0-armeabi-v7a-android.apk',
-      'keqdroid-windows-x64-0.36.0.zip',
-      'keqdroid-0.36.0-macos-arm64.dmg',
-      'keqdroid-0.36.0-macos-x86_64.dmg',
+      'etesaL-0.36.0-android.apk',
+      'etesaL-0.36.0-armeabi-v7a-android.apk',
+      'etesaL-windows-x64-0.36.0.zip',
+      'etesaL-0.36.0-macos-arm64.dmg',
+      'etesaL-0.36.0-macos-x86_64.dmg',
       'SHA256SUMS',
       'SHA256SUMS.sig',
     ];
