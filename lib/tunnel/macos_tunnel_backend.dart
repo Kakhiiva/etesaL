@@ -34,7 +34,7 @@ class MacosTunnelBackend
     with DesktopTrafficStats, DesktopCoreSession
     implements TunnelBackend {
   static const tunInterfaceName = kMacosTunInterfaceName;
-  static const coresLogName = 'keqdroid_cores.log';
+  static const coresLogName = 'etesaL_cores.log';
   static const _tunStartBudgetMs = 20000;
 
   static MacosTunnelBackend? activeInstance;
@@ -124,7 +124,7 @@ class MacosTunnelBackend
           throw const VpnStartException(
             'TUN mode needs administrator rights: the utun interface and the '
             'system route table cannot be set up without them. Turn TUN on '
-            'again in the app to install the keqdroid service, or use Proxy '
+            'again in the app to install the etesaL service, or use Proxy '
             'mode.',
           );
         }
@@ -134,7 +134,7 @@ class MacosTunnelBackend
       if (request.mode == ConnectionMode.tun && await _tunInterfaceExists()) {
         throw VpnStartException(
           'The macOS interface $tunInterfaceName already exists. Disconnect '
-          'the other tunnel or wait for the previous keqdroid core to stop.',
+          'the other tunnel or wait for the previous etesaL core to stop.',
         );
       }
 
