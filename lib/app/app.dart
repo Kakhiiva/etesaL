@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
 import 'package:material_color_utilities/material_color_utilities.dart' as mcu;
 
 import '../models/app_font.dart';
