@@ -5,8 +5,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
 
 abstract final class TvFocus {
   static bool get enabled => PlatformBootstrap.isTelevision;
