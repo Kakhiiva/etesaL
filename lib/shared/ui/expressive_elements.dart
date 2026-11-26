@@ -2,8 +2,8 @@ library;
 
 import 'package:flutter/material.dart';
 
-import 'package:keqdroid/models/icon_shape.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
+import 'package:etesaL/models/icon_shape.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
 
 class ExpressiveIconShapeTheme
     extends ThemeExtension<ExpressiveIconShapeTheme> {
