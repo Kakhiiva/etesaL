@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/rule_list_service.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/rule_list_service.dart';
 
 // Списки по ссылкам: скачивание, кэш на диске и что из него уходит ядру.
 // Подключение сети не ждёт, поэтому всё, что ядро получает, берётся из кэша,
