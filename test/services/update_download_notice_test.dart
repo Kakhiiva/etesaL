@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/platform/vpn_native_bridge.dart';
-import 'package:keqdroid/services/update_download_notice.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/platform/vpn_native_bridge.dart';
+import 'package:etesaL/services/update_download_notice.dart';
 
 void main() {
   final l10n = lookupAppLocalizations(const Locale('ru'));
