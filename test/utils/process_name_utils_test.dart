@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/process_name_utils.dart';
+import 'package:etesaL/utils/process_name_utils.dart';
 
 void main() {
   group('normalizeProcessName режет путь независимо от платформы', () {
