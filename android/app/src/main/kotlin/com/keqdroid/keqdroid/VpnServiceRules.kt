@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 internal fun statusName(status: VpnRunStatus): String = when (status) {
     VpnRunStatus.STOPPED -> "disconnected"
