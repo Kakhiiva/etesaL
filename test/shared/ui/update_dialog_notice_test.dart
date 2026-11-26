@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/platform/vpn_native_bridge.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/storage_service.dart';
-import 'package:keqdroid/services/update_download_notice.dart';
-import 'package:keqdroid/services/update_service.dart';
-import 'package:keqdroid/shared/ui/update_dialog.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/platform/vpn_native_bridge.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/storage_service.dart';
+import 'package:etesaL/services/update_download_notice.dart';
+import 'package:etesaL/services/update_service.dart';
+import 'package:etesaL/shared/ui/update_dialog.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _StuckStorage extends StorageService {
@@ -53,7 +53,7 @@ void main() {
     final info = UpdateInfo(
       currentVersion: '0.37.1',
       latestVersion: '0.38.0',
-      downloadUrl: 'https://example.invalid/keqdroid.apk',
+      downloadUrl: 'https://example.invalid/etesaL.apk',
       apkSize: 8 * 1024 * 1024,
     );
     await tester.pumpWidget(
