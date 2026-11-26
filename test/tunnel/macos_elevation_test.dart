@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/macos_elevation.dart';
+import 'package:etesaL/tunnel/macos_elevation.dart';
 
 void main() {
   group('shell and AppleScript quoting', () {
@@ -19,7 +19,7 @@ void main() {
   });
 
   group('planMacosAdminCommand', () {
-    const argv = ['/App/Contents/Resources/bin/keqdroid-tun', 'install', '501'];
+    const argv = ['/App/Contents/Resources/bin/etesaL-tun', 'install', '501'];
 
     test('runs binary directly when already root', () {
       final plan = planMacosAdminCommand(argv, asRoot: true);
@@ -41,7 +41,7 @@ void main() {
         macosAdminCancelled('execution error: User canceled. (-128)'),
         isTrue,
       );
-      expect(macosAdminCancelled('keqdroid-tun: launchctl failed'), isFalse);
+      expect(macosAdminCancelled('etesaL-tun: launchctl failed'), isFalse);
     });
   });
 }
