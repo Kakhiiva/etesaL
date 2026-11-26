@@ -4,11 +4,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/screens/settings/connection_details_sheet.dart';
-import 'package:keqdroid/screens/settings/connection_tile.dart';
-import 'package:keqdroid/utils/connection_route.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/screens/settings/connection_details_sheet.dart';
+import 'package:etesaL/screens/settings/connection_tile.dart';
+import 'package:etesaL/utils/connection_route.dart';
 
 final _t0 = DateTime(2026, 11, 16, 13, 20, 12);
 
