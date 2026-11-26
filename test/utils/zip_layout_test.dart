@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/zip_layout.dart';
+import 'package:etesaL/utils/zip_layout.dart';
 
 import '../helpers/zip_fixture.dart';
 
