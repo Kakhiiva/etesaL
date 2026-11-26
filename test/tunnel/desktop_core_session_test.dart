@@ -4,16 +4,16 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/exceptions.dart';
-import 'package:keqdroid/services/xray_route_decisions.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
-import 'package:keqdroid/tunnel/desktop_core_session.dart';
-import 'package:keqdroid/tunnel/linux_tunnel_backend.dart';
-import 'package:keqdroid/tunnel/tun_failure_hints.dart';
-import 'package:keqdroid/tunnel/tunnel_backend.dart';
-import 'package:keqdroid/tunnel/tunnel_session_request.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
-import 'package:keqdroid/tunnel/windows_tunnel_backend.dart';
+import 'package:etesaL/core/exceptions.dart';
+import 'package:etesaL/services/xray_route_decisions.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
+import 'package:etesaL/tunnel/desktop_core_session.dart';
+import 'package:etesaL/tunnel/linux_tunnel_backend.dart';
+import 'package:etesaL/tunnel/tun_failure_hints.dart';
+import 'package:etesaL/tunnel/tunnel_backend.dart';
+import 'package:etesaL/tunnel/tunnel_session_request.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
+import 'package:etesaL/tunnel/windows_tunnel_backend.dart';
 
 import '../helpers/fake_core_process.dart';
 
@@ -182,7 +182,7 @@ const _wintunRefused =
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  const channel = MethodChannel('keqdroid_vpn_channel');
+  const channel = MethodChannel('etesaL_vpn_channel');
   final messenger =
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
 
