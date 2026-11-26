@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/go_build_info.dart';
+import 'package:etesaL/utils/go_build_info.dart';
 
 // Собирает блок build info в том виде, в каком его кладёт в бинарь Go 1.18+:
 // метка, размер указателя, флаги, затем две строки с длиной-uvarint впереди.
