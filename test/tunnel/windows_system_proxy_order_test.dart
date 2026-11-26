@@ -2,16 +2,16 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
-import 'package:keqdroid/tunnel/desktop_core_session.dart';
-import 'package:keqdroid/tunnel/tunnel_session_request.dart';
-import 'package:keqdroid/tunnel/windows_tunnel_backend.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
+import 'package:etesaL/tunnel/desktop_core_session.dart';
+import 'package:etesaL/tunnel/tunnel_session_request.dart';
+import 'package:etesaL/tunnel/windows_tunnel_backend.dart';
 
 // видео 22.11: TUN выбрали, пока Proxy подключался. Раннер включает прокси в своём потоке,
 // и выключение от стопа писало в реестр посреди включения
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  const channel = MethodChannel('keqdroid_vpn_channel');
+  const channel = MethodChannel('etesaL_vpn_channel');
   final messenger =
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
   tearDown(() => messenger.setMockMethodCallHandler(channel, null));
