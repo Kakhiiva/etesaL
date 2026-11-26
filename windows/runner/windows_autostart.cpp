@@ -184,7 +184,7 @@ std::wstring TempXmlPath() {
   wchar_t dir[MAX_PATH] = {};
   const DWORD len = ::GetTempPathW(MAX_PATH, dir);
   if (len == 0 || len >= MAX_PATH) return std::wstring();
-  return std::wstring(dir, len) + L"keqdroid_autostart.xml";
+  return std::wstring(dir, len) + L"etesaL_autostart.xml";
 }
 
 // UTF-16 с BOM, иначе schtasks файл не читает
