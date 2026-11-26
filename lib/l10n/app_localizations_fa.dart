@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get appTitle => 'keqdroid';
+  String get appTitle => 'etesaL';
 
   @override
   String vpnConnectedTo(Object serverName) {
@@ -206,7 +206,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get routingCheatSheetTitle => 'نحوهٔ نوشتن قوانین';
 
   @override
-  String get routingCheatSheetBody => 'هر مسیر سه بخش دارد: کدام برنامه، چه ترافیکی، به کجا. در «سایت‌های دلخواه» هر خط یک دامنه، آی‌پی، برچسب جغرافیایی یا لینک فهرست است و مقصد را خود مسیر تعیین می‌کند: مستقیم، پروکسی یا مسدود.\n\n## دامنه‌ها\nvk.com — خود دامنه و همهٔ زیردامنه‌هایش\nru — هر چیزی که به ‎.ru‎ ختم شود (یک کلمه، بدون نقطه)\n‎.example.com‎ و ‎*.example.com‎ — همان ‎example.com‎\nfull:example.com — دقیقاً همین هاست، بدون زیردامنه\n‎regexp:…‎ — عبارت منظم، اگر واقعاً لازم شد\n\n## آدرس‌های آی‌پی\n1.2.3.4 — یک آدرس\n10.0.0.0/8 — یک بازهٔ کامل (CIDR)\n\n## GeoIP: بر اساس کشور\ngeoip:ru — همهٔ آی‌پی‌های روسیه. به‌جای ru هر کشوری را بگذارید: ‎us، de، cn، ua، kz…‎\nبه‌علاوه بسته‌های آماده: geoip:private (شبکهٔ محلی)، geoip:telegram، geoip:google.\nتفکیک بر اساس کشور لازم دارید؟ همین است؛ geoip همهٔ کشورها را می‌شناسد.\n\n## GeoSite: فهرست‌های آماده\n‎geosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…‎\nاین‌ها کشور نیستند، بلکه دسته‌بندی سرویس‌هایی‌اند که از قبل برایتان جمع شده.\nکشور اینجا تقریباً نیست (فقط geolocation-⁠cn و geolocation-⁠!⁠cn)، پس برای کشورها از geoip استفاده کنید.\n\n## روی کامپیوتر\nقانون‌های جغرافیایی مثل موبایل کار می‌کنند. فقط باید geoip.dat و geosite.dat کنار keqdroid.exe باشند؛ در نسخهٔ رسمی از قبل آنجا هستند. اگر قانون‌های جغرافیایی نادیده گرفته می‌شوند، اول همین دو فایل را بررسی کنید.\n\n## ترتیب\nمثل صفحه، از بالا به پایین: مسدودسازی، برنامه‌های مشخص، همهٔ برنامه‌ها. در همهٔ برنامه‌ها مسیر تازهٔ «مستقیم» بالاتر از «پروکسی» قرار می‌گیرد. ترتیب را می‌توانید عوض کنید: مسیر را نگه دارید و بالا یا پایین بکشید. سرور خودتان همیشه پیش از همه مستقیم می‌رود، وگرنه حلقه ایجاد می‌شود. هرچه با هیچ مسیری جور نشود، از ردیف «بقیهٔ ترافیک» پیروی می‌کند.';
+  String get routingCheatSheetBody => 'هر مسیر سه بخش دارد: کدام برنامه، چه ترافیکی، به کجا. در «سایت‌های دلخواه» هر خط یک دامنه، آی‌پی، برچسب جغرافیایی یا لینک فهرست است و مقصد را خود مسیر تعیین می‌کند: مستقیم، پروکسی یا مسدود.\n\n## دامنه‌ها\nvk.com — خود دامنه و همهٔ زیردامنه‌هایش\nru — هر چیزی که به ‎.ru‎ ختم شود (یک کلمه، بدون نقطه)\n‎.example.com‎ و ‎*.example.com‎ — همان ‎example.com‎\nfull:example.com — دقیقاً همین هاست، بدون زیردامنه\n‎regexp:…‎ — عبارت منظم، اگر واقعاً لازم شد\n\n## آدرس‌های آی‌پی\n1.2.3.4 — یک آدرس\n10.0.0.0/8 — یک بازهٔ کامل (CIDR)\n\n## GeoIP: بر اساس کشور\ngeoip:ru — همهٔ آی‌پی‌های روسیه. به‌جای ru هر کشوری را بگذارید: ‎us، de، cn، ua، kz…‎\nبه‌علاوه بسته‌های آماده: geoip:private (شبکهٔ محلی)، geoip:telegram، geoip:google.\nتفکیک بر اساس کشور لازم دارید؟ همین است؛ geoip همهٔ کشورها را می‌شناسد.\n\n## GeoSite: فهرست‌های آماده\n‎geosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…‎\nاین‌ها کشور نیستند، بلکه دسته‌بندی سرویس‌هایی‌اند که از قبل برایتان جمع شده.\nکشور اینجا تقریباً نیست (فقط geolocation-⁠cn و geolocation-⁠!⁠cn)، پس برای کشورها از geoip استفاده کنید.\n\n## روی کامپیوتر\nقانون‌های جغرافیایی مثل موبایل کار می‌کنند. فقط باید geoip.dat و geosite.dat کنار etesaL.exe باشند؛ در نسخهٔ رسمی از قبل آنجا هستند. اگر قانون‌های جغرافیایی نادیده گرفته می‌شوند، اول همین دو فایل را بررسی کنید.\n\n## ترتیب\nمثل صفحه، از بالا به پایین: مسدودسازی، برنامه‌های مشخص، همهٔ برنامه‌ها. در همهٔ برنامه‌ها مسیر تازهٔ «مستقیم» بالاتر از «پروکسی» قرار می‌گیرد. ترتیب را می‌توانید عوض کنید: مسیر را نگه دارید و بالا یا پایین بکشید. سرور خودتان همیشه پیش از همه مستقیم می‌رود، وگرنه حلقه ایجاد می‌شود. هرچه با هیچ مسیری جور نشود، از ردیف «بقیهٔ ترافیک» پیروی می‌کند.';
 
   @override
   String settingsRoutingItemCount(int count) {
@@ -1693,16 +1693,16 @@ class AppLocalizationsFa extends AppLocalizations {
   String get desktopTunServiceTitle => 'سرویس برای TUN';
 
   @override
-  String get desktopTunServiceMessage => 'حالت TUN از طریق سرویس keqdroid کار می‌کند. این سرویس یک بار نصب می‌شود: ویندوز اجازه می‌خواهد و پس از آن TUN بدون پرسش و بدون راه‌اندازی دوباره روشن می‌شود.';
+  String get desktopTunServiceMessage => 'حالت TUN از طریق سرویس etesaL کار می‌کند. این سرویس یک بار نصب می‌شود: ویندوز اجازه می‌خواهد و پس از آن TUN بدون پرسش و بدون راه‌اندازی دوباره روشن می‌شود.';
 
   @override
-  String get desktopTunServiceUpdateMessage => 'برنامه به‌روز شده و سرویس keqdroid برای TUN هم باید به‌روز شود. ویندوز اجازه می‌خواهد.';
+  String get desktopTunServiceUpdateMessage => 'برنامه به‌روز شده و سرویس etesaL برای TUN هم باید به‌روز شود. ویندوز اجازه می‌خواهد.';
 
   @override
-  String get desktopTunServiceMessageMacos => 'حالت TUN از طریق سرویس keqdroid کار می‌کند. این سرویس یک بار نصب می‌شود: macOS رمز مدیر را می‌خواهد و پس از آن TUN بدون پرسش و بدون راه‌اندازی دوباره روشن می‌شود.';
+  String get desktopTunServiceMessageMacos => 'حالت TUN از طریق سرویس etesaL کار می‌کند. این سرویس یک بار نصب می‌شود: macOS رمز مدیر را می‌خواهد و پس از آن TUN بدون پرسش و بدون راه‌اندازی دوباره روشن می‌شود.';
 
   @override
-  String get desktopTunServiceUpdateMessageMacos => 'برنامه به‌روز شده و سرویس keqdroid برای TUN هم باید به‌روز شود. macOS رمز مدیر را می‌خواهد.';
+  String get desktopTunServiceUpdateMessageMacos => 'برنامه به‌روز شده و سرویس etesaL برای TUN هم باید به‌روز شود. macOS رمز مدیر را می‌خواهد.';
 
   @override
   String get desktopTunServiceInstall => 'نصب سرویس';
@@ -1987,7 +1987,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get tvReceiveSubtitle => 'اشتراک از گوشی از طریق Wi-Fi';
 
   @override
-  String get tvReceiveHint => 'این کد را در keqdroid روی گوشی اسکن کنید. گوشی و تلویزیون باید به یک شبکهٔ Wi-Fi وصل باشند.';
+  String get tvReceiveHint => 'این کد را در etesaL روی گوشی اسکن کنید. گوشی و تلویزیون باید به یک شبکهٔ Wi-Fi وصل باشند.';
 
   @override
   String get tvReceiveWaiting => 'در انتظار اشتراک…';
@@ -2120,7 +2120,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get errorPolkitMissingMessage => 'حالت TUN هسته را با pkexec به‌صورت root اجرا می‌کند و polkit نصب نیست.';
 
   @override
-  String get errorPolkitMissingAction => 'polkit را همراه با یک عامل احراز هویت نصب کنید، برنامه را با root اجرا کنید (sudo -E keqdroid) یا در تنظیمات به حالت پروکسی بروید.';
+  String get errorPolkitMissingAction => 'polkit را همراه با یک عامل احراز هویت نصب کنید، برنامه را با root اجرا کنید (sudo -E etesaL) یا در تنظیمات به حالت پروکسی بروید.';
 
   @override
   String get errorPolkitNoAgentTitle => 'polkit لازم است';
@@ -3366,10 +3366,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get backupTransferRetry => 'دوباره';
 
   @override
-  String get backupTransferNotOurCode => 'این کد پشتیبان keqdroid نیست';
+  String get backupTransferNotOurCode => 'این کد پشتیبان etesaL نیست';
 
   @override
-  String get backupTransferUnreachable => 'دستگاه پاسخ نمی‌دهد. هر دو باید به یک شبکهٔ Wi-Fi وصل باشند و روی رایانه keqdroid باید در فایروال مجاز باشد';
+  String get backupTransferUnreachable => 'دستگاه پاسخ نمی‌دهد. هر دو باید به یک شبکهٔ Wi-Fi وصل باشند و روی رایانه etesaL باید در فایروال مجاز باشد';
 
   @override
   String get backupTransferExpired => 'این کد قبلاً استفاده یا بسته شده است. آن را در دستگاه دیگر دوباره باز کنید';
@@ -3380,5 +3380,5 @@ class AppLocalizationsFa extends AppLocalizations {
   }
 
   @override
-  String get backupFromReleaseBuild => 'این پشتیبان را نسخهٔ رسمی keqdroid ساخته و این نسخه کلید آن را ندارد';
+  String get backupFromReleaseBuild => 'این پشتیبان را نسخهٔ رسمی etesaL ساخته و این نسخه کلید آن را ندارد';
 }
