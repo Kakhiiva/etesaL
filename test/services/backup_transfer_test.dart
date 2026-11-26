@@ -4,7 +4,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/backup_transfer.dart';
+import 'package:etesaL/services/backup_transfer.dart';
 
 // настоящий сокет на петле: сервер слушает 127.0.0.1, а в код подставляем частный адрес только для разбора ссылки
 BackupTransferLink _local(BackupTransferLink link) => BackupTransferLink(
@@ -41,19 +41,19 @@ void main() {
         '127.0.0.1',
       ]) {
         expect(
-          BackupTransferLink.parse('keqdroid://backup?h=$host&p=1&d=r&k=$key'),
+          BackupTransferLink.parse('etesaL://backup?h=$host&p=1&d=r&k=$key'),
           isNull,
           reason: host,
         );
       }
       expect(
         BackupTransferLink.parse(
-          'keqdroid://backup?h=10.0.0.2&p=80&d=r&k=short',
+          'etesaL://backup?h=10.0.0.2&p=80&d=r&k=short',
         ),
         isNull,
       );
       expect(
-        BackupTransferLink.parse('keqdroid://tv-send?h=10.0.0.2&p=80&t=abc'),
+        BackupTransferLink.parse('etesaL://tv-send?h=10.0.0.2&p=80&t=abc'),
         isNull,
       );
     });
