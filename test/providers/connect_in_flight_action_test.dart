@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/vpn_engine.dart';
 
 void main() {
   group('connectInFlightAction до старта сессии', () {
