@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/custom_xray_config.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/custom_xray_config.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Правило провайдера с geo-кодом, которого нет в наших базах, исчезает из
 // конфига целиком: иначе ядро не стартует вовсе. Само по себе это верно, но
