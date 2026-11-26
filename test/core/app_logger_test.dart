@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/app_logger.dart';
+import 'package:etesaL/core/app_logger.dart';
 
 // файл лога единственный след поломки: developer.log в релизе не видно нигде
 void main() {
