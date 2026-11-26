@@ -1,174 +1,91 @@
-# etesaL
+# 🛡️ EtesaL — VPN/Proxy Client
 
-Proxy and VPN client for Android, Android TV, Windows, Linux and macOS, built on Xray-core and mihomo. etesaL manages subscriptions, server configurations and traffic routing in a single application.
+> **⚠️ This is a FORKED project for educational and personal use.**
+> **Modified from [keqdroid](https://github.com/Lemonochka/keqdroid) by [Lemonochka](https://github.com/Lemonochka).**
 
-[![Release](https://img.shields.io/github/v/release/Kakhiiva/etesaL?label=release)](https://github.com/Kakhiiva/etesaL/releases)
-[![Build](https://img.shields.io/github/actions/workflow/status/Kakhiiva/etesaL/ci.yml?branch=master&label=build)](https://github.com/Kakhiiva/etesaL/actions/workflows/ci.yml)
-[![License](https://img.shields.io/badge/license-AGPL--3.0-blue)](LICENSE)
-[![Telegram](https://img.shields.io/badge/Telegram-chat-26A5E4?logo=telegram&logoColor=white)](https://t.me/etesaL)
+---
 
-English | [Русский](README.ru.md)
+## 📋 About
 
-etesaL does not provide servers. It requires a subscription or a server configuration from a provider of your choice. You are responsible for complying with the laws of your country.
+**EtesaL** is a cross-platform VPN/Proxy client. This repository is a **fork** of the original project [keqdroid](https://github.com/Lemonochka/keqdroid).
 
-https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
+All core functionality, architecture, and open-source technologies remain the same — only branding, package name, and colors have been changed.
 
-## Download
+| Original Project | This Fork |
+|-----------------|-----------|
+| [Lemonochka/keqdroid](https://github.com/Lemonochka/keqdroid) | Kakhiiva/etesaL |
+| AGPL-3.0 License | AGPL-3.0 License |
 
-Builds are published on the [Releases](https://github.com/Kakhiiva/etesaL/releases) page.
+---
 
-| Platform | Package |
-|----------|---------|
-| Android 7.0 and later, Android TV | `etesaL-<version>-android.apk` |
-| Android 7.0 and later, 32-bit firmware | `etesaL-<version>-armeabi-v7a-android.apk` |
-| Windows x64 | `etesaL-windows-x64-<version>-setup.exe` (installer) |
-| Windows x64 | `etesaL-windows-x64-<version>.zip` (portable) |
-| Linux x86_64 | `.AppImage`, `.deb`, `.rpm`, `.tar.gz`, `PKGBUILD` |
-| macOS 13 and later, Apple Silicon | `etesaL-<version>-macos-arm64.dmg` |
-| macOS 13 and later, Intel | `etesaL-<version>-macos-x86_64.dmg` |
+## 🔧 Technologies
 
-Each release includes `SHA256SUMS` with the hash of every file and `SHA256SUMS.sig` with its signature. The built-in updater verifies both before installing an update.
+- **Flutter** — Cross-platform UI framework
+- **Xray Core** — Network proxy engine
+- **Mihomo Core** — Advanced proxy core
+- **Platforms**: Android, Windows, Linux, macOS
 
-## Features
+### Supported Protocols
+VLESS, VMess, Shadowsocks, Trojan, Hysteria2, WireGuard, Amneziawg
 
-**Servers and subscriptions**
+---
 
-- Subscriptions with scheduled updates, added by URL or from a provider panel through a `etesaL://` link
-- Servers added from links, files, the clipboard or a QR code
-- Proxy chains through several servers in a set order
-- Automatic server selection within a subscription, with servers that can be excluded from it
-- Separate device identity for each subscription
-- Follows a subscription to a new address when the provider moves it, and uses the provider's backup address when the main one is unavailable
-- TCP, HTTP and ICMP latency tests and speed tests
+## 📜 License
 
-**Routing**
+> This project is licensed under **[AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html)** — the same license as the original [keqdroid](https://github.com/Lemonochka/keqdroid) project.
 
-- Routes that block a destination, send it directly, through the tunnel or through another server
-- Destinations defined by domain, IP address, built-in list, or AdBlock or hosts list by URL
-- Routes limited to selected applications, TCP or UDP, and ports
-- Routing profiles per subscription, including profiles supplied by the provider
-- Profiles shared as a link or QR code; Happ and Incy routing links are accepted
-- Split tunneling by application on Android and by program on Windows, Linux and macOS
-- Live list of connections with the rule applied to each one
+### Original Author Attribution
 
-**Application**
+```
+Copyright (C) 2024 Lemonochka
 
-- Light and dark themes, color presets and Material You on Android
-- Interface scale from 70% to 140%; adaptive layout for tablets and landscape
-- Encrypted backups of settings, servers and subscriptions, and transfer to another device by QR code
-- Local proxy sharing over LAN
-- Hotkeys for the main actions
-- Signed updates from GitHub Releases
-- English, Russian, German, Chinese and Persian
-
-## Supported formats
-
-| Protocol or format | Import | Core |
-|--------------------|--------|------|
-| VLESS | `vless://` | Xray, mihomo |
-| VMess | `vmess://` | Xray, mihomo |
-| Trojan | `trojan://` | Xray, mihomo |
-| Shadowsocks | `ss://` | Xray, mihomo |
-| Hysteria 2 | `hysteria2://`, `hy2://` | Xray, mihomo |
-| SOCKS5 | `socks://`, `socks5://`, `socks5h://` | Xray, mihomo |
-| ShadowsocksR | `ssr://` | mihomo |
-| TUIC | `tuic://` | mihomo |
-| AnyTLS | `anytls://` | mihomo |
-| Mieru | `mierus://` | mihomo |
-| WireGuard, AmneziaWG | `.conf` file; `wg://`, `awg://`, `wireguard://` | mihomo |
-| Xray configuration | JSON file, paste or subscription | Xray |
-| Clash or mihomo configuration | YAML file, paste or subscription | mihomo |
-
-For servers that both cores support, the core is selected in Settings → About; the default is Xray. A server that uses a transport available in only one core runs on that core.
-
-Clash and sing-box configurations are imported as individual servers. Subscriptions that supply a mihomo template with proxy groups keep those groups and run on mihomo.
-
-A ready-made configuration keeps its own routing, DNS and outbounds. Inbounds and logging are managed by the application, and sections that act on the device rather than the connection are removed.
-
-## Platforms
-
-| Platform | Mode | Description | Privileges |
-|----------|------|-------------|------------|
-| Android | VPN | All device traffic goes through the tunnel | VPN permission on first connection |
-| Android | Proxy | Local SOCKS and HTTP proxy on `127.0.0.1` | None |
-| Windows | Proxy | System proxy | None |
-| Windows | TUN | All traffic goes through a virtual adapter | Administrator once, to install the etesaL service |
-| Linux | Proxy | System proxy on GNOME and KDE; manual setup elsewhere | None |
-| Linux | TUN | All traffic goes through a virtual adapter | Root through `pkexec`, or Passwordless TUN in Settings → Advanced → Permissions |
-| macOS | Proxy | System proxy via `networksetup` | None |
-| macOS | TUN | All traffic goes through a `utun` adapter | Administrator once, to install the etesaL service |
-
-**Android.** The connection can be controlled from the notification, the Quick Settings tile, a home screen widget and launcher shortcuts. Per-application routing and DNS interception require VPN mode. An active VPN session resumes after an application update or a device restart.
-
-**Android TV.** The application is operated with a remote control. A subscription can be sent from etesaL on a phone by scanning a QR code on the TV.
-
-**Windows.** The installer places the application in Program Files and can remove it together with its data; the portable version runs from any folder. The application can start with the system, connect automatically and stay in the tray. Settings are stored in `%APPDATA%\com.etesaL\etesaL\` and are shared by both versions.
-
-**Linux.** The application can start at login and connect automatically. On Arch Linux, install with `makepkg -si` using the `PKGBUILD` from the release. On NixOS, add `github:Kakhiiva/etesaL/nix` to flake inputs and include `inputs.etesaL.packages.x86_64-linux.default` in `environment.systemPackages`.
-
-**macOS.** Separate builds are provided for Apple Silicon and Intel. The application can start at login, connect automatically and stay in the menu bar.
-
-## Getting started
-
-1. Open **Subscriptions**, paste the subscription URL and select **Add & Fetch**.
-2. Open **Servers** and select a server.
-3. Press the connect button.
-
-Routing, split tunneling, the connection mode and other options are available in **Settings**.
-
-## Documentation
-
-Detailed documentation is available at [kequinq.art/docs/etesaL](https://kequinq.art/docs/etesaL/en/):
-
-- [Routing](https://kequinq.art/docs/etesaL/en/routing) and [DNS](https://kequinq.art/docs/etesaL/en/dns)
-- [Connection modes and split tunneling](https://kequinq.art/docs/etesaL/en/modes)
-- [Xray or mihomo](https://kequinq.art/docs/etesaL/en/xray-or-mihomo) and [mihomo groups](https://kequinq.art/docs/etesaL/en/mihomo-groups)
-- [Automatic server selection](https://kequinq.art/docs/etesaL/en/auto) and [server checks](https://kequinq.art/docs/etesaL/en/ping)
-- For providers: [subscription headers](https://kequinq.art/docs/etesaL/en/provider/headers) and [links](https://kequinq.art/docs/etesaL/en/provider/links)
-
-## Privacy
-
-etesaL has no servers of its own and collects no usage statistics. It connects to:
-
-- **the subscriptions, servers and rule lists you add.** A subscription request carries a device ID, the OS name and version and the device model, which subscription panels use to limit devices. Turn it off in Settings → Advanced → *Share device HWID*;
-- **GitHub** (`api.github.com`, `github.com`): update checks when the app starts or comes back to the foreground, update downloads, and the full geo database on Android when you ask for it;
-- **`www.cloudflare.com/cdn-cgi/trace`**, through the connected server, to show the country of the exit;
-- **`ipv6.google.com`**, through each server after a latency test and at most once a day, to find servers with IPv6, when IPv6 is set to *Through the VPN* in the TUN settings;
-- **the latency test address** when servers are tested: `connectivitycheck.gstatic.com` by default, changeable in the settings; **`speed.cloudflare.com`** when you run a speed test.
-
-Crash reports are not sent anywhere: errors are written only to the app log on the device.
-
-## Code signing policy
-
-Free code signing provided by [SignPath.io](https://signpath.io), certificate by [SignPath Foundation](https://signpath.org). Signing is being set up; until it is enabled, Windows builds are not signed.
-
-macOS builds are ad-hoc signed and are not notarized by Apple.
-
-- Committers and reviewers: [Kakhiiva](https://github.com/Kakhiiva)
-- Approvers: [Kakhiiva](https://github.com/Kakhiiva)
-
-Releases after 0.35.0 are built from this repository by [GitHub Actions](.github/workflows/release.yml). `gh attestation verify <file> --repo Kakhiiva/etesaL` confirms that a file came from that build. Signing covers `etesaL.exe` and the installer; the bundled `xray.exe` and `mihomo.exe` are builds of the upstream Xray-core and mihomo.
-
-## Security
-
-Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
-
-## Building from source
-
-```bash
-flutter pub get
-flutter build apk --debug        # Android
-flutter build windows --release  # Windows
-flutter build linux --release    # Linux
-flutter build macos --release    # macOS; build macOS cores first
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 ```
 
-A release APK needs a signing key in `android/key.properties`. Prebuilt cores are included for Android, Windows and Linux; build the macOS cores with `tool/build_macos_cores.sh`. Linux and macOS builds, rebuilding the cores, tests and the release process are described in [docs/BUILD.md](docs/BUILD.md).
+The original [keqdroid](https://github.com/Lemonochka/keqdroid) project provides the foundation, core functionality, and architectural design that makes this application possible.
 
-## Community
+---
 
-Questions and discussion: [Telegram chat](https://t.me/etesaL).
+## 🛠️ Build
 
-## License
+```bash
+git clone https://github.com/Kakhiiva/etesaL.git
+cd etesaL
+flutter pub get
+flutter build apk --release
+```
 
-etesaL is licensed under [AGPL-3.0](LICENSE). The bundled cores keep their upstream licenses: Xray-core (MPL-2.0) and mihomo (GPL-3.0).
+---
+
+## 📝 Credits
+
+| Credit | Link |
+|--------|------|
+| Original Project | [keqdroid](https://github.com/Lemonochka/keqdroid) |
+| Original Author | [Lemonochka](https://github.com/Lemonochka) |
+| Xray | [XTLS/Xray-core](https://github.com/XTLS/Xray-core) |
+| Mihomo | [Metacubex/mihomo](https://github.com/MetaCubeX/mihomo) |
+| Flutter | [flutter/flutter](https://github.com/flutter/flutter) |
+
+---
+
+## ⚖️ Disclaimer
+
+- This is a **personal/educational fork** of the original [keqdroid](https://github.com/Lemonochka/keqdroid) project
+- Changes made: package name, branding, colors, language strings
+- All core functionality remains unchanged
+- The original project and its authors are **NOT affiliated** with this fork
+- Use at your own risk
+
+---
+
+<div align="center">
+
+**Made with ❤️ based on [keqdroid](https://github.com/Lemonochka/keqdroid) by [Lemonochka](https://github.com/Lemonochka)**
+
+*This fork is not affiliated with or endorsed by the original project authors.*
+
+</div>
