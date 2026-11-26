@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/rule_lists.dart';
+import 'package:etesaL/utils/rule_lists.dart';
 
 // Списки по ссылке: какие записи поля считаются ссылками и какие домены берутся из
 // списка фильтров. VPN блокирует соединение целиком, поэтому из AdBlock
