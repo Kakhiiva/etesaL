@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/exceptions.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/storage_service.dart';
+import 'package:etesaL/core/exceptions.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/storage_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _CountingStorage extends StorageService {
