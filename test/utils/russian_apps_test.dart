@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/russian_apps.dart';
+import 'package:etesaL/utils/russian_apps.dart';
 
 // Кнопка русские приложения мимо VPN решает по имени пакета. Жалоб было
 // две: отмечает не всё, а у одного пользователя отметила полтелефона, включая
