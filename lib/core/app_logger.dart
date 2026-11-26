@@ -117,7 +117,7 @@ class AppLogger {
     StackTrace? stackTrace,
   }) {
     final text = '[$level] $message';
-    developer.log(text, name: 'keqdroid', error: error, stackTrace: stackTrace);
+    developer.log(text, name: 'etesaL', error: error, stackTrace: stackTrace);
     if (kDebugMode && error != null) {
       debugPrint('$text | error: $error');
     }
