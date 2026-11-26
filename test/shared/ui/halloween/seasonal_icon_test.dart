@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/providers/halloween_provider.dart';
-import 'package:keqdroid/shared/ui/halloween/halloween_icons.dart';
+import 'package:etesaL/providers/halloween_provider.dart';
+import 'package:etesaL/shared/ui/halloween/halloween_icons.dart';
 
 class _Fixed extends HalloweenActiveNotifier {
   _Fixed(this.value);
