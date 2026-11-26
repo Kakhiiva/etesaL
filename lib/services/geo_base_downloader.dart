@@ -14,7 +14,7 @@ import 'update_service.dart';
 class GeoBaseDownloader {
   GeoBaseDownloader._();
 
-  static const _owner = 'Lemonochka';
+  static const _owner = 'Kakhiiva';
   static const _repo = 'etesaL';
 
   static const assetName = 'geoip.dat';
