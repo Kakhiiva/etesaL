@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/connections_poll_stats.dart';
-import 'package:keqdroid/models/traffic_split.dart';
-import 'package:keqdroid/services/traffic_split_service.dart';
+import 'package:etesaL/core/connections_poll_stats.dart';
+import 'package:etesaL/models/traffic_split.dart';
+import 'package:etesaL/services/traffic_split_service.dart';
 
 import '../helpers/fake_clash_api.dart';
 
