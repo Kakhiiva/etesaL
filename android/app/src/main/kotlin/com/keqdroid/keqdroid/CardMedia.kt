@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -182,7 +182,7 @@ class CardMedia(private val context: Context, messenger: BinaryMessenger) :
     }
 
     companion object {
-        const val CHANNEL = "keqdroid_media"
+        const val CHANNEL = "etesaL_media"
     }
 }
 
