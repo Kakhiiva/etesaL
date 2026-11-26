@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/hotkey_config.dart';
-import 'package:keqdroid/services/hotkey_service.dart';
+import 'package:etesaL/models/hotkey_config.dart';
+import 'package:etesaL/services/hotkey_service.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
