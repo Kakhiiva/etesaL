@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
+import 'package:etesaL/models/server_item.dart';
 
 void main() {
   const vlessConfig =
