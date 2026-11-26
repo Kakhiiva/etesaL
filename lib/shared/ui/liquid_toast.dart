@@ -4,8 +4,8 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/floating_bar.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/floating_bar.dart';
 
 // Уведомление Модерна: капля вытекает из левого края экрана, растекается в плитку над лентой и уходит обратно
 // в край. В письме справа налево капля идёт из правого края, смахивается в тот же край
