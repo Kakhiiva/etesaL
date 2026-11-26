@@ -1,6 +1,6 @@
-# Contributing to keqdroid
+# Contributing to etesaL
 
-Bug reports and feature requests go to [Issues](https://github.com/Lemonochka/keqdroid/issues). Pull requests are welcome.
+Bug reports and feature requests go to [Issues](https://github.com/Kakhiiva/etesaL/issues). Pull requests are welcome.
 
 ## Contributor License Agreement
 
@@ -9,7 +9,7 @@ Before a pull request can be merged, everyone who made commits in it signs the [
 To sign, read [CLA.md](CLA.md) and post this comment on your pull request:
 
 ```
-I have read the keqdroid CLA and I agree to its terms
+I have read the etesaL CLA and I agree to its terms
 ```
 
 The signature is recorded once and covers all your contributions, earlier and later. Commits have to be linked to your GitHub account: the commit email must be added to the account.
