@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/models/subscription_card_theme.dart';
-import 'package:keqdroid/providers/halloween_provider.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/servers_tab.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/shared/ui/card_art.dart';
-import 'package:keqdroid/shared/ui/server_group_anchors.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/models/subscription_card_theme.dart';
+import 'package:etesaL/providers/halloween_provider.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/servers_tab.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/shared/ui/card_art.dart';
+import 'package:etesaL/shared/ui/server_group_anchors.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 import '../helpers/test_storage.dart';
