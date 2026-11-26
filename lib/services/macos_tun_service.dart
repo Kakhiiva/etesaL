@@ -13,12 +13,12 @@ import 'windows_tun_service.dart' show TunServiceState, WindowsTunService;
 
 export 'windows_tun_service.dart' show TunServiceState;
 
-// LaunchDaemon com.keqdroid.tun (tool/macos_tun_daemon) поднимает ядро в режиме TUN без повторного ввода пароля
+// LaunchDaemon com.etesaL.tun (tool/macos_tun_daemon) поднимает ядро в режиме TUN без повторного ввода пароля
 class MacosTunService {
   MacosTunService._();
 
-  static const plistPath = '/Library/LaunchDaemons/com.keqdroid.tun.plist';
-  static const socketDir = '/var/run/keqdroid-tun';
+  static const plistPath = '/Library/LaunchDaemons/com.etesaL.tun.plist';
+  static const socketDir = '/var/run/etesaL-tun';
   static const socketPath = '$socketDir/tun.sock';
   static const _protocolVersion = '1';
   static const _maxFrameBytes = 64 << 20;
@@ -94,7 +94,7 @@ class MacosTunService {
     final daemonBin = MacosCorePaths.daemonExecutable();
     if (daemonBin == null) {
       AppLogger.instance.warn(
-        'keqdroid-tun binary is missing next to macOS cores',
+        'etesaL-tun binary is missing next to macOS cores',
       );
       return (ok: false, cancelled: false);
     }
@@ -124,7 +124,7 @@ class MacosTunService {
   static Future<({bool ok, bool cancelled})> uninstall() async {
     final daemonBin =
         MacosCorePaths.daemonExecutable() ??
-        '/Library/Application Support/keqdroid-tun/bin/keqdroid-tun';
+        '/Library/Application Support/etesaL-tun/bin/etesaL-tun';
     if (!File(daemonBin).existsSync() && runAdminOverride == null) {
       return (ok: !isInstalledSync(), cancelled: false);
     }
@@ -158,7 +158,7 @@ class MacosTunService {
       client = await _openFrameClient();
     } catch (e) {
       throw ProcessException(
-        'keqdroid-tun',
+        'etesaL-tun',
         [kind],
         'TUN service is unreachable: $e',
       );
@@ -174,7 +174,7 @@ class MacosTunService {
       if (reply.startsWith('error\n')) {
         await client.close();
         throw ProcessException(
-          'keqdroid-tun',
+          'etesaL-tun',
           [kind],
           'TUN service: ${reply.substring('error\n'.length)}',
         );
@@ -182,7 +182,7 @@ class MacosTunService {
       if (!reply.startsWith('ok\n')) {
         await client.close();
         throw ProcessException(
-          'keqdroid-tun',
+          'etesaL-tun',
           [kind],
           'TUN service returned unexpected response: $reply',
         );
@@ -197,7 +197,7 @@ class MacosTunService {
     } catch (e) {
       await client.close();
       if (e is ProcessException) rethrow;
-      throw ProcessException('keqdroid-tun', [kind], 'TUN service: $e');
+      throw ProcessException('etesaL-tun', [kind], 'TUN service: $e');
     }
   }
 
