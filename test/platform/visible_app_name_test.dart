@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 // keqdis внутри приложения держит настройки и ссылки, а пользователю на глаза попадать не должно
 void main() {
   const main = 'android/app/src/main';
-  const kotlin = '$main/kotlin/com/keqdroid/keqdroid';
+  const kotlin = '$main/kotlin/com/etesaL/etesaL';
   final oldName = RegExp('keqdis', caseSensitive: false);
 
   String read(String path) => File(path).readAsStringSync();
@@ -14,19 +14,19 @@ void main() {
     final labels = RegExp(
       r'android:label="([^"]+)"',
     ).allMatches(read('$main/AndroidManifest.xml')).map((m) => m[1]).toSet();
-    expect(labels, {'keqdroid'});
+    expect(labels, {'etesaL'});
 
     expect(
       RegExp(
         r'tileObj\.label = "([^"]+)"',
       ).firstMatch(read('$kotlin/VpnQuickTileService.kt'))?[1],
-      'keqdroid',
+      'etesaL',
     );
     expect(
       RegExp(
         r'\.setSession\("([^"]+)"\)',
       ).firstMatch(read('$kotlin/KeqdisVpnService.kt'))?[1],
-      'keqdroid',
+      'etesaL',
     );
   });
 
@@ -41,7 +41,7 @@ void main() {
     for (final lang in ['en', 'ru', 'de', 'zh', 'fa']) {
       expect(
         read('lib/l10n/app_$lang.arb'),
-        contains('"appTitle": "keqdroid"'),
+        contains('"appTitle": "etesaL"'),
         reason: lang,
       );
     }
@@ -51,16 +51,16 @@ void main() {
     expect(
       read('lib/screens/settings/backup_restore.dart'),
       contains(
-        r"'keqdroid-backup-$stamp.${SettingsBackupService.fileExtension}'",
+        r"'etesaL-backup-$stamp.${SettingsBackupService.fileExtension}'",
       ),
     );
     expect(
       read('lib/services/settings_backup_service.dart'),
-      contains("fileExtension = 'keqdroid'"),
+      contains("fileExtension = 'etesaL'"),
     );
     expect(
       read('lib/screens/subscriptions/share_sheet.dart'),
-      contains(r"'keqdroid_sub_${safe"),
+      contains(r"'etesaL_sub_${safe"),
     );
   });
 
