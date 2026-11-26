@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/awg_profile.dart';
+import 'package:etesaL/utils/awg_profile.dart';
 
 void main() {
   // Валидные 32-байтные ключи (base64) для проверки base64→hex.
