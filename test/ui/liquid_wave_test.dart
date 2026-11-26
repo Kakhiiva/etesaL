@@ -5,9 +5,9 @@ import 'package:androidx_graphics_shapes/material_shapes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/liquid_wave.dart';
-import 'package:keqdroid/shared/ui/paced_clock.dart';
-import 'package:keqdroid/shared/ui/smooth_fade.dart';
+import 'package:etesaL/shared/ui/liquid_wave.dart';
+import 'package:etesaL/shared/ui/paced_clock.dart';
+import 'package:etesaL/shared/ui/smooth_fade.dart';
 
 const _frame = 1 / 60;
 
