@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/services/subscription_body_parser.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
-import 'package:keqdroid/utils/vpn_core_support.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/services/subscription_body_parser.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
+import 'package:etesaL/utils/vpn_core_support.dart';
 
 // примеры дословно из спецификаций: SIP002 (shadowsocks.org/doc/sip002.html) и Hysteria 2 URI Scheme
 const _sip002Plugin =
