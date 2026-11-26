@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -36,7 +36,7 @@ class ConnectionOwnerServer(private val context: Context) {
     private var outside = 0L
 
     init {
-        Thread({ acceptLoop() }, "keqdroid-owner").apply { isDaemon = true }.start()
+        Thread({ acceptLoop() }, "etesaL-owner").apply { isDaemon = true }.start()
     }
 
     fun close() {
@@ -114,7 +114,7 @@ class ConnectionOwnerServer(private val context: Context) {
 
     companion object {
         // то же имя в lib/utils/owner_guard.dart и tool/patches/mihomo-uid-owner-guard.patch
-        const val OUTSIDE_VPN = "keqdroid:outside-vpn"
+        const val OUTSIDE_VPN = "etesaL:outside-vpn"
     }
 }
 
