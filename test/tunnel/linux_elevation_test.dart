@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/linux_elevation.dart';
+import 'package:etesaL/tunnel/linux_elevation.dart';
 
 // Чем поднимать ядро TUN на Linux.
 //
@@ -10,7 +10,7 @@ import 'package:keqdroid/tunnel/linux_elevation.dart';
 // $1..$8: сдвиг на один превратит путь к конфигу в путь к логу.
 void main() {
   const wrapper = 'SB="\$1"; CFG="\$2"';
-  const helper = '/usr/local/lib/keqdroid/keqrnel-tun-root';
+  const helper = '/usr/local/lib/etesaL/keqrnel-tun-root';
   const coreArgs = ['/tmp/s/keqrnel', '/tmp/s/cfg.json', '/tmp/s/geo'];
 
   test('под root pkexec не нужен вовсе', () {
