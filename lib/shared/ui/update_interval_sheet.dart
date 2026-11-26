@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
 
 void showUpdateIntervalSheet(
   BuildContext context,
