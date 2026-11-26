@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/macos_app_bundle.dart';
+import 'package:etesaL/utils/macos_app_bundle.dart';
 
 void main() {
   group('macOS app bundle process path', () {
