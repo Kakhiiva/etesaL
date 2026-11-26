@@ -2,15 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/desktop_tun.dart';
-import 'package:keqdroid/utils/owner_guard.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/route_servers.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/desktop_tun.dart';
+import 'package:etesaL/utils/owner_guard.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/route_servers.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Побайтовая отсечка на форму конфига целиком.
 //
@@ -392,7 +392,7 @@ void main() {
           udpTimeoutSec: 120,
           routingMode: AppRoutingMode.onlySelected,
           managedProcessNames: ['firefox.exe', r'C:\Games\Game One\game.exe'],
-          appProcessName: 'keqdroid.exe',
+          appProcessName: 'etesaL.exe',
         ),
       );
     });
@@ -405,7 +405,7 @@ void main() {
           windows: false,
           mtu: 9000,
           captureIpv6: true,
-          appProcessName: 'keqdroid',
+          appProcessName: 'etesaL',
         ),
       );
     });
@@ -433,7 +433,7 @@ void main() {
           mtu: 9000,
           routingMode: AppRoutingMode.allExceptSelected,
           managedProcessNames: ['steam.exe'],
-          appProcessName: 'keqdroid.exe',
+          appProcessName: 'etesaL.exe',
         ),
       );
     });
