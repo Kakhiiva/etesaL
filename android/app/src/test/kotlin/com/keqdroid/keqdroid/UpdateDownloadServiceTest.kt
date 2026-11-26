@@ -1,11 +1,11 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.Application
 import android.app.Notification
 import android.app.NotificationManager
 import android.content.Context
 import android.content.pm.ServiceInfo
-import com.keqdroid.keqdroid.RoboSession.context
+import com.etesaL.etesaL.RoboSession.context
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNull
