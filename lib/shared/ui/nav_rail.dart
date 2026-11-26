@@ -1,11 +1,11 @@
 import 'dart:ui' show lerpDouble;
 
 import 'package:flutter/material.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/bottom_nav.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/haptics.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/bottom_nav.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/haptics.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 class AppNavRail extends StatefulWidget {
   final int index;
