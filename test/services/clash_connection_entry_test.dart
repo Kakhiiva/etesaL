@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/connections_service.dart';
+import 'package:etesaL/services/connections_service.dart';
 
 // Ответ GET /connections у sing-box и mihomo одинаков по форме, но
 // правило они пишут по-разному, и экран должен читать оба.
