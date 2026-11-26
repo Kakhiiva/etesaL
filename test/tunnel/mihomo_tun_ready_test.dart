@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/mihomo_tun_ready.dart';
+import 'package:etesaL/tunnel/mihomo_tun_ready.dart';
 
 void main() {
   group('готов ли TUN у mihomo', () {
