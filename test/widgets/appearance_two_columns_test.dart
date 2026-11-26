@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/l10n/app_localizations_en.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/settings_tab.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/l10n/app_localizations_en.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/settings_tab.dart';
 
 import '../helpers/test_storage.dart';
 
