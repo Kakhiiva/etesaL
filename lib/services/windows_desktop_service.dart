@@ -10,7 +10,7 @@ import 'windows_tun_service.dart';
 class WindowsDesktopService {
   WindowsDesktopService._();
 
-  static const _channel = MethodChannel('keqdroid_vpn_channel');
+  static const _channel = MethodChannel('etesaL_vpn_channel');
 
   static Future<bool> isAutostartLaunch() async {
     if (!Platform.isWindows) return false;
