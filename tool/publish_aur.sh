@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Push release/<ver>/aur/{PKGBUILD,.SRCINFO} to the AUR package keqdroid-bin.
+# Push release/<ver>/aur/{PKGBUILD,.SRCINFO} to the AUR package etesaL-bin.
 #
 # The PKGBUILD downloads the release tar.gz from GitHub, so publish the GitHub
 # release first, then run this.
@@ -9,7 +9,7 @@
 # this machine's SSH public key added under "My Account". The first push
 # creates the package, every later one updates it.
 #
-#   wsl -e bash /mnt/c/.../keqdroid/tool/publish_aur.sh
+#   wsl -e bash /mnt/c/.../etesaL/tool/publish_aur.sh
 #
 set -euo pipefail
 
@@ -23,16 +23,16 @@ done
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK" 2>/dev/null || true' EXIT
 
-git clone ssh://aur@aur.archlinux.org/keqdroid-bin.git "$WORK/aur"
+git clone ssh://aur@aur.archlinux.org/etesaL-bin.git "$WORK/aur"
 cp "$SRC/PKGBUILD" "$SRC/.SRCINFO" "$WORK/aur/"
 cd "$WORK/aur"
 git add PKGBUILD .SRCINFO
 if git diff --cached --quiet; then
-  echo "AUR already has keqdroid-bin $VERSION"
+  echo "AUR already has etesaL-bin $VERSION"
   exit 0
 fi
-git -c user.name="${AUR_NAME:-Lemonochka}" \
+git -c user.name="${AUR_NAME:-Kakhiiva}" \
     -c user.email="${AUR_EMAIL:-noreply@users.noreply.github.com}" \
     commit -q -m "Update to $VERSION"
 git push origin HEAD:master
-echo "keqdroid-bin $VERSION is on AUR"
+echo "etesaL-bin $VERSION is on AUR"
