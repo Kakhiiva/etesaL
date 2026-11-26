@@ -1,12 +1,12 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.content.Intent
 import android.os.Build
-import com.keqdroid.keqdroid.QuickConnect.Tap
-import com.keqdroid.keqdroid.RoboSession.context
-import com.keqdroid.keqdroid.RoboSession.prefs
-import com.keqdroid.keqdroid.RoboSession.saveSnapshot
-import com.keqdroid.keqdroid.RoboSession.setLiveStatus
+import com.etesaL.etesaL.QuickConnect.Tap
+import com.etesaL.etesaL.RoboSession.context
+import com.etesaL.etesaL.RoboSession.prefs
+import com.etesaL.etesaL.RoboSession.saveSnapshot
+import com.etesaL.etesaL.RoboSession.setLiveStatus
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertSame
