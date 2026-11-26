@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
-import 'package:keqdroid/shared/ui/shape_loading_indicator.dart';
-import 'package:keqdroid/utils/clipboard_import.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/shape_loading_indicator.dart';
+import 'package:etesaL/utils/clipboard_import.dart';
 
 // Подписки без сети: настоящий add сразу качал бы её содержимое.
 class _FakeSubs extends SubscriptionsNotifier {
