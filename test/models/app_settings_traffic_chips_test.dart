@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
+import 'package:etesaL/models/app_settings.dart';
 
 // Общие чипы трафика и раздельные показывают одно и то же в двух видах:
 // раздельные рисуются вместо общих. Включёнными разом они быть не должны,
