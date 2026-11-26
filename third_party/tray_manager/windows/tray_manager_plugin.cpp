@@ -34,7 +34,7 @@ std::unique_ptr<
     std::default_delete<flutter::MethodChannel<flutter::EncodableValue>>>
     channel = nullptr;
 
-// --- keqdroid patch: см. third_party/tray_manager/PATCH.md -----------------
+// --- etesaL patch: см. third_party/tray_manager/PATCH.md -----------------
 //
 // Невидимое окно — владелец меню трея.
 //
@@ -78,7 +78,7 @@ void DestroyMenuOwnerWindow() {
   }
   g_menu_owner = nullptr;
 }
-// --- end keqdroid patch ----------------------------------------------------
+// --- end etesaL patch ----------------------------------------------------
 
 class TrayManagerPlugin : public flutter::Plugin {
  public:
@@ -172,7 +172,7 @@ TrayManagerPlugin::TrayManagerPlugin(flutter::PluginRegistrarWindows* registrar)
 
 TrayManagerPlugin::~TrayManagerPlugin() {
   registrar->UnregisterTopLevelWindowProcDelegate(window_proc_id);
-  // keqdroid patch: своё окно-владелец меню живёт ровно столько же.
+  // etesaL patch: своё окно-владелец меню живёт ровно столько же.
   DestroyMenuOwnerWindow();
 }
 
@@ -237,7 +237,7 @@ std::optional<LRESULT> TrayManagerPlugin::HandleWindowProc(HWND hWnd,
       DestroyIcon(nid.hIcon);
     }
   } else if (message == WM_COMMAND) {
-    // keqdroid patch: меню трея сюда больше не приходит — оно показывается с
+    // etesaL patch: меню трея сюда больше не приходит — оно показывается с
     // TPM_RETURNCMD | TPM_NONOTIFY и отдаёт выбранный пункт возвратом
     // TrackPopupMenuEx. Ветка оставлена как была, для любого другого меню.
     flutter::EncodableMap eventData = flutter::EncodableMap();
@@ -394,7 +394,7 @@ void TrayManagerPlugin::PopUpContextMenu(
 
   HWND hWnd = GetMainWindow();
 
-  // --- keqdroid patch: см. third_party/tray_manager/PATCH.md ---------------
+  // --- etesaL patch: см. third_party/tray_manager/PATCH.md ---------------
   //
   // bringAppToFront не влияет ни на что: активное окно нужно всегда, но окно
   // приложения при этом не трогаем вовсе. Оставлен ради сигнатуры канала.
@@ -501,7 +501,7 @@ void TrayManagerPlugin::PopUpContextMenu(
     channel->InvokeMethod("onTrayMenuItemClick",
                           std::make_unique<flutter::EncodableValue>(eventData));
   }
-  // --- end keqdroid patch --------------------------------------------------
+  // --- end etesaL patch --------------------------------------------------
   result->Success(flutter::EncodableValue(true));
 }
 
