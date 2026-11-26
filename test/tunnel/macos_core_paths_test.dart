@@ -1,21 +1,21 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/macos_core_paths.dart';
+import 'package:etesaL/tunnel/macos_core_paths.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
   late Directory tmp;
 
   setUp(() {
-    tmp = Directory.systemTemp.createTempSync('keq_macos_paths_');
+    tmp = Directory.systemTemp.createTempSync('etesaL_macos_paths_');
     MacosCorePaths.cacheRootOverride = p.join(tmp.path, 'Caches');
     MacosCorePaths.executableOverride = p.join(
       tmp.path,
-      'keqdroid.app',
+      'etesaL.app',
       'Contents',
       'MacOS',
-      'keqdroid',
+      'etesaL',
     );
     MacosCorePaths.isExecutableOverride = null;
   });
@@ -31,13 +31,13 @@ void main() {
     'uses executable bundle binaries directly in place without copying',
     () async {
       final binDir = Directory(
-        p.join(tmp.path, 'keqdroid.app', 'Contents', 'Resources', 'bin'),
+        p.join(tmp.path, 'etesaL.app', 'Contents', 'Resources', 'bin'),
       )..createSync(recursive: true);
       final xraySrc = File(p.join(binDir.path, 'xray'))
         ..writeAsStringSync('xray-bin');
       final mihomoSrc = File(p.join(binDir.path, 'mihomo'))
         ..writeAsStringSync('mihomo-bin');
-      final daemonSrc = File(p.join(binDir.path, 'keqdroid-tun'))
+      final daemonSrc = File(p.join(binDir.path, 'etesaL-tun'))
         ..writeAsStringSync('daemon-bin');
       MacosCorePaths.isExecutableOverride = (_) => true;
 
@@ -45,7 +45,7 @@ void main() {
       expect(await MacosCorePaths.mihomoExecutable(), mihomoSrc.path);
       expect(MacosCorePaths.daemonExecutable(), daemonSrc.path);
       expect(
-        Directory(p.join(tmp.path, 'Caches', 'keqdroid', 'cores')).existsSync(),
+        Directory(p.join(tmp.path, 'Caches', 'etesaL', 'cores')).existsSync(),
         isFalse,
       );
     },
@@ -56,7 +56,7 @@ void main() {
     () async {
       MacosCorePaths.isExecutableOverride = (_) => false;
       final binDir = Directory(
-        p.join(tmp.path, 'keqdroid.app', 'Contents', 'Resources', 'bin'),
+        p.join(tmp.path, 'etesaL.app', 'Contents', 'Resources', 'bin'),
       )..createSync(recursive: true);
       final source = File(p.join(binDir.path, 'xray'))
         ..writeAsStringSync('core-v1');
@@ -64,7 +64,7 @@ void main() {
       final staged = await MacosCorePaths.xrayExecutable();
       expect(
         staged!,
-        startsWith(p.join(tmp.path, 'Caches', 'keqdroid', 'cores')),
+        startsWith(p.join(tmp.path, 'Caches', 'etesaL', 'cores')),
       );
       expect(File(staged).readAsStringSync(), 'core-v1');
 
@@ -82,7 +82,7 @@ void main() {
     'prefers user cached geo over bundle geo and syncs mihomo home',
     () async {
       final binDir = Directory(
-        p.join(tmp.path, 'keqdroid.app', 'Contents', 'Resources', 'bin'),
+        p.join(tmp.path, 'etesaL.app', 'Contents', 'Resources', 'bin'),
       )..createSync(recursive: true);
       File(p.join(binDir.path, 'geoip.dat')).writeAsBytesSync([1, 2, 3, 4]);
       File(p.join(binDir.path, 'geosite.dat')).writeAsBytesSync([5, 6, 7]);
@@ -108,7 +108,7 @@ void main() {
       ]);
 
       final cachedGeo = Directory(
-        p.join(tmp.path, 'Caches', 'keqdroid', 'geo'),
+        p.join(tmp.path, 'Caches', 'etesaL', 'geo'),
       )..createSync(recursive: true);
       File(p.join(cachedGeo.path, 'geoip.dat')).writeAsBytesSync([42]);
       expect(await MacosCorePaths.geoAssetDir(), cachedGeo.path);
