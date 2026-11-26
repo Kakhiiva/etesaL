@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
@@ -9,7 +9,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.net.Uri
 import android.provider.Settings
-import com.keqdroid.keqdroid.RoboSession.context
+import com.etesaL.etesaL.RoboSession.context
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
