@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/ui/desktop/desktop_tab_switcher.dart';
+import 'package:etesaL/ui/desktop/desktop_tab_switcher.dart';
 
 // Вкладки ПК едут вдоль панели и при этом живут, как в IndexedStack: видна
 // одна, скрытые не рисуются, не ловят нажатия и фокус и не крутят тикеры
