@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/expressive_elements.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive_elements.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
 
 class EditorLayer {
   const EditorLayer(this.icon, this.title, this.children);
