@@ -34,7 +34,7 @@ import 'xray_desktop_config.dart';
 class WindowsTunnelBackend
     with DesktopTrafficStats, DesktopCoreSession
     implements TunnelBackend {
-  static const _method = MethodChannel('keqdroid_vpn_channel');
+  static const _method = MethodChannel('etesaL_vpn_channel');
 
   static WindowsTunnelBackend? activeInstance;
 
@@ -185,7 +185,7 @@ class WindowsTunnelBackend
           throw const VpnStartException(
             'TUN mode needs administrator rights: the wintun adapter and the '
             'system route table cannot be set up without them. Turn TUN on '
-            'again in the app to install the keqdroid service, or use Proxy '
+            'again in the app to install the etesaL service, or use Proxy '
             'mode.',
           );
         }
