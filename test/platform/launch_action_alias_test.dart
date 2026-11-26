@@ -5,8 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 // MainActivity открыта наружу: extra с командой мимо закрытого алиаса дало бы любому приложению отключить VPN
 void main() {
   const main = 'android/app/src/main';
-  const kotlin = '$main/kotlin/com/keqdroid/keqdroid';
-  const alias = 'com.keqdroid.keqdroid.LaunchAction';
+  const kotlin = '$main/kotlin/com/etesaL/etesaL';
+  const alias = 'com.etesaL.etesaL.LaunchAction';
 
   test('the alias is closed to other apps and leads to MainActivity', () {
     final manifest = File('$main/AndroidManifest.xml').readAsStringSync();
