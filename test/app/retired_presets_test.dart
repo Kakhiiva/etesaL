@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
+import 'package:etesaL/app/app.dart';
 
 // Forest, Ruby и Cobalt убраны как копии Mint, Sunset и Ocean: tonalSpot
 // строит палитру по тону сида, и на выходе у них были одни и те же роли.
