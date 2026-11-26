@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/screens/settings/connection_tile.dart';
-import 'package:keqdroid/shared/ui/accent_edge_card.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
-import 'package:keqdroid/utils/connection_route.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/screens/settings/connection_tile.dart';
+import 'package:etesaL/shared/ui/accent_edge_card.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
+import 'package:etesaL/utils/connection_route.dart';
 
 class ConnectionField {
   const ConnectionField(
