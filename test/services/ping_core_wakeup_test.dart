@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/ephemeral_xray_ping.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
+import 'package:etesaL/services/ephemeral_xray_ping.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
 
 // Открытый порт ядра замера ещё не говорит о готовности.
 //
