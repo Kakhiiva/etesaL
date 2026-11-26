@@ -1,6 +1,6 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/file_dialog_service.dart';
+import 'package:etesaL/services/file_dialog_service.dart';
 
 // Сам диалог не тестируется: он существует только на Linux и только рядом с
 // живой сессией. Тестируются аргументы запасных CLI-диалогов: у zenity и
