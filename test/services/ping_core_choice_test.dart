@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/ping_service.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/ping_service.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
 
 // Замер обязан подниматься тем же ядром, каким сервер поедет. Пока он всегда
 // поднимал xray, зелёный пинг и надпись работает были про разные ядра: сервер,
