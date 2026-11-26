@@ -21,7 +21,7 @@
 namespace {
 
 constexpr wchar_t kServiceName[] = L"KeqdroidTun";
-constexpr wchar_t kPipeName[] = L"\\\\.\\pipe\\keqdroid-tun";
+constexpr wchar_t kPipeName[] = L"\\\\.\\pipe\\etesaL-tun";
 constexpr uint32_t kMaxFrame = 64u << 20;
 
 std::unique_ptr<flutter::MethodChannel<flutter::EncodableValue>> g_channel;
@@ -152,7 +152,7 @@ class ClientPipe {
       }
       ::Sleep(100);
     }
-    *error = "the keqdroid TUN service does not answer";
+    *error = "the etesaL TUN service does not answer";
     return false;
   }
 
@@ -216,11 +216,11 @@ class ClientPipe {
     SC_HANDLE service = ::OpenServiceW(scm, kServiceName, SERVICE_START);
     bool ok = false;
     if (!service) {
-      *error = "the keqdroid TUN service is not installed";
+      *error = "the etesaL TUN service is not installed";
     } else {
       ok = ::StartServiceW(service, 0, nullptr) ||
            ::GetLastError() == ERROR_SERVICE_ALREADY_RUNNING;
-      if (!ok) *error = "could not start the keqdroid TUN service";
+      if (!ok) *error = "could not start the etesaL TUN service";
       ::CloseServiceHandle(service);
     }
     ::CloseServiceHandle(scm);
@@ -346,9 +346,9 @@ void Status(Result result) {
 void Install(Result result) {
   std::thread([result]() {
     const std::wstring sid = CurrentUserSid();
-    const std::wstring exe = ExeDir() + L"\\keqdroid-tun.exe";
+    const std::wstring exe = ExeDir() + L"\\etesaL-tun.exe";
     if (sid.empty() || ::GetFileAttributesW(exe.c_str()) == INVALID_FILE_ATTRIBUTES) {
-      ReplyError(result, "NO_SERVICE_EXE", "keqdroid-tun.exe is missing next to the app");
+      ReplyError(result, "NO_SERVICE_EXE", "etesaL-tun.exe is missing next to the app");
       return;
     }
     // SID свой, а не того администратора, чей пароль введут в окне UAC: службой пользоваться этому пользователю
@@ -425,7 +425,7 @@ void StartCore(const flutter::EncodableMap& args, Result result) {
     }
     if (!pipe->Write(start) || !pipe->Read(&frame)) {
       ReplyError(result, "SERVICE_UNAVAILABLE",
-                 "the keqdroid TUN service closed the connection");
+                 "the etesaL TUN service closed the connection");
       return;
     }
     const auto head = SplitLines(frame);
@@ -492,7 +492,7 @@ void StopCore(bool graceful) {
 void RegisterKeqdroidTunServiceChannel(flutter::FlutterEngine* engine) {
   if (engine == nullptr) return;
   g_channel = std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-      engine->messenger(), "keqdroid/tun_service",
+      engine->messenger(), "etesaL/tun_service",
       &flutter::StandardMethodCodec::GetInstance());
   g_channel->SetMethodCallHandler(
       [](const flutter::MethodCall<flutter::EncodableValue>& call,
