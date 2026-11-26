@@ -2,16 +2,16 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/linux_desktop_entry.dart';
+import 'package:etesaL/services/linux_desktop_entry.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
   group('contentFor', () {
-    const appImage = '/home/u/Apps/keqdroid-0.25.2-x86_64.AppImage';
+    const appImage = '/home/u/Apps/etesaL-0.25.2-x86_64.AppImage';
 
     test('ties the window to the entry by the app id', () {
       final text = LinuxDesktopEntry.contentFor(appImage, hidden: false);
-      expect(text, contains('StartupWMClass=com.keqdroid.keqdroid\n'));
+      expect(text, contains('StartupWMClass=com.etesaL.etesaL\n'));
       expect(text, contains('Exec="$appImage" %u\n'));
       expect(text, contains('TryExec=$appImage\n'));
       expect(text, contains(LinuxDesktopEntry.marker));
@@ -23,13 +23,13 @@ void main() {
       expect(text, contains('NoDisplay=true\n'));
     });
 
-    test('opens keqdroid:// and keqdis:// links, hidden or not', () {
+    test('opens etesaL:// and keqdis:// links, hidden or not', () {
       for (final hidden in [false, true]) {
         final text = LinuxDesktopEntry.contentFor(appImage, hidden: hidden);
         expect(
           text,
           contains(
-            'MimeType=x-scheme-handler/keqdroid;x-scheme-handler/keqdis;\n',
+            'MimeType=x-scheme-handler/etesaL;x-scheme-handler/keqdis;\n',
           ),
         );
       }
@@ -93,18 +93,18 @@ void main() {
   });
 
   group('window entry for KWin', () {
-    const appImage = '/home/u/Apps/keqdroid-0.25.2-x86_64.AppImage';
+    const appImage = '/home/u/Apps/etesaL-0.25.2-x86_64.AppImage';
     late Directory apps;
 
     setUp(() => apps = Directory.systemTemp.createTempSync('desktop_apps'));
     tearDown(() => apps.deleteSync(recursive: true));
 
-    File twin() => File(p.join(apps.path, 'com.keqdroid.keqdroid.desktop'));
+    File twin() => File(p.join(apps.path, 'com.etesaL.etesaL.desktop'));
 
     test('is named after the window app id', () {
       expect(
         LinuxDesktopEntry.windowEntryFileName,
-        'com.keqdroid.keqdroid.desktop',
+        'com.etesaL.etesaL.desktop',
       );
     });
 
@@ -112,7 +112,7 @@ void main() {
       'carries the icon and stays out of menus, link handlers and window matching',
       () {
         final text = LinuxDesktopEntry.windowEntryFor(appImage);
-        expect(text, contains('Icon=keqdroid\n'));
+        expect(text, contains('Icon=etesaL\n'));
         expect(text, contains('NoDisplay=true\n'));
         expect(text, contains('TryExec=$appImage\n'));
         expect(text, contains(LinuxDesktopEntry.marker));
@@ -130,7 +130,7 @@ void main() {
     });
 
     test('follows the AppImage when it moves', () {
-      LinuxDesktopEntry.syncWindowEntry(apps.path, '/old/keqdroid.AppImage');
+      LinuxDesktopEntry.syncWindowEntry(apps.path, '/old/etesaL.AppImage');
       LinuxDesktopEntry.syncWindowEntry(apps.path, appImage);
       expect(
         twin().readAsStringSync(),
@@ -147,7 +147,7 @@ void main() {
 
     test('leaves a file it did not write alone', () {
       const own =
-          '[Desktop Entry]\nType=Application\nIcon=keqdroid\nNoDisplay=true\n';
+          '[Desktop Entry]\nType=Application\nIcon=etesaL\nNoDisplay=true\n';
       twin().writeAsStringSync(own);
       LinuxDesktopEntry.syncWindowEntry(apps.path, appImage);
       expect(twin().readAsStringSync(), own);
@@ -174,7 +174,7 @@ void main() {
   });
 
   test('integratedElsewhere spots an AppImageLauncher or Gear Lever entry', () {
-    const appImage = '/home/u/Applications/keqdroid.AppImage';
+    const appImage = '/home/u/Applications/etesaL.AppImage';
     expect(
       LinuxDesktopEntry.integratedElsewhere(appImage, [
         '[Desktop Entry]\nExec=/usr/bin/firefox\n',
@@ -202,27 +202,27 @@ void main() {
 
     test('puts the icon under both names', () {
       LinuxDesktopEntry.writeIcons(home.path, fresh);
-      expect(icon('keqdroid.png').readAsBytesSync(), fresh);
-      expect(icon('com.keqdroid.keqdroid.png').readAsBytesSync(), fresh);
+      expect(icon('etesaL.png').readAsBytesSync(), fresh);
+      expect(icon('com.etesaL.etesaL.png').readAsBytesSync(), fresh);
     });
 
     // AppImage обновился на месте: ярлык тот же, а иконка в нём уже другая
     test('replaces an icon left by an older version', () {
-      icon('keqdroid.png')
+      icon('etesaL.png')
         ..createSync(recursive: true)
         ..writeAsBytesSync([9, 9]);
       LinuxDesktopEntry.writeIcons(home.path, fresh);
-      expect(icon('keqdroid.png').readAsBytesSync(), fresh);
+      expect(icon('etesaL.png').readAsBytesSync(), fresh);
     });
 
     test('leaves an icon that is already current alone', () {
       final old = DateTime(2026, 1, 1);
-      icon('keqdroid.png')
+      icon('etesaL.png')
         ..createSync(recursive: true)
         ..writeAsBytesSync(fresh)
         ..setLastModifiedSync(old);
       LinuxDesktopEntry.writeIcons(home.path, fresh);
-      expect(icon('keqdroid.png').lastModifiedSync(), old);
+      expect(icon('etesaL.png').lastModifiedSync(), old);
     });
   });
 }
