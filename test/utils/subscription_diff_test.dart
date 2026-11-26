@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/utils/subscription_diff.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/utils/subscription_diff.dart';
 
 Subscription _sub(String id, {String name = 'n', int serverCount = 0}) =>
     Subscription(
