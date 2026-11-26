@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/subscription_body_parser.dart';
-import 'package:keqdroid/utils/custom_clash_config.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/subscription_body_parser.dart';
+import 'package:etesaL/utils/custom_clash_config.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // ss-opts, dialer-proxy и smux ссылка не несёт (сверено по примерам docs/config/proxies mihomo).
 // Пин, token v4 и версию UoT несёт: эти узлы обязаны остаться ссылками
