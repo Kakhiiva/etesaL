@@ -1,7 +1,7 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
-import com.keqdroid.keqdroid.EphemeralXrayPing.BatchItem
-import com.keqdroid.keqdroid.EphemeralXrayPing.MultiProbe
+import com.etesaL.etesaL.EphemeralXrayPing.BatchItem
+import com.etesaL.etesaL.EphemeralXrayPing.MultiProbe
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
