@@ -614,9 +614,9 @@ String _coreMismatchText(AppLocalizations l10n, VpnCoreSkip skip) =>
 
 const _author = 'Alice';
 const _authorLogin = 'Lemonochka';
-const _repoUrl = 'https://github.com/Lemonochka/keqdroid';
-const _chatUrl = 'https://t.me/keqdroid';
-const _docsUrl = 'https://kequinq.art/docs/keqdroid/';
+const _repoUrl = 'https://github.com/Lemonochka/etesaL';
+const _chatUrl = 'https://t.me/etesaL';
+const _docsUrl = 'https://kequinq.art/docs/etesaL/';
 const _licenseUrl = '$_repoUrl/blob/master/LICENSE';
 
 @visibleForTesting
