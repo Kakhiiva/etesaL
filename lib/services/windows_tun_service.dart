@@ -13,7 +13,7 @@ class WindowsTunService {
   WindowsTunService._();
 
   // windows/runner/windows_tun_service_client.cpp
-  static const _channel = MethodChannel('keqdroid/tun_service');
+  static const _channel = MethodChannel('etesaL/tun_service');
 
   static _ServiceCoreProcess? _current;
   static bool _handlerSet = false;
@@ -73,7 +73,7 @@ class WindowsTunService {
         'adapterIds': adapterIds,
       });
     } on PlatformException catch (e) {
-      throw ProcessException('keqdroid-tun', [
+      throw ProcessException('etesaL-tun', [
         kind,
       ], 'TUN service: ${e.message ?? e.code}');
     }
