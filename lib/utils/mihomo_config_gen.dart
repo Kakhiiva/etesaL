@@ -1996,15 +1996,15 @@ class MihomoConfigGen {
   }
 
   // читает только наш mihomo, tool/patches/mihomo-udp-per-exit.patch; чужой ключ ядро пропускает
-  static const udpPerExitKey = 'keqdroid-udp-per-exit';
+  static const udpPerExitKey = 'etesaL-udp-per-exit';
 
   // читает только наш mihomo, tool/patches/mihomo-uid-owner-guard.patch: без ключа ядро не отличает приложение вне VPN,
   // со значением all проверяет и DNS, который перехватывает раньше правил
-  static const ownerGuardKey = 'keqdroid-owner-guard';
+  static const ownerGuardKey = 'etesaL-owner-guard';
 
   // читает только наш mihomo, tool/patches/mihomo-v6-tun-reset.patch: TCP по IPv6 из TUN получает сброс
   // до рукопожатия, и браузер сразу идёт на IPv4; правило ниже ловит остальное, UDP
-  static const closeTunIpv6Key = 'keqdroid-tun-close-ipv6';
+  static const closeTunIpv6Key = 'etesaL-tun-close-ipv6';
 
   static const closedTunIpv6Rule = 'AND,((IN-TYPE,TUN),(IP-CIDR6,::/0)),REJECT';
 
