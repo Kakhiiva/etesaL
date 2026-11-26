@@ -11,7 +11,7 @@ import 'dart:io';
 import 'dart:math' as math;
 import 'dart:typed_data';
 
-import 'package:keqdroid/utils/zip_layout.dart';
+import 'package:etesaL/utils/zip_layout.dart';
 
 typedef Deflater =
     Future<Map<int, Uint8List>> Function(Map<int, Uint8List> plain);
