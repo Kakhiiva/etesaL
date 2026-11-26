@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/backup_crypto.dart';
-import 'package:keqdroid/services/settings_backup_service.dart';
+import 'package:etesaL/services/backup_crypto.dart';
+import 'package:etesaL/services/settings_backup_service.dart';
 
 final _backup = KeqdroidBackup(
   version: 1,
