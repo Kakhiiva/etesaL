@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/ping_service.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/ping_service.dart';
 
 void main() {
   group('дефолт пинга — прокси', () {
