@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // ruleTag остаётся единственным способом узнать, по какому правилу ушло соединение:
 // xray печатает Hit route rule: [tag] so taking detour [proxy] for [...], и по
