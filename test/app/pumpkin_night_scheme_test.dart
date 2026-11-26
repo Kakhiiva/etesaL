@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
+import 'package:etesaL/app/app.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
 double _contrast(Color a, Color b) {
