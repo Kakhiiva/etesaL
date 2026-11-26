@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/hysteria_uri.dart';
+import 'package:etesaL/utils/hysteria_uri.dart';
 
 void main() {
   test('parses obfs and builds finalmask', () {
