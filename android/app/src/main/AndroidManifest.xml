@@ -36,7 +36,7 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
     <application
-        android:label="keqdroid"
+        android:label="etesaL"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:banner="@drawable/tv_banner"
@@ -93,14 +93,14 @@
             </intent-filter>
 
             <!-- Кнопка «добавить подписку» на странице панели (Remnawave и
-                 подобные): keqdroid://install-config?url=<адрес подписки>.
+                 подобные): etesaL://install-config?url=<адрес подписки>.
                  Схема — часть внешнего контракта: она вписана в настройки
                  панелей, поэтому переименование ломает уже сделанные кнопки. -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="keqdroid" />
+                <data android:scheme="etesaL" />
                 <data android:scheme="keqdis" />
             </intent-filter>
         </activity>
@@ -145,13 +145,13 @@
         <!-- ContentProvider для синхронизации статуса VPN с Quick Settings tile -->
         <provider
             android:name=".VpnStatusProvider"
-            android:authorities="com.keqdroid.keqdroid.vpnstatus"
+            android:authorities="com.etesaL.etesaL.vpnstatus"
             android:exported="false" />
 
         <!-- Quick Settings tile (Android 7.0+) -->
         <service
             android:name=".VpnQuickTileService"
-            android:label="keqdroid"
+            android:label="etesaL"
             android:icon="@drawable/ic_notification"
             android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -176,7 +176,7 @@
         <receiver
             android:name=".HomeWidgetProvider"
             android:exported="true"
-            android:label="keqdroid">
+            android:label="etesaL">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
