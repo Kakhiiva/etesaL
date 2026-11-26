@@ -13,8 +13,8 @@ import 'tunnel_state.dart';
 import 'vpn_backend.dart';
 
 class AndroidTunnelBackend implements TunnelBackend {
-  static const _method = MethodChannel('keqdroid_vpn_channel');
-  static const _event = EventChannel('keqdroid_vpn_status');
+  static const _method = MethodChannel('etesaL_vpn_channel');
+  static const _event = EventChannel('etesaL_vpn_status');
 
   StreamSubscription<dynamic>? _eventSub;
   final _stateCtrl = StreamController<VpnState>.broadcast();
@@ -286,7 +286,7 @@ class AndroidTunnelBackend implements TunnelBackend {
   );
 
   // подписка заводится до первого вызова: канал шлёт в никуда, пока его не слушают
-  static const _pingProgress = EventChannel('keqdroid_ping_progress');
+  static const _pingProgress = EventChannel('etesaL_ping_progress');
   static StreamSubscription<dynamic>? _pingProgressSub;
   static final _pingProgressListeners =
       <String, void Function(Map<Object?, Object?>)>{};
@@ -398,7 +398,7 @@ class AndroidTunnelBackend implements TunnelBackend {
     'VPN_START_FAILED' => VpnStartException(e.message ?? 'Failed to start VPN'),
     _ => PlatformChannelException(
       '[$method] ${e.code}: ${e.message}',
-      channel: 'keqdroid_vpn_channel',
+      channel: 'etesaL_vpn_channel',
       cause: e,
     ),
   };
