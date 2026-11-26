@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/linux_tunnel_backend.dart';
+import 'package:etesaL/tunnel/linux_tunnel_backend.dart';
 
 // Беспарольный TUN держится на строках, которые живут в трёх местах: теле
 // обёртки, правиле polkit и проверке, установлено ли. Разойдись они, и
@@ -35,7 +35,7 @@ void main() {
   // хелпер без пароля зовёт любая программа пользователя: v5 обнулял от root любой файл из аргумента
   group('what the caller names cannot steer root', () {
     test('root writes only into its own run directory', () {
-      expect(body, contains(r'RUN=/run/keqdroid/$OWNER'));
+      expect(body, contains(r'RUN=/run/etesaL/$OWNER'));
       expect(body, contains(r'LOGF=$RUN/core.log'));
       expect(body, isNot(contains(r'LOGF="$4"')));
       expect(body, isNot(contains(r'AUTHF=')));
