@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/routing_rule.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/utils/rule_lists.dart';
-import 'package:keqdroid/utils/traffic_routes.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/routing_rule.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/utils/rule_lists.dart';
+import 'package:etesaL/utils/traffic_routes.dart';
 
 RoutingRule _rule(
   RuleType type,
