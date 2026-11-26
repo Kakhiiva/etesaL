@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/geo_base_downloader.dart';
+import 'package:etesaL/services/geo_base_downloader.dart';
 
 // Где загрузчик полной geo-базы берёт хеш.
 //
@@ -14,7 +14,7 @@ void main() {
   test('хеш из подписанного SHA256SUMS', () {
     expect(
       GeoBaseDownloader.urlsFromAssets([
-        _asset('keqdroid-0.36.0-android.apk'),
+        _asset('etesaL-0.36.0-android.apk'),
         _asset('geoip.dat'),
         _asset('geoip.dat.sha256'),
         _asset('SHA256SUMS'),
