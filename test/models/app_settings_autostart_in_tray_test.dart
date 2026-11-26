@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/settings_backup_service.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/settings_backup_service.dart';
 
 void main() {
   group('автозапуск в трей', () {
