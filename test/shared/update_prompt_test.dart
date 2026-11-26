@@ -4,9 +4,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/services/update_service.dart';
-import 'package:keqdroid/shared/ui/update_dialog.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/services/update_service.dart';
+import 'package:etesaL/shared/ui/update_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 UpdateInfo _info(String version) => UpdateInfo(
