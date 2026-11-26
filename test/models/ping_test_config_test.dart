@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/ping_test_config.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/ping_test_config.dart';
 
 void main() {
   group('PingTestConfig', () {
