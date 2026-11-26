@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/widgets.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/tun_settings.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/tun_settings.dart';
 
 // Подписи под полями TUN называют умолчания числом, и число это живёт в другом
 // файле. Когда умолчание сменили (system/1400 → gvisor/9000), подпись
