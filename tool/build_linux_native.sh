@@ -4,12 +4,12 @@
 # free space) instead of /mnt/c, then copy only the release artifacts back to
 # the Windows project. Use when the C: drive is low on space.
 #
-#   wsl -e bash /mnt/c/Users/<you>/StudioProjects/keqdroid/tool/build_linux_native.sh
+#   wsl -e bash /mnt/c/Users/<you>/StudioProjects/etesaL/tool/build_linux_native.sh
 #
 set -euo pipefail
 
-SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # /mnt/c/.../keqdroid
-DST="$HOME/keqdroid_src"
+SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # /mnt/c/.../etesaL
+DST="$HOME/etesaL_src"
 export PATH="$HOME/flutter/bin:$PATH"
 
 echo "==> Syncing project to native fs: $DST"
