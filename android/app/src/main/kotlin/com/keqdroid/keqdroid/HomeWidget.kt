@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
