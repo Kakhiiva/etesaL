@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/screen_qr_capture.dart';
+import 'package:etesaL/services/screen_qr_capture.dart';
 
 void main() {
   test('takes the gray frame the runner sent', () {
