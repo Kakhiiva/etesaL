@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/servers/server_config_editor.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/servers/server_config_editor.dart';
 
 // Готовый конфиг из подписки: у него нет share-ссылки, поэтому редактор
 // открывается в сыром режиме с окном на 26 строк. Это самый высокий экран
