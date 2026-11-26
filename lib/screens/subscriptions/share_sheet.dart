@@ -97,7 +97,7 @@ Future<Uint8List?> _subscriptionQrPng(GlobalKey qrKey) async {
 
 String _subscriptionQrFileName(String subscriptionName) {
   final safe = subscriptionName.replaceAll(RegExp(r'[^\w\-]+'), '_');
-  return 'keqdroid_sub_${safe.isEmpty ? 'qr' : safe}.png';
+  return 'etesaL_sub_${safe.isEmpty ? 'qr' : safe}.png';
 }
 
 // на Linux share_plus файлы не передаёт и кидает исключение, поэтому сохраняем
