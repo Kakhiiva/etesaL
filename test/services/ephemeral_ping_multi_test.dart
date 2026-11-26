@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/ephemeral_xray_ping.dart';
+import 'package:etesaL/services/ephemeral_xray_ping.dart';
 
 // Пачку серверов на ПК меряет один процесс ядра, как на Android.
 //
@@ -12,7 +12,7 @@ import 'package:keqdroid/services/ephemeral_xray_ping.dart';
 // он принял бы за ответ, и десяток живых соседей ушёл бы в красные.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  const channel = MethodChannel('keqdroid_vpn_channel');
+  const channel = MethodChannel('etesaL_vpn_channel');
 
   setUp(() {
     // привязка процесса к job object уходит в нативную часть, в тесте её нет
