@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/ping_sample.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/services/auto_select_watchdog.dart';
-import 'package:keqdroid/services/auto_server_select.dart';
+import 'package:etesaL/models/ping_sample.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/services/auto_select_watchdog.dart';
+import 'package:etesaL/services/auto_server_select.dart';
 
 // Кого выбирает Авто.
 //
