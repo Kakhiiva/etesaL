@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/hotkey_config.dart';
+import 'package:etesaL/models/hotkey_config.dart';
 
 void main() {
   test('every recordable key token has a unique Carbon virtual keycode', () {
