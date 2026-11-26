@@ -11,7 +11,7 @@ class LinuxAutostart {
   LinuxAutostart._();
 
   static const flag = '--autostart';
-  static const _fileName = 'keqdroid.desktop';
+  static const _fileName = 'etesaL.desktop';
 
   static const _marker = 'X-KeqDroid-Autostart=true';
 
@@ -33,7 +33,7 @@ class LinuxAutostart {
 
   // Hyprland без uwsm (так у caelestia) ~/.config/autostart не читает и поднимает только hyprland-session.target.
   // Цепляем к ней службу, которую systemd-xdg-autostart-generator делает из ярлыка: под uwsm и в GNOME/KDE запуск остаётся один
-  static const _generatedUnit = 'app-keqdroid@autostart.service';
+  static const _generatedUnit = 'app-etesaL@autostart.service';
 
   static String _configHome() {
     final override = configHomeOverride;
@@ -50,7 +50,7 @@ class LinuxAutostart {
       'systemd',
       'user',
       'hyprland-session.target.d',
-      'keqdroid.conf',
+      'etesaL.conf',
     ),
   );
 
@@ -72,7 +72,7 @@ class LinuxAutostart {
   // xdg-desktop-autostart.target никто не поднимает. Остаётся их собственный запуск при старте; строку ставим
   // только там, иначе приложение стартовало бы дважды
   static const _startMarker =
-      'keqdroid autostart, added and removed by the app';
+      'etesaL autostart, added and removed by the app';
 
   static const _compositors = ['hyprland', 'sway', 'river', 'niri'];
 
@@ -266,7 +266,7 @@ class LinuxAutostart {
   static String _nixTarget(String executable) {
     const store = '/nix/store/';
     if (!executable.startsWith(store) ||
-        p.posix.basename(executable) != 'keqdroid') {
+        p.posix.basename(executable) != 'etesaL') {
       return executable;
     }
     final env = environment();
@@ -277,18 +277,18 @@ class LinuxAutostart {
         ? xdgState
         : (home.isNotEmpty ? p.posix.join(home, '.local', 'state') : '');
     final candidates = <String>[
-      '/run/current-system/sw/bin/keqdroid',
+      '/run/current-system/sw/bin/etesaL',
       if (user != null && user.isNotEmpty)
-        '/etc/profiles/per-user/$user/bin/keqdroid',
-      if (stateHome.isNotEmpty) '$stateHome/nix/profile/bin/keqdroid',
-      if (home.isNotEmpty) p.posix.join(home, '.nix-profile/bin/keqdroid'),
+        '/etc/profiles/per-user/$user/bin/etesaL',
+      if (stateHome.isNotEmpty) '$stateHome/nix/profile/bin/etesaL',
+      if (home.isNotEmpty) p.posix.join(home, '.nix-profile/bin/etesaL'),
     ];
     for (final candidate in candidates) {
       if (fileExists(candidate)) return candidate;
     }
     final slash = executable.indexOf('/', store.length);
     if (slash > store.length) {
-      final wrapped = '${executable.substring(0, slash)}/bin/keqdroid';
+      final wrapped = '${executable.substring(0, slash)}/bin/etesaL';
       if (fileExists(wrapped)) return wrapped;
     }
     return executable;
@@ -378,7 +378,7 @@ class LinuxAutostart {
         (xdg != null && xdg.isNotEmpty
             ? xdg
             : p.join(_home(), '.local', 'share'));
-    return File(p.join(dataHome, 'com.keqdroid.keqdroid', 'autostart-in-tray'));
+    return File(p.join(dataHome, 'com.etesaL.etesaL', 'autostart-in-tray'));
   }
 
   static Future<void> setStartInTray(bool enabled) async {
@@ -414,7 +414,7 @@ class LinuxAutostart {
     'Type=Application',
     'Name=KeqDroid',
     'Exec=${LinuxDesktopEntry.execArgument(target)} $flag',
-    'Icon=keqdroid',
+    'Icon=etesaL',
     'Terminal=false',
     'X-GNOME-Autostart-enabled=true',
     _marker,
