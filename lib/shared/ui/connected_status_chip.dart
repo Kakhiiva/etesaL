@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/server_avatar.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/server_avatar.dart';
 
 import '../../models/server_flag.dart';
 import '../../services/exit_ip_service.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
 
 // адрес постоянно не показываем: скриншоты главного экрана уходят в чаты и issue
 class ConnectedStatusChip extends StatefulWidget {
