@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_flag.dart';
+import 'package:etesaL/models/server_flag.dart';
 
 // Картинки флагов мы берём из ассетов country_flags напрямую, минуя его
 // виджет (его таблица кодов беднее набора ассетов). Цена: список [FlagArt]
