@@ -2,10 +2,10 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/utils/connection_route.dart';
-import 'package:keqdroid/utils/geo_dat_reader.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/utils/connection_route.dart';
+import 'package:etesaL/utils/geo_dat_reader.dart';
 
 ConnectionEntry _conn(
   String host, {
