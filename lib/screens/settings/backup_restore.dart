@@ -52,7 +52,7 @@ class _BackupRestoreScreenState extends ConsumerState<_BackupRestoreScreen> {
           .split('.')
           .first;
       final fileName =
-          'keqdroid-backup-$stamp.${SettingsBackupService.fileExtension}';
+          'etesaL-backup-$stamp.${SettingsBackupService.fileExtension}';
 
       final savedPath = await AppFileDialogs.saveFile(
         dialogTitle: l10n.settingsSelectLocation,
