@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/scroll_hidden_fab.dart';
+import 'package:etesaL/shared/ui/scroll_hidden_fab.dart';
 
 // Кнопка + над списком серверов.
 //
