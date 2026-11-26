@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/resume_after_update.dart';
+import 'package:etesaL/services/resume_after_update.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
