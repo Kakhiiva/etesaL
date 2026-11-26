@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/singbox_outbounds.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
-import 'package:keqdroid/utils/socks_uri.dart';
-import 'package:keqdroid/utils/ssr_uri.dart';
-import 'package:keqdroid/utils/vpn_core_support.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/singbox_outbounds.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
+import 'package:etesaL/utils/socks_uri.dart';
+import 'package:etesaL/utils/ssr_uri.dart';
+import 'package:etesaL/utils/vpn_core_support.dart';
 
 // Перевод узлов sing-box в ссылки. Поля по option/*.go sing-box.
 //
