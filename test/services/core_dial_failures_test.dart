@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/core_dial_failures.dart';
+import 'package:etesaL/services/core_dial_failures.dart';
 
 // Какие строки вывода ядра считаются отказом дозвона до сервера.
 //
