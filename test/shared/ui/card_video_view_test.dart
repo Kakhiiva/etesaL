@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/card_video_view.dart';
+import 'package:etesaL/shared/ui/card_video_view.dart';
 import 'package:video_player/video_player.dart';
 
 class _FakeController extends VideoPlayerController {
