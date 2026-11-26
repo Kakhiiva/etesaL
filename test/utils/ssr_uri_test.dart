@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/ssr_uri.dart';
+import 'package:etesaL/utils/ssr_uri.dart';
 
 // У SSR внутри base64 лежит всё: адрес, пароль, параметры и имя. Пока
 // разборщика не было, сервер показывался куском base64 вместо адреса, пинг
