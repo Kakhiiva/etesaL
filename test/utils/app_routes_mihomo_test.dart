@@ -1,14 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/app_routes.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/route_servers.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/app_routes.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/route_servers.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 import '../helpers/mihomo_rules_sim.dart';
 
@@ -80,7 +80,7 @@ Map<String, dynamic> _config(
     socksPort: 2080,
     httpPort: 2081,
     tun: tun,
-    appProcessName: 'keqdroid.exe',
+    appProcessName: 'etesaL.exe',
     windows: true,
     routeServers: outbounds,
     appRoutes: apps,
@@ -214,7 +214,7 @@ void main() {
     final c = _config(routes);
     expect(_go(c, 'chrome.exe', host: 'youtube.com', inType: 'HTTP'), 'proxy');
     expect(
-      _go(c, 'keqdroid.exe', host: 'example.com', inType: 'HTTP'),
+      _go(c, 'etesaL.exe', host: 'example.com', inType: 'HTTP'),
       'proxy',
     );
   });
