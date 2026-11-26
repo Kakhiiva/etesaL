@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/traffic_split_service.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/route_servers.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/traffic_split_service.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/route_servers.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Другой сервер маршрута на mihomo: отдельный выход в конфиге сессии и
 // правила на него между напрямую и через VPN, там, где ТЗ ставит его
