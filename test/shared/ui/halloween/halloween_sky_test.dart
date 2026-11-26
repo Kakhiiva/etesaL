@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/halloween/halloween_sky.dart';
+import 'package:etesaL/shared/ui/halloween/halloween_sky.dart';
 
 Widget _sky(Brightness brightness) => MaterialApp(
   theme: ThemeData(brightness: brightness),
