@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_info.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/split_tunneling_screen.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
-import 'package:keqdroid/utils/process_name_utils.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_info.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/split_tunneling_screen.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
+import 'package:etesaL/utils/process_name_utils.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 
