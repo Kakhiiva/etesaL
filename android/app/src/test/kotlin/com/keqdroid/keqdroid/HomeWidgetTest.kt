@@ -1,6 +1,6 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
-import com.keqdroid.keqdroid.HomeWidget.Kind
+import com.etesaL.etesaL.HomeWidget.Kind
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
