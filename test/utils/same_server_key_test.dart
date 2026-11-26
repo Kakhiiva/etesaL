@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/mieru_uri.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/same_server_key.dart';
+import 'package:etesaL/utils/mieru_uri.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/same_server_key.dart';
 
 const _vless =
     'vless://00000000-0000-4000-8000-000000000000@198.51.100.10:443'
