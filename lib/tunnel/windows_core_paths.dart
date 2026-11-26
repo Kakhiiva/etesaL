@@ -17,7 +17,7 @@ class WindowsCorePaths {
   static const binariesHint =
       'Положите xray.exe, mihomo.exe и '
       'wintun.dll (нужен для TUN) в assets/bin/windows/ (см. README) и '
-      'пересоберите приложение, или рядом с keqdroid.exe.';
+      'пересоберите приложение, или рядом с etesaL.exe.';
 
   static Future<Directory> sessionDir() async {
     _sweepLegacyTempDirs();
@@ -30,7 +30,7 @@ class WindowsCorePaths {
     final base = (localAppData != null && localAppData.isNotEmpty)
         ? localAppData
         : Directory.systemTemp.path;
-    return p.join(base, 'keqdroid');
+    return p.join(base, 'etesaL');
   }
 
   static bool _legacySweepStarted = false;
