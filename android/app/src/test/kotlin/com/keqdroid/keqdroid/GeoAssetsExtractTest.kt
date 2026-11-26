@@ -1,6 +1,6 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
-import com.keqdroid.keqdroid.RoboSession.context
+import com.etesaL.etesaL.RoboSession.context
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
