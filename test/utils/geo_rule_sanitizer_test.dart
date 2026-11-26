@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/geo_asset_index.dart';
-import 'package:keqdroid/utils/geo_rule_sanitizer.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/geo_asset_index.dart';
+import 'package:etesaL/utils/geo_rule_sanitizer.dart';
 
 void main() {
   const index = GeoAssetIndex(
