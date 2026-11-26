@@ -67,7 +67,7 @@ class UpdateInfo {
 }
 
 class UpdateService {
-  static const _owner = 'Lemonochka';
+  static const _owner = 'Kakhiiva';
   static const _repo = 'etesaL';
 
   // ведущая v необязательна: в репозитории есть теги обоих видов
