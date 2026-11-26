@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/windows_zip_updater.dart';
+import 'package:etesaL/services/windows_zip_updater.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
@@ -9,7 +9,7 @@ void main() {
     late Directory tempDir;
 
     setUp(() async {
-      tempDir = await Directory.systemTemp.createTemp('keqdroid_zip_test_');
+      tempDir = await Directory.systemTemp.createTemp('etesaL_zip_test_');
     });
 
     tearDown(() async {
@@ -25,7 +25,7 @@ void main() {
     });
 
     test('finds exe inside a single nested folder', () async {
-      final nested = Directory(p.join(tempDir.path, 'keqdroid'));
+      final nested = Directory(p.join(tempDir.path, 'etesaL'));
       await nested.create();
       await File(p.join(nested.path, WindowsZipUpdater.exeName)).create();
 
