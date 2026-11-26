@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/core/app_logger.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/screens/settings_tab.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/core/app_logger.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/screens/settings_tab.dart';
 
 // pumpAndSettle тут не годится: журнал части опрашивается по таймеру.
 Future<void> _frames(WidgetTester tester) async {
@@ -149,7 +149,7 @@ void main() {
 
     expect(
       sharedName,
-      matches(RegExp(r'^keqdroid-log-\d{4}-\d{2}-\d{2}-\d{4}\.txt$')),
+      matches(RegExp(r'^etesaL-log-\d{4}-\d{2}-\d{2}-\d{4}\.txt$')),
     );
     expect(sharedText, contains('record 000'));
     expect(sharedText, contains('record 309'));
