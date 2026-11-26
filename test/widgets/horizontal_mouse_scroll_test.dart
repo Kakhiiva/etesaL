@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/horizontal_mouse_scroll.dart';
+import 'package:etesaL/shared/ui/horizontal_mouse_scroll.dart';
 
 // Колесо над горизонтальной лентой внутри вертикальной страницы (выбор картинки подписки на ПК):
 // листало страницу вниз, а карусель с привязкой возвращалась к той же картинке.
