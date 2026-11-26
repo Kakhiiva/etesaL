@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/shared/ui/bottom_nav.dart';
-import 'package:keqdroid/shared/ui/floating_bar.dart';
-import 'package:keqdroid/shared/ui/liquid_nav.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/shared/ui/bottom_nav.dart';
+import 'package:etesaL/shared/ui/floating_bar.dart';
+import 'package:etesaL/shared/ui/liquid_nav.dart';
 
 Future<void> _pumpNav(
   WidgetTester tester, {
