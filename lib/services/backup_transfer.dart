@@ -30,7 +30,7 @@ class BackupTransferLink {
   static const _linkHost = 'backup';
 
   String toLink() => Uri(
-    scheme: 'keqdroid',
+    scheme: 'etesaL',
     host: _linkHost,
     queryParameters: {
       'h': host,
@@ -44,7 +44,7 @@ class BackupTransferLink {
   static BackupTransferLink? parse(String raw) {
     final uri = Uri.tryParse(raw.trim());
     if (uri == null ||
-        !const {'keqdroid', 'keqdis'}.contains(uri.scheme.toLowerCase()) ||
+        !const {'etesaL', 'keqdis'}.contains(uri.scheme.toLowerCase()) ||
         uri.host.toLowerCase() != _linkHost) {
       return null;
     }
@@ -209,13 +209,13 @@ class BackupTransferServer {
     _onGiven?.call();
   }
 
-  static const proofHeader = 'x-keqdroid-proof';
+  static const proofHeader = 'x-etesaL-proof';
 
   static String giveProof(List<int> key) => base64Url.encode(
     hashes.Hmac(
       hashes.sha256,
       key,
-    ).convert(utf8.encode('keqdroid backup give')).bytes,
+    ).convert(utf8.encode('etesaL backup give')).bytes,
   );
 
   // без раннего выхода, чтобы ключ не подобрать по времени ответа
