@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/system_accent.dart';
+import 'package:etesaL/utils/system_accent.dart';
 
 // Цепочка источников цвета системной темы. Проверяем то, из-за чего она и
 // появилась: на прошивках без Material You прежний путь отдавал константу
