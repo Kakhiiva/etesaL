@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/ping_service.dart';
+import 'package:etesaL/services/ping_service.dart';
 
 void main() {
   test('извлекает физический интерфейс из route -n get default на macOS', () {
