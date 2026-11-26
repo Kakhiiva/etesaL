@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/connection_entry.dart';
-import 'package:keqdroid/services/xray_access_log_parser.dart';
-import 'package:keqdroid/services/xray_connection_lines.dart';
-import 'package:keqdroid/services/xray_route_decisions.dart';
-import 'package:keqdroid/utils/xray_session_log.dart';
+import 'package:etesaL/models/connection_entry.dart';
+import 'package:etesaL/services/xray_access_log_parser.dart';
+import 'package:etesaL/services/xray_connection_lines.dart';
+import 'package:etesaL/services/xray_route_decisions.dart';
+import 'package:etesaL/utils/xray_session_log.dart';
 
 // вывод xray 26 на ПК: системный прокси через http-in, socks и TUN
 const _coreOutput = '''
