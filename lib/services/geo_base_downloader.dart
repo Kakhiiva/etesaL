@@ -15,7 +15,7 @@ class GeoBaseDownloader {
   GeoBaseDownloader._();
 
   static const _owner = 'Lemonochka';
-  static const _repo = 'keqdroid';
+  static const _repo = 'etesaL';
 
   static const assetName = 'geoip.dat';
 
