@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/ephemeral_xray_ping.dart';
+import 'package:etesaL/services/ephemeral_xray_ping.dart';
 
 void main() {
   group('лог временного ядра', () {
