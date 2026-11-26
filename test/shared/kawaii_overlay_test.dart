@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/shared/ui/kawaii_decorations.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/shared/ui/kawaii_decorations.dart';
 
 void main() {
   Widget host(KawaiiFlavor flavor, Brightness brightness) => MaterialApp(
