@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get appTitle => 'keqdroid';
+  String get appTitle => 'etesaL';
 
   @override
   String vpnConnectedTo(Object serverName) {
@@ -206,7 +206,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get routingCheatSheetTitle => '怎么写规则';
 
   @override
-  String get routingCheatSheetBody => '路由读作“对象 → 内容 → 去向”。在“自定义网站”中，每一行写一个域名、IP、地理标签或列表链接，去向由路由本身选择：直连、代理或阻止。\n\n## 域名\nvk.com — 这个域名本身及其所有子域名\nru — 所有以 .ru 结尾的域名（只写这个词，不带点）\n.example.com 和 *.example.com — 与 example.com 相同\nfull:example.com — 只匹配这一个主机，不含子域名\nregexp:… — 正则表达式，确实需要复杂匹配时再用\n\n## IP 地址\n1.2.3.4 — 单个地址\n10.0.0.0/8 — 一整段地址（CIDR）\n\n## GeoIP：按国家\ngeoip:ru — 所有俄罗斯 IP。把 ru 换成任意国家代码：us、de、cn、ua、kz……\n另有现成的集合：geoip:private（局域网）、geoip:telegram、geoip:google。\n要按国家分流？就用它，geoip 认得所有国家。\n\n## GeoSite：现成的列表\ngeosite:google、geosite:netflix、geosite:telegram、geosite:category-ads-all……\n这些不是国家，而是别人已经整理好的服务分类。\n这里几乎没有国家（只有 geolocation-cn 和 geolocation-!cn），所以按国家还是要用 geoip。\n\n## 在电脑上\n地理规则和手机上一样生效。只需让 geoip.dat 和 geosite.dat 与 keqdroid.exe 放在同一目录，正式版里已经放好了。如果地理规则似乎没有生效，请先检查这两个文件。\n\n## 顺序\n与屏幕一致，从上到下：阻止、指定应用、所有应用。所有应用中，新建的直连路由排在代理路由之上。顺序可以调整：长按路由并上下拖动。您的服务器始终最先直连，否则会形成回环。不匹配任何路由的流量按“其他所有”这一行处理。';
+  String get routingCheatSheetBody => '路由读作“对象 → 内容 → 去向”。在“自定义网站”中，每一行写一个域名、IP、地理标签或列表链接，去向由路由本身选择：直连、代理或阻止。\n\n## 域名\nvk.com — 这个域名本身及其所有子域名\nru — 所有以 .ru 结尾的域名（只写这个词，不带点）\n.example.com 和 *.example.com — 与 example.com 相同\nfull:example.com — 只匹配这一个主机，不含子域名\nregexp:… — 正则表达式，确实需要复杂匹配时再用\n\n## IP 地址\n1.2.3.4 — 单个地址\n10.0.0.0/8 — 一整段地址（CIDR）\n\n## GeoIP：按国家\ngeoip:ru — 所有俄罗斯 IP。把 ru 换成任意国家代码：us、de、cn、ua、kz……\n另有现成的集合：geoip:private（局域网）、geoip:telegram、geoip:google。\n要按国家分流？就用它，geoip 认得所有国家。\n\n## GeoSite：现成的列表\ngeosite:google、geosite:netflix、geosite:telegram、geosite:category-ads-all……\n这些不是国家，而是别人已经整理好的服务分类。\n这里几乎没有国家（只有 geolocation-cn 和 geolocation-!cn），所以按国家还是要用 geoip。\n\n## 在电脑上\n地理规则和手机上一样生效。只需让 geoip.dat 和 geosite.dat 与 etesaL.exe 放在同一目录，正式版里已经放好了。如果地理规则似乎没有生效，请先检查这两个文件。\n\n## 顺序\n与屏幕一致，从上到下：阻止、指定应用、所有应用。所有应用中，新建的直连路由排在代理路由之上。顺序可以调整：长按路由并上下拖动。您的服务器始终最先直连，否则会形成回环。不匹配任何路由的流量按“其他所有”这一行处理。';
 
   @override
   String settingsRoutingItemCount(int count) {
@@ -1693,16 +1693,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get desktopTunServiceTitle => 'TUN 服务';
 
   @override
-  String get desktopTunServiceMessage => 'TUN 模式通过 keqdroid 服务运行。服务只需安装一次：Windows 会请求您的许可，之后开启 TUN 无需再次确认，也无需重启。';
+  String get desktopTunServiceMessage => 'TUN 模式通过 etesaL 服务运行。服务只需安装一次：Windows 会请求您的许可，之后开启 TUN 无需再次确认，也无需重启。';
 
   @override
-  String get desktopTunServiceUpdateMessage => '应用已更新，用于 TUN 的 keqdroid 服务也需要一起更新。Windows 会请求您的许可。';
+  String get desktopTunServiceUpdateMessage => '应用已更新，用于 TUN 的 etesaL 服务也需要一起更新。Windows 会请求您的许可。';
 
   @override
-  String get desktopTunServiceMessageMacos => 'TUN 模式通过 keqdroid 服务运行。服务只需安装一次：macOS 会请求管理员密码，之后开启 TUN 无需再次输入密码，也无需重启。';
+  String get desktopTunServiceMessageMacos => 'TUN 模式通过 etesaL 服务运行。服务只需安装一次：macOS 会请求管理员密码，之后开启 TUN 无需再次输入密码，也无需重启。';
 
   @override
-  String get desktopTunServiceUpdateMessageMacos => '应用已更新，用于 TUN 的 keqdroid 服务也需要一起更新。macOS 会请求管理员密码。';
+  String get desktopTunServiceUpdateMessageMacos => '应用已更新，用于 TUN 的 etesaL 服务也需要一起更新。macOS 会请求管理员密码。';
 
   @override
   String get desktopTunServiceInstall => '安装服务';
@@ -1987,7 +1987,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tvReceiveSubtitle => '通过 Wi-Fi 接收手机上的订阅';
 
   @override
-  String get tvReceiveHint => '在手机上的 keqdroid 中扫描此二维码。手机和电视需连接同一 Wi-Fi 网络。';
+  String get tvReceiveHint => '在手机上的 etesaL 中扫描此二维码。手机和电视需连接同一 Wi-Fi 网络。';
 
   @override
   String get tvReceiveWaiting => '正在等待订阅…';
@@ -2120,7 +2120,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get errorPolkitMissingMessage => 'TUN 模式通过 pkexec 以 root 启动内核，而系统未安装 polkit。';
 
   @override
-  String get errorPolkitMissingAction => '请安装 polkit 及其认证代理，或以 root 身份启动应用（sudo -E keqdroid），也可以在设置中切换到代理模式。';
+  String get errorPolkitMissingAction => '请安装 polkit 及其认证代理，或以 root 身份启动应用（sudo -E etesaL），也可以在设置中切换到代理模式。';
 
   @override
   String get errorPolkitNoAgentTitle => '需要 polkit';
@@ -3364,10 +3364,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get backupTransferRetry => '重试';
 
   @override
-  String get backupTransferNotOurCode => '这不是 keqdroid 的备份二维码';
+  String get backupTransferNotOurCode => '这不是 etesaL 的备份二维码';
 
   @override
-  String get backupTransferUnreachable => '设备无响应。两台设备需连接同一 Wi-Fi 网络，电脑上还需在防火墙中允许 keqdroid';
+  String get backupTransferUnreachable => '设备无响应。两台设备需连接同一 Wi-Fi 网络，电脑上还需在防火墙中允许 etesaL';
 
   @override
   String get backupTransferExpired => '此二维码已被使用或已关闭。请在另一台设备上重新打开';
@@ -3378,5 +3378,5 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get backupFromReleaseBuild => '此备份由 keqdroid 正式版生成，而当前版本没有它的密钥';
+  String get backupFromReleaseBuild => '此备份由 etesaL 正式版生成，而当前版本没有它的密钥';
 }
