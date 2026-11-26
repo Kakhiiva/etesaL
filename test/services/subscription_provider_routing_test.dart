@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/routing_profile.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/services/storage_service.dart';
-import 'package:keqdroid/services/subscription_service.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/routing_profile.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/services/storage_service.dart';
+import 'package:etesaL/services/subscription_service.dart';
 import 'package:mocktail/mocktail.dart';
 
 class _MockStorageService extends Mock implements StorageService {}
