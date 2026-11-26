@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.content.Intent
 import org.junit.Assert.assertEquals
@@ -131,7 +131,7 @@ class VpnServiceRulesTest {
 
     @Test
     fun `proc status fields are read by key`() {
-        val status = sequenceOf("Name:\tkeqdroid", "Threads:\t57", "VmRSS:\t  183456 kB")
+        val status = sequenceOf("Name:\tetesaL", "Threads:\t57", "VmRSS:\t  183456 kB")
         assertEquals(57L, statusField(status, "Threads"))
         assertEquals(183456L, statusField(status, "VmRSS"))
         assertNull(statusField(status, "VmSwap"))
