@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/utils/awg_profile.dart';
-import 'package:keqdroid/utils/awg_uri.dart';
-import 'package:keqdroid/utils/import_payload.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/utils/awg_profile.dart';
+import 'package:etesaL/utils/awg_uri.dart';
+import 'package:etesaL/utils/import_payload.dart';
 
 void main() {
   // Ключи с '+' и '/' внутри: ровно те символы, на которых ломается разбор
