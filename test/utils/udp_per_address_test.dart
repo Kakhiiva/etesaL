@@ -1,16 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/desktop_tun.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/desktop_tun.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Переключатель UDP по маршрутам для каждого адреса: ядра включают раздельные
 // UDP-потоки по метке в конфиге (xray: выход keq-udp-per-exit, mihomo:
-// ключ keqdroid-udp-per-exit). Выключен, и конфиг прежний.
+// ключ etesaL-udp-per-exit). Выключен, и конфиг прежний.
 const _link =
     'vless://00000000-0000-4000-8000-000000000000@198.51.100.10:443'
     '?type=tcp&security=reality&pbk=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
@@ -98,9 +98,9 @@ void main() {
             as Map<String, dynamic>;
 
     test('ключ только при включённом', () {
-      expect(config(_on)['keqdroid-udp-per-exit'], isTrue);
+      expect(config(_on)['etesaL-udp-per-exit'], isTrue);
       expect(
-        config(const AppSettings()).containsKey('keqdroid-udp-per-exit'),
+        config(const AppSettings()).containsKey('etesaL-udp-per-exit'),
         isFalse,
       );
     });
@@ -113,9 +113,9 @@ void main() {
       Map<String, dynamic> custom(AppSettings s) =>
           jsonDecode(MihomoConfigGen.generate(clash, s, socksPort: 2080))
               as Map<String, dynamic>;
-      expect(custom(_on)['keqdroid-udp-per-exit'], isTrue);
+      expect(custom(_on)['etesaL-udp-per-exit'], isTrue);
       expect(
-        custom(const AppSettings()).containsKey('keqdroid-udp-per-exit'),
+        custom(const AppSettings()).containsKey('etesaL-udp-per-exit'),
         isFalse,
       );
     });
