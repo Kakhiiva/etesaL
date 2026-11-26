@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/zip_piece_download.dart';
+import 'package:etesaL/services/zip_piece_download.dart';
 
 import '../helpers/zip_fixture.dart';
 
