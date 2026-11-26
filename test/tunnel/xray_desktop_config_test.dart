@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/xray_desktop_config.dart';
+import 'package:etesaL/tunnel/xray_desktop_config.dart';
 
 // Счётчики и программа в журнале на ПК: раньше их давал мост keqrnel через
 // clash API, теперь сам xray (metrics и патч xray-desktop-process).
