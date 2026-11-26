@@ -28,13 +28,13 @@ final class ProviderRoutingRules extends ProviderRouting {
 }
 
 final _link = RegExp(
-  r'^(?:happ|incy|keqdroid|keqdis)://routing/(add|onadd|off)(?:/(.*))?$',
+  r'^(?:happ|incy|etesaL|keqdis)://routing/(add|onadd|off)(?:/(.*))?$',
   caseSensitive: false,
   dotAll: true,
 );
 
 final _linkInText = RegExp(
-  r'(?<![A-Za-z0-9+.\-])(?:happ|incy|keqdroid|keqdis)://routing/(?:off\b|(?:add|onadd)/[A-Za-z0-9+/=_%\-]+)',
+  r'(?<![A-Za-z0-9+.\-])(?:happ|incy|etesaL|keqdis)://routing/(?:off\b|(?:add|onadd)/[A-Za-z0-9+/=_%\-]+)',
   caseSensitive: false,
 );
 
@@ -301,7 +301,7 @@ final _ipEntry = RegExp(
   };
   return (
     link:
-        'keqdroid://routing/add/${base64.encode(utf8.encode(jsonEncode(json)))}',
+        'etesaL://routing/add/${base64.encode(utf8.encode(jsonEncode(json)))}',
     skipped: skipped,
   );
 }
