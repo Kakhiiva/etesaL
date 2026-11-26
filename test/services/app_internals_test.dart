@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_internals.dart';
-import 'package:keqdroid/services/app_internals_service.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
-import 'package:keqdroid/utils/byte_format.dart';
+import 'package:etesaL/models/app_internals.dart';
+import 'package:etesaL/services/app_internals_service.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
+import 'package:etesaL/utils/byte_format.dart';
 
 void main() {
   group('версия модуля', () {
@@ -109,7 +109,7 @@ void main() {
         build: const BuildInfo(
           appVersion: '0.9.2',
           buildNumber: '35',
-          packageName: 'com.keqdroid.keqdroid',
+          packageName: 'com.etesaL.etesaL',
           operatingSystem: 'windows',
           osVersion: 'Windows 11',
           abi: 'windows_x64',
