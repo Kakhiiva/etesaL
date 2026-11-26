@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/geo_dat_reader.dart';
-import 'package:keqdroid/utils/routing_presets.dart';
+import 'package:etesaL/utils/geo_dat_reader.dart';
+import 'package:etesaL/utils/routing_presets.dart';
 
 // Пресеты держатся на кодах geosite: неизвестный код санитайзер выбрасывает
 // молча, и карточка в шторке перестаёт делать хоть что-то. Эта же база едет и
