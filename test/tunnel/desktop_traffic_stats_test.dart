@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/connections_poll_stats.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
-import 'package:keqdroid/tunnel/desktop_traffic_stats.dart';
-import 'package:keqdroid/tunnel/tunnel_state.dart';
+import 'package:etesaL/core/connections_poll_stats.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
+import 'package:etesaL/tunnel/desktop_traffic_stats.dart';
+import 'package:etesaL/tunnel/tunnel_state.dart';
 
 import '../helpers/fake_clash_api.dart';
 
