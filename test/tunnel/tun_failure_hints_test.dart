@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/tun_failure_hints.dart';
+import 'package:etesaL/tunnel/tun_failure_hints.dart';
 
 // Наружу все падения TUN выглядели одинаково: did not start (exit code 1)
 // плюс хвост лога, в котором пользователю нечего опознать. Причин же десяток,
