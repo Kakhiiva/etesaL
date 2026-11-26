@@ -5,8 +5,8 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/local_vpn_proxy.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/utils/local_vpn_proxy.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Прокси-заглушка: отвечает на запрос с абсолютным URI (так HttpClient ходит
 // к http-адресам через прокси) и записывает первую строку запроса.
@@ -511,7 +511,7 @@ void main() {
       sessionHas('live', 'live');
       final adapter = _TunnelAdapter('live');
       dio.httpClientAdapter = adapter;
-      final dir = await Directory.systemTemp.createTemp('keq_407_');
+      final dir = await Directory.systemTemp.createTemp('etesaL_407_');
       addTearDown(() => dir.delete(recursive: true));
       final file = File('${dir.path}/update.apk');
 
