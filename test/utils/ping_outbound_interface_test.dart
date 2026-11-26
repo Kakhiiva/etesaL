@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/xray_core_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/xray_core_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Ядро замера в TUN выходит мимо туннеля, иначе сниффинг туннеля подменяет
 // адрес REALITY на сайт маски раньше правила своих процессов (живой TUN,
