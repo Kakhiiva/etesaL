@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,8 +11,8 @@ import '../providers/providers.dart';
 import 'error_messages.dart';
 import 'import_payload.dart';
 import 'provider_routing.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
-import 'package:keqdroid/shared/ui/shape_loading_indicator.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/shape_loading_indicator.dart';
 
 Future<void> pasteSubscriptionFromClipboard(
   BuildContext context,
