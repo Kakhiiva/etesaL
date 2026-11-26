@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/fake_ip.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/fake_ip.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
 
 // Список не подменять один на все ядра: mihomo читает его как есть, xray и
 // sing-box в переводе на синтаксис правил.
