@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/utils/app_locale.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/utils/app_locale.dart';
 
 void main() {
   const supported = AppLocalizations.supportedLocales;
