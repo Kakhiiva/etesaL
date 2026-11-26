@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/macos_system_proxy.dart';
+import 'package:etesaL/tunnel/macos_system_proxy.dart';
 
 class _ServiceProxy {
   bool webEnabled = false;
@@ -103,7 +103,7 @@ void main() {
   late File backup;
 
   setUp(() {
-    tmp = Directory.systemTemp.createTempSync('keq_macos_proxy_');
+    tmp = Directory.systemTemp.createTempSync('etesaL_macos_proxy_');
     backup = File('${tmp.path}/system_proxy_backup.json');
   });
 
