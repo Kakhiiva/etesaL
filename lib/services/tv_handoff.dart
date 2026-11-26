@@ -20,7 +20,7 @@ class TvPairing {
   static const _linkHost = 'tv-send';
 
   String toLink() => Uri(
-    scheme: 'keqdroid',
+    scheme: 'etesaL',
     host: _linkHost,
     queryParameters: {'h': host, 'p': '$port', 't': token},
   ).toString();
@@ -29,7 +29,7 @@ class TvPairing {
   static TvPairing? parse(String raw) {
     final uri = Uri.tryParse(raw.trim());
     if (uri == null ||
-        !const {'keqdroid', 'keqdis'}.contains(uri.scheme.toLowerCase()) ||
+        !const {'etesaL', 'keqdis'}.contains(uri.scheme.toLowerCase()) ||
         uri.host.toLowerCase() != _linkHost) {
       return null;
     }
