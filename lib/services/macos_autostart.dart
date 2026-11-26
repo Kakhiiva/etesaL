@@ -9,7 +9,7 @@ class MacosAutostart {
   MacosAutostart._();
 
   static const flag = '--autostart';
-  static const label = 'com.keqdroid.keqdroid';
+  static const label = 'com.etesaL.etesaL';
   static const _fileName = '$label.plist';
 
   @visibleForTesting
