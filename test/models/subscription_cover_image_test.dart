@@ -4,7 +4,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/subscription_card_theme.dart';
+import 'package:etesaL/models/subscription_card_theme.dart';
 
 Future<String> _png(Directory dir, int width, int height) async {
   final recorder = ui.PictureRecorder();
