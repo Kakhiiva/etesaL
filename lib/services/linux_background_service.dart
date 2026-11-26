@@ -21,7 +21,7 @@ class LinuxBackgroundService with WindowListener, TrayListener {
   @visibleForTesting
   LinuxBackgroundService.forTesting();
 
-  static const _trayId = 'keqdroid';
+  static const _trayId = 'etesaL';
   static const _trayIcon = 'assets/icon.png';
   static const _trayIconConnected = 'assets/icon_connected.png';
 
@@ -36,7 +36,7 @@ class LinuxBackgroundService with WindowListener, TrayListener {
   @visibleForTesting
   static String? desktopOverride;
 
-  String _showLabel = 'Show keqdroid';
+  String _showLabel = 'Show etesaL';
   String _quitLabel = 'Quit';
   String _connectLabel = 'Connect';
   String _disconnectLabel = 'Disconnect';
@@ -52,7 +52,7 @@ class LinuxBackgroundService with WindowListener, TrayListener {
 
   // абстрактный сокет с uid: TCP-порт на петле общий для всех пользователей машины
   static InternetAddress _lockAddress() => InternetAddress(
-    '@keqdroid-${_uid() ?? 'user'}',
+    '@etesaL-${_uid() ?? 'user'}',
     type: InternetAddressType.unix,
   );
 
@@ -150,7 +150,7 @@ class LinuxBackgroundService with WindowListener, TrayListener {
 
     trayManager.addListener(this);
     try {
-      await trayManager.setIcon(_trayIcon, id: _trayId, title: 'keqdroid');
+      await trayManager.setIcon(_trayIcon, id: _trayId, title: 'etesaL');
       // без setToolTip: на Linux tray_manager кидает MissingPluginException, и меню остаётся пустым
       await _applyTrayMenu();
     } catch (e, st) {
@@ -214,7 +214,7 @@ class LinuxBackgroundService with WindowListener, TrayListener {
       await trayManager.setIcon(
         connected ? _trayIconConnected : _trayIcon,
         id: _trayId,
-        title: 'keqdroid',
+        title: 'etesaL',
       );
     } catch (e) {
       AppLogger.instance.debug('Tray icon not updated', error: e);
