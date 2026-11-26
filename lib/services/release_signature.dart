@@ -77,7 +77,7 @@ class ReleaseSignature {
     final bytes = sums.data;
     if (bytes == null || !await verify(bytes, signature.data ?? '')) {
       throw StateError(
-        '$sumsName of this release is not signed by the keqdroid release key; '
+        '$sumsName of this release is not signed by the etesaL release key; '
         'refusing to trust it.',
       );
     }
