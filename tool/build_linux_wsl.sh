@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #
-# Build the Linux desktop release of keqdroid inside WSL (Ubuntu/Debian).
+# Build the Linux desktop release of etesaL inside WSL (Ubuntu/Debian).
 #
 # Idempotent: installs the GTK toolchain and a NATIVE Linux Flutter SDK (the
 # Windows SDK on /mnt/* cannot build Linux), then `flutter build linux`.
 #
 # Usage (from Windows):
-#   wsl -e bash /mnt/c/Users/<you>/StudioProjects/keqdroid/tool/build_linux_wsl.sh
+#   wsl -e bash /mnt/c/Users/<you>/StudioProjects/etesaL/tool/build_linux_wsl.sh
 #
 set -euo pipefail
 
@@ -101,4 +101,4 @@ echo "bundled cores (next to the binary, installed by linux/CMakeLists.txt):"
 ls -la "$BUNDLE"/xray "$BUNDLE"/mihomo "$BUNDLE"/*.dat 2>/dev/null \
   || echo "(cores missing -- check assets/bin/linux)"
 echo ""
-echo "DONE. Binary: $BUNDLE/keqdroid"
+echo "DONE. Binary: $BUNDLE/etesaL"
