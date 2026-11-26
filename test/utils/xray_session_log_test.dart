@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/xray_session_log.dart';
+import 'package:etesaL/utils/xray_session_log.dart';
 
 // xray сессии на десктопе работает не тише info: отказы дозвона до своего
 // сервера xray 26.x пишет только там. Лог при этом должен остаться ровно
