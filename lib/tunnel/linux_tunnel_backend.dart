@@ -158,7 +158,7 @@ class LinuxTunnelBackend
     }
   }
 
-  static const coresLogName = 'keqdroid_cores.log';
+  static const coresLogName = 'etesaL_cores.log';
 
   @override
   Future<({String username, String password})?>
@@ -398,17 +398,17 @@ class LinuxTunnelBackend
   // путь версионирован: тело обёртки служит контрактом по позициям аргументов, и со старым путём
   // у тех, кто уже поставил правило, mihomo запускался бы командой keqrnel
 
-  static const _polkitHelperPath = '/usr/local/lib/keqdroid/core-tun-root';
+  static const _polkitHelperPath = '/usr/local/lib/etesaL/core-tun-root';
 
   // старый хелпер сносим, иначе он остался бы разрешён в polkit навсегда
   static const _legacyPolkitHelperPath =
-      '/usr/local/lib/keqdroid/keqrnel-tun-root';
+      '/usr/local/lib/etesaL/keqrnel-tun-root';
 
-  static const _polkitRulePath = '/etc/polkit-1/rules.d/49-keqdroid-tun.rules';
+  static const _polkitRulePath = '/etc/polkit-1/rules.d/49-etesaL-tun.rules';
 
-  static const _trustedCoresDir = '/usr/local/lib/keqdroid/cores';
+  static const _trustedCoresDir = '/usr/local/lib/etesaL/cores';
 
-  static const _runRootDir = '/run/keqdroid';
+  static const _runRootDir = '/run/etesaL';
 
   // v5 и старше обнуляли от root любой файл из аргумента, поэтому такой хелпер считается неустановленным
   static const _helperVersionMark = '[wrap v6';
@@ -439,15 +439,15 @@ class LinuxTunnelBackend
   static const helperVersionMarkForTest = _helperVersionMark;
 
   // Беспарольный хелпер может позвать любая программа пользователя, поэтому названное в аргументах читается
-  // его правами, а root пишет только в свой /run/keqdroid/<uid>. Журнал отдан владельцу 0600, в нём адреса серверов.
+  // его правами, а root пишет только в свой /run/etesaL/<uid>. Журнал отдан владельцу 0600, в нём адреса серверов.
   // Ядро без пароля запускается только доверенной копией и под systemd с ProtectSystem=strict, так подсунутый
   // конфиг не допишет файлы мимо RUN
   static const _tunWrapperBody =
       r'''PATH="$PATH:/run/current-system/sw/bin"; export PATH
 umask 022
 SB="$1"; CFG="$2"; GEO="$3"; SENT="$4"; APPPID="$5"; KIND="$6"
-HELPER=/usr/local/lib/keqdroid/core-tun-root
-CORES=/usr/local/lib/keqdroid/cores
+HELPER=/usr/local/lib/etesaL/core-tun-root
+CORES=/usr/local/lib/etesaL/cores
 case "$KIND" in xray) NAME=keqrnel; EXT=json ;; mihomo) NAME=mihomo; EXT=yaml ;; *) exit 5 ;; esac
 case "$APPPID" in ''|*[!0-9]*) exit 5 ;; esac
 OWNER="${PKEXEC_UID:-$(id -u)}"
@@ -462,14 +462,14 @@ else
   as_owner() { "$@"; }
 fi
 if [ "$0" != "$HELPER" ] && [ -f "$HELPER" ] && ! grep -q '\[wrap v6' "$HELPER"; then
-  rm -f "$HELPER" /usr/local/lib/keqdroid/keqrnel-tun-root /etc/polkit-1/rules.d/49-keqdroid-tun.rules
+  rm -f "$HELPER" /usr/local/lib/etesaL/keqrnel-tun-root /etc/polkit-1/rules.d/49-etesaL-tun.rules
 fi
-RUN=/run/keqdroid/$OWNER
-UNIT=keqdroid-core-$OWNER
+RUN=/run/etesaL/$OWNER
+UNIT=etesaL-core-$OWNER
 SANDBOX=
 [ -d /run/systemd/system ] && command -v systemd-run >/dev/null 2>&1 && SANDBOX=1
 [ -n "$SANDBOX" ] && { systemctl stop "$UNIT"; systemctl reset-failed "$UNIT"; } >/dev/null 2>&1
-mkdir -p /run/keqdroid && rm -rf "$RUN" && mkdir -m 0755 "$RUN" "$RUN/home" || exit 5
+mkdir -p /run/etesaL && rm -rf "$RUN" && mkdir -m 0755 "$RUN" "$RUN/home" || exit 5
 LOGF=$RUN/core.log
 : >"$LOGF" && chown "$OWNER" "$LOGF" && chmod 0600 "$LOGF" || exit 5
 if [ "$0" = "$HELPER" ]; then
@@ -509,7 +509,7 @@ wait "$sb"
 ''';
 
   static const _polkitRuleContent =
-      '''// keqdroid: passwordless authorization for TUN mode.
+      '''// etesaL: passwordless authorization for TUN mode.
 // Removing this file restores the password prompt on every TUN connect.
 polkit.addRule(function(action, subject) {
     if (action.id == "org.freedesktop.policykit.exec" &&
@@ -566,7 +566,7 @@ polkit.addRule(function(action, subject) {
     return '''
 $_rootPathLine
 set -e
-mkdir -p /usr/local/lib/keqdroid '$_trustedCoresDir'
+mkdir -p /usr/local/lib/etesaL '$_trustedCoresDir'
 rm -f '$_legacyPolkitHelperPath'
 $installCores
 cat > '$_polkitHelperPath' <<'KEQDROID_HELPER_EOF'
@@ -643,7 +643,7 @@ $run''';
       "'${value.replaceAll("'", r"'\''")}'";
 
   // своё имя, а не xray: pkill -x в _stopRootCore иначе задел бы чужие xray в системе
-  static const _rootXrayName = 'keqdroid-xray';
+  static const _rootXrayName = 'etesaL-xray';
 
   Future<void> _runXrayAsRoot(String config) async {
     final bin = await LinuxCorePaths.xrayExecutable();
