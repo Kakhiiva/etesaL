@@ -108,7 +108,7 @@ class TrayManager {
     bool isTemplate = false, // macOS only
     TrayIconPosition iconPosition = TrayIconPosition.left, // macOS only
     int iconSize = 18, // macOS only
-    // keqdroid patch, Linux: постоянный id, иначе KDE на каждом запуске видит
+    // etesaL patch, Linux: постоянный id, иначе KDE на каждом запуске видит
     // новый значок и забывает «показывать всегда»; title — подпись значка.
     String? id,
     String? title,
@@ -149,7 +149,7 @@ class TrayManager {
     await _channel.invokeMethod('setIcon', arguments);
   }
 
-  /// keqdroid patch, Linux: есть ли сейчас трей, где виден значок.
+  /// etesaL patch, Linux: есть ли сейчас трей, где виден значок.
   Future<bool> isAvailable() async {
     return await _channel.invokeMethod<bool>('isAvailable') ?? false;
   }
