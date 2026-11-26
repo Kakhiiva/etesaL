@@ -3,16 +3,16 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/ui/desktop/desktop_connection_mode.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/ui/desktop/desktop_connection_mode.dart';
 
 // TUN без прав администратора на Windows: вместо перезапуска от администратора один раз ставится служба
 
-const _vpn = MethodChannel('keqdroid_vpn_channel');
-const _service = MethodChannel('keqdroid/tun_service');
+const _vpn = MethodChannel('etesaL_vpn_channel');
+const _service = MethodChannel('etesaL/tun_service');
 
 class _Vpn extends VpnStateNotifier {
   // autostartTunFallback каждого вызова
