@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.keqdroid" "\0"
-            VALUE "FileDescription", "keqdroid" "\0"
+            VALUE "CompanyName", "com.etesaL" "\0"
+            VALUE "FileDescription", "etesaL" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "keqdroid" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.keqdroid. All rights reserved." "\0"
-            VALUE "OriginalFilename", "keqdroid.exe" "\0"
-            VALUE "ProductName", "keqdroid" "\0"
+            VALUE "InternalName", "etesaL" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 com.etesaL. All rights reserved." "\0"
+            VALUE "OriginalFilename", "etesaL.exe" "\0"
+            VALUE "ProductName", "etesaL" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
