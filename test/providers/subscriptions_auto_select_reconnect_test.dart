@@ -3,12 +3,12 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/auto_select_home.dart';
-import 'package:keqdroid/services/subscription_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/auto_select_home.dart';
+import 'package:etesaL/services/subscription_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 import '../helpers/test_storage.dart';
