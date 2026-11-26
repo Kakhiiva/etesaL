@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/removed_tls_fields.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/removed_tls_fields.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // allowInsecure ядро отвергает безусловно (26.7.28,
 // infra/conf/transport_security.go), и падает при этом разбор всего конфига.
