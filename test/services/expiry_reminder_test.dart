@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/services/expiry_reminder.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/services/expiry_reminder.dart';
 
 import '../helpers/test_storage.dart';
 
