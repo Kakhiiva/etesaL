@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/providers/halloween_provider.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/shared/ui/halloween/halloween_season.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/providers/halloween_provider.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/shared/ui/halloween/halloween_season.dart';
 
 import '../helpers/test_storage.dart';
 
