@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/auto_select_home.dart';
+import 'package:etesaL/services/auto_select_home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Свой сервер автовыбора: с какого увёз аварийный переезд и когда на него
