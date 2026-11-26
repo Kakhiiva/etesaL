@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/routing_entry.dart';
+import 'package:etesaL/utils/routing_entry.dart';
 
 void main() {
   group('splitGeoipTokens', () {
