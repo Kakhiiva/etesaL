@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/servers/chain_editor.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/server_sort.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/servers/chain_editor.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/server_sort.dart';
 
 const _de = 'vless://uuid-de@de.example.com:443?security=tls&type=tcp#DE-1';
 const _nl = 'trojan://pass@nl.example.com:8443?sni=nl.example.com#NL-2';
