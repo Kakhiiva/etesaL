@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
 
 // Режим сплита без правил по процессам отправлял весь трафик мимо прокси.
 //
@@ -28,7 +28,7 @@ void main() {
       // Туннеля у ядра нет: и есть proxy-режим десктопа.
       routingMode: split,
       managedProcessNames: selected,
-      appProcessName: 'keqdroid.exe',
+      appProcessName: 'etesaL.exe',
       windows: true,
     );
 
@@ -55,7 +55,7 @@ void main() {
       tun: const MihomoTunOptions(device: 'tun-keqdis', stack: 'gvisor'),
       routingMode: split,
       managedProcessNames: selected,
-      appProcessName: 'keqdroid.exe',
+      appProcessName: 'etesaL.exe',
       windows: true,
     );
 
