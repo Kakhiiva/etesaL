@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
+import 'package:etesaL/app/app.dart';
 
 // Схемы пресетов обязаны считаться один раз на пару (пресет, яркость).
 //
