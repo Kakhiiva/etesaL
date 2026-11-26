@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/subscription.dart';
-import 'package:keqdroid/models/subscription_card_layout.dart';
-import 'package:keqdroid/models/subscription_card_theme.dart';
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/subscriptions_tab.dart';
-import 'package:keqdroid/shared/ui/card_art.dart';
-import 'package:keqdroid/shared/ui/expressive_button_group.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/subscription.dart';
+import 'package:etesaL/models/subscription_card_layout.dart';
+import 'package:etesaL/models/subscription_card_theme.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/subscriptions_tab.dart';
+import 'package:etesaL/shared/ui/card_art.dart';
+import 'package:etesaL/shared/ui/expressive_button_group.dart';
 
 import '../helpers/test_storage.dart';
 
