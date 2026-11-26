@@ -1,14 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/routing_profile.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/traffic_route.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/services/rule_list_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/utils/provider_routing.dart';
-import 'package:keqdroid/utils/routing_profiles.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/routing_profile.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/traffic_route.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/services/rule_list_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/utils/provider_routing.dart';
+import 'package:etesaL/utils/routing_profiles.dart';
 
 import '../helpers/test_storage.dart';
 
