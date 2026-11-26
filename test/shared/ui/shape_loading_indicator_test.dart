@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/shape_loading_indicator.dart';
-import 'package:keqdroid/shared/ui/shape_morph.dart';
+import 'package:etesaL/shared/ui/shape_loading_indicator.dart';
+import 'package:etesaL/shared/ui/shape_morph.dart';
 
 // кадры по 16 мс: фаза цикла идёт от часов планировщика
 Future<void> _run(WidgetTester tester, Duration total) async {
