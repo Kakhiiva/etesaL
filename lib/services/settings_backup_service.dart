@@ -102,7 +102,7 @@ class KeqdroidBackup {
   static KeqdroidBackup fromJson(Map<String, dynamic> json) {
     final format = json['format'];
     if (format != 'keqdis_backup') {
-      throw FormatException('Not a keqdroid backup file');
+      throw FormatException('Not a etesaL backup file');
     }
     final version = (json['version'] as num?)?.toInt() ?? 0;
     if (version <= 0) {
@@ -120,7 +120,7 @@ class KeqdroidBackup {
 class SettingsBackupService {
   static const int currentVersion = 1;
 
-  static const fileExtension = 'keqdroid';
+  static const fileExtension = 'etesaL';
 
   static Future<Uint8List> encodeFile(KeqdroidBackup backup) =>
       BackupCrypto.seal(
