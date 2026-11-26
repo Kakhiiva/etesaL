@@ -1,6 +1,6 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
-import com.keqdroid.keqdroid.RoboSession.context
+import com.etesaL.etesaL.RoboSession.context
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -44,7 +44,7 @@ class NativeLogTest {
         NativeLog.e("T", "boom", IllegalStateException("why"))
         val text = NativeLog.read()
         assertTrue(text, text.contains("[ERROR] T: boom\njava.lang.IllegalStateException: why"))
-        assertTrue(text, text.contains("\tat com.keqdroid.keqdroid.NativeLogTest"))
+        assertTrue(text, text.contains("\tat com.etesaL.etesaL.NativeLogTest"))
     }
 
     @Test
