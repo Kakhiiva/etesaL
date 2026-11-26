@@ -16,7 +16,7 @@ class PlatformBootstrap {
       try {
         _isTelevision =
             await const MethodChannel(
-              'keqdroid_vpn_channel',
+              'etesaL_vpn_channel',
             ).invokeMethod<bool>('isTelevision') ??
             false;
       } on PlatformException {
