@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/icon_shape.dart';
-import 'package:keqdroid/shared/ui/expressive_elements.dart';
+import 'package:etesaL/models/icon_shape.dart';
+import 'package:etesaL/shared/ui/expressive_elements.dart';
 
 ShapeBorder badgeShape(WidgetTester tester) {
   final container = tester.widget<Container>(
