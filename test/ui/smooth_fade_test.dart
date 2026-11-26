@@ -3,7 +3,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/smooth_fade.dart';
+import 'package:etesaL/shared/ui/smooth_fade.dart';
 
 double _slope(FadeCurve c, double t, {double d = 1e-4}) =>
     (c.at(t + d) - c.at(t - d)) / (2 * d);
