@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.ApplicationExitInfo
 import org.junit.Assert.assertEquals
@@ -67,7 +67,7 @@ class DeviceAndAppRulesTest {
 
     @Test
     fun `launch actions are trusted only from our own closed alias`() {
-        val alias = "com.keqdroid.keqdroid.LaunchAction"
+        val alias = "com.etesaL.etesaL.LaunchAction"
         assertEquals(
             MainActivity.LAUNCH_ACTION_CONNECT,
             launchActionFrom(alias) { MainActivity.LAUNCH_ACTION_CONNECT },
@@ -83,7 +83,7 @@ class DeviceAndAppRulesTest {
     @Test
     fun `extras sent to the exported window are not even read`() {
         var read = false
-        assertNull(launchActionFrom("com.keqdroid.keqdroid.MainActivity") { read = true; MainActivity.LAUNCH_ACTION_CONNECT })
+        assertNull(launchActionFrom("com.etesaL.etesaL.MainActivity") { read = true; MainActivity.LAUNCH_ACTION_CONNECT })
         assertNull(launchActionFrom(null) { read = true; MainActivity.LAUNCH_ACTION_CONNECT })
         assertFalse(read)
     }
