@@ -15,7 +15,7 @@ std::wstring KeqdroidDataDir() {
   if (FAILED(SHGetFolderPathW(nullptr, CSIDL_APPDATA, nullptr, 0, appdata))) {
     return L"";
   }
-  return std::wstring(appdata) + L"\\com.keqdroid\\keqdroid";
+  return std::wstring(appdata) + L"\\com.etesaL\\etesaL";
 }
 
 std::wstring CorePidFilePath() {
@@ -35,7 +35,7 @@ void EnsureDataDir() {
   if (FAILED(SHGetFolderPathW(nullptr, CSIDL_APPDATA, nullptr, 0, appdata))) {
     return;
   }
-  CreateDirectoryW((std::wstring(appdata) + L"\\com.keqdroid").c_str(), nullptr);
+  CreateDirectoryW((std::wstring(appdata) + L"\\com.etesaL").c_str(), nullptr);
   CreateDirectoryW(dir.c_str(), nullptr);
 }
 
