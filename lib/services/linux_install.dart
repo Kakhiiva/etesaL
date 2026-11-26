@@ -50,7 +50,7 @@ class LinuxInstall {
   }
 
   static bool isWritableDir(String dir) {
-    final probe = File(p.join(dir, '.keqdroid_write_probe_$pid'));
+    final probe = File(p.join(dir, '.etesaL_write_probe_$pid'));
     try {
       probe.writeAsStringSync('');
       probe.deleteSync();
@@ -147,7 +147,7 @@ class LinuxInstall {
     Future<void> Function()? beforeRestart,
   }) async {
     final appDir = p.dirname(Platform.resolvedExecutable);
-    final staging = await Directory.systemTemp.createTemp('keqdroid_update_');
+    final staging = await Directory.systemTemp.createTemp('etesaL_update_');
     try {
       final result = await Process.run('tar', [
         '-xzf',
@@ -160,9 +160,9 @@ class LinuxInstall {
           _tail(result.stderr) ?? 'Failed to extract the update archive',
         );
       }
-      final payload = p.join(staging.path, 'keqdroid');
-      if (!File(p.join(payload, 'keqdroid')).existsSync()) {
-        throw StateError('Update archive does not contain keqdroid');
+      final payload = p.join(staging.path, 'etesaL');
+      if (!File(p.join(payload, 'etesaL')).existsSync()) {
+        throw StateError('Update archive does not contain etesaL');
       }
       await launchAfterExit(_portableScript, [
         payload,
@@ -208,7 +208,7 @@ else
   log "copy FAILED"
 fi
 rm -rf "$STAGING" "$ARCHIVE" 2>/dev/null
-setsid "$DST/keqdroid" >/dev/null 2>&1 < /dev/null &
+setsid "$DST/etesaL" >/dev/null 2>&1 < /dev/null &
 ''';
 }
 
@@ -217,7 +217,7 @@ Future<void> launchAfterExit(String body, List<String> args) async {
   final script = File(
     p.join(
       Directory.systemTemp.path,
-      'keqdroid_update_${DateTime.now().millisecondsSinceEpoch}.sh',
+      'etesaL_update_${DateTime.now().millisecondsSinceEpoch}.sh',
     ),
   );
   await script.writeAsString('$_waitForApp\n$body');
@@ -234,7 +234,7 @@ Future<void> launchAfterExit(String body, List<String> args) async {
 
 const _waitForApp = r'''
 APPPID="$1"; shift
-LOG="${TMPDIR:-/tmp}/keqdroid_update.log"
+LOG="${TMPDIR:-/tmp}/etesaL_update.log"
 log() { printf '%s  %s\n' "$(date -Is 2>/dev/null)" "$1" >>"$LOG" 2>/dev/null; }
 i=0
 while [ "$i" -lt 120 ]; do
