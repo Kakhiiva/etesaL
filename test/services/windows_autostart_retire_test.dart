@@ -2,12 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/windows_desktop_service.dart';
+import 'package:etesaL/services/windows_desktop_service.dart';
 
 // настройки запуска с правами больше нет: её задачу снимает приложение, запущенное этой задачей,
 // и только когда TUN после следующего входа поднимет служба
-const _vpn = MethodChannel('keqdroid_vpn_channel');
-const _tun = MethodChannel('keqdroid/tun_service');
+const _vpn = MethodChannel('etesaL_vpn_channel');
+const _tun = MethodChannel('etesaL/tun_service');
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
