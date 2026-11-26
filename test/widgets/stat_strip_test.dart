@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/stat_strip.dart';
+import 'package:etesaL/shared/ui/stat_strip.dart';
 
 StatMetric _rate(String value) => StatMetric(
   icon: Icons.arrow_downward_rounded,
