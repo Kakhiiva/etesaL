@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/server_field_rules.dart';
+import 'package:etesaL/utils/server_field_rules.dart';
 
 // Правила взяты из ядра: docs/config/transport.md (матрицы транспорт ×
 // защита и протокол × защита), docs/config/outbounds/vless.md (условия
