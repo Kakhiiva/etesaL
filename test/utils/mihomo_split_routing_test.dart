@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 import '../helpers/mihomo_rules_sim.dart';
 
@@ -35,7 +35,7 @@ Map<String, dynamic> _config({
     tun: const MihomoTunOptions(device: 'tun-keqdis', stack: 'gvisor'),
     routingMode: mode,
     managedProcessNames: apps,
-    appProcessName: windows ? 'keqdroid.exe' : 'keqdroid',
+    appProcessName: windows ? 'etesaL.exe' : 'etesaL',
     windows: windows,
   );
 }
@@ -47,7 +47,7 @@ List<String> _rulesOf(Map<String, dynamic> config) =>
 // приложения.
 String _splitRule(Map<String, dynamic> config) => _rulesOf(config).singleWhere(
   (r) =>
-      r.startsWith('AND,((IN-TYPE,TUN),(PROCESS-') && !r.contains('keqdroid'),
+      r.startsWith('AND,((IN-TYPE,TUN),(PROCESS-') && !r.contains('etesaL'),
 );
 
 // Куда mihomo отправит соединение [process] → [host], пришедшее из туннеля.
@@ -320,13 +320,13 @@ rules:
       tun: const MihomoTunOptions(device: 'tun-keqdis', stack: 'gvisor'),
       routingMode: AppRoutingMode.onlySelected,
       managedProcessNames: const ['firefox.exe'],
-      appProcessName: 'keqdroid.exe',
+      appProcessName: 'etesaL.exe',
       windows: true,
     );
     expect(_route(rules, 'firefox.exe', 'author-direct.example'), 'DIRECT');
     expect(_route(rules, 'firefox.exe', 'example.com'), 'G');
     expect(_route(rules, 'chrome.exe', 'example.com'), 'DIRECT');
-    expect(_route(rules, 'keqdroid.exe', 'example.com', inType: 'HTTP'), 'G');
+    expect(_route(rules, 'etesaL.exe', 'example.com', inType: 'HTTP'), 'G');
   });
 
   // Сплит решает, кто идёт в туннель, а на свой HTTP-вход приложение шлёт
@@ -337,20 +337,20 @@ rules:
     test('только выбранные: запросы самого приложения идут через VPN', () {
       final rules = _config(mode: AppRoutingMode.onlySelected);
       expect(
-        _route(rules, 'keqdroid.exe', 'example.com', inType: 'HTTP'),
+        _route(rules, 'etesaL.exe', 'example.com', inType: 'HTTP'),
         'proxy',
       );
       expect(
-        _route(rules, 'keqdroid.exe', 'github.com', inType: 'HTTP'),
+        _route(rules, 'etesaL.exe', 'github.com', inType: 'HTTP'),
         'proxy',
       );
       // Списки сайтов при этом действуют как обычно.
       expect(
-        _route(rules, 'keqdroid.exe', 'yandex.ru', inType: 'HTTP'),
+        _route(rules, 'etesaL.exe', 'yandex.ru', inType: 'HTTP'),
         'DIRECT',
       );
       // Из туннеля невыбранное по-прежнему идёт мимо.
-      expect(_route(rules, 'keqdroid.exe', 'example.com'), 'DIRECT');
+      expect(_route(rules, 'etesaL.exe', 'example.com'), 'DIRECT');
     });
 
     test('все, кроме выбранных: исключённое на HTTP-входе — по спискам', () {
