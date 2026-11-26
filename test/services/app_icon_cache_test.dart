@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/app_icon_cache.dart';
+import 'package:etesaL/services/app_icon_cache.dart';
 
 // Однопиксельный PNG в base64: содержимое неважно, важен сам факт байтов.
 const _png =
