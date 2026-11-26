@@ -13,14 +13,14 @@ import 'linux_appimage_updater.dart';
 class LinuxDesktopEntry {
   LinuxDesktopEntry._();
 
-  static const _fileName = 'keqdroid.desktop';
-  static const windowEntryFileName = 'com.keqdroid.keqdroid.desktop';
-  static const _iconNames = ['keqdroid', 'com.keqdroid.keqdroid'];
+  static const _fileName = 'etesaL.desktop';
+  static const windowEntryFileName = 'com.etesaL.etesaL.desktop';
+  static const _iconNames = ['etesaL', 'com.etesaL.etesaL'];
 
   static const marker = 'X-KeqDroid-AppImage=true';
 
-  // кнопки «Добавить в keqdroid» на страницах подписок, тот же список схем в tool/package_linux.sh
-  static const mimeTypes = 'x-scheme-handler/keqdroid;x-scheme-handler/keqdis;';
+  // кнопки «Добавить в etesaL» на страницах подписок, тот же список схем в tool/package_linux.sh
+  static const mimeTypes = 'x-scheme-handler/etesaL;x-scheme-handler/keqdis;';
 
   @visibleForTesting
   static Future<void> Function(String appsDir) refreshMimeCache =
@@ -87,14 +87,14 @@ class LinuxDesktopEntry {
       '[Desktop Entry]',
       'Type=Application',
       'Name=KeqDroid',
-      'Comment=keqdroid proxy/VPN client',
+      'Comment=etesaL proxy/VPN client',
       'Exec=${execArgument(appImage)} %u',
       'TryExec=${appImage.replaceAll(r'\', r'\\')}',
       'MimeType=$mimeTypes',
-      'Icon=keqdroid',
+      'Icon=etesaL',
       'Categories=Network;',
       'Terminal=false',
-      'StartupWMClass=com.keqdroid.keqdroid',
+      'StartupWMClass=com.etesaL.etesaL',
       if (hidden) 'NoDisplay=true',
       marker,
       '',
@@ -124,7 +124,7 @@ class LinuxDesktopEntry {
     'Name=KeqDroid',
     'Exec=${execArgument(appImage)} %u',
     'TryExec=${appImage.replaceAll(r'\', r'\\')}',
-    'Icon=keqdroid',
+    'Icon=etesaL',
     'NoDisplay=true',
     marker,
     '',
