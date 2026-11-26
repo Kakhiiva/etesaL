@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/halloween/halloween_season.dart';
+import 'package:etesaL/shared/ui/halloween/halloween_season.dart';
 
 void main() {
   group('окно праздника', () {
