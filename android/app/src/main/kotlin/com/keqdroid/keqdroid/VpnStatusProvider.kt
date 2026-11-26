@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.content.ContentProvider
 import android.content.ContentValues
@@ -9,7 +9,7 @@ import android.net.Uri
 class VpnStatusProvider : ContentProvider() {
 
     companion object {
-        const val AUTHORITY = "com.keqdroid.keqdroid.vpnstatus"
+        const val AUTHORITY = "com.etesaL.etesaL.vpnstatus"
         val STATUS_URI: Uri = Uri.parse("content://$AUTHORITY/status")
     }
 
