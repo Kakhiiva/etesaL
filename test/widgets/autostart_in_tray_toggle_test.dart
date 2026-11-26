@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/settings_tab.dart';
-import 'package:keqdroid/services/linux_autostart.dart';
-import 'package:keqdroid/services/storage_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/settings_tab.dart';
+import 'package:etesaL/services/linux_autostart.dart';
+import 'package:etesaL/services/storage_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
 import 'package:path/path.dart' as p;
 
 import '../helpers/fake_tunnel_backend.dart';
@@ -21,7 +21,7 @@ import '../helpers/test_storage.dart';
 // Запускать в трее, без окна на экране Windows и Linux: раннер решает,
 // показывать ли окно, до первого кадра, поэтому флаг обязан доехать до
 // нативной части сразу, а без автозапуска переключать его нечего.
-const _channel = MethodChannel('keqdroid_vpn_channel');
+const _channel = MethodChannel('etesaL_vpn_channel');
 const _title = 'Start in the tray, without a window';
 
 Future<void> _frames(WidgetTester tester) async {
@@ -276,15 +276,15 @@ void main() {
     late Directory dir;
 
     File inTray() => File(
-      p.join(dir.path, 'data', 'com.keqdroid.keqdroid', 'autostart-in-tray'),
+      p.join(dir.path, 'data', 'com.etesaL.etesaL', 'autostart-in-tray'),
     );
 
     // экран сверяет переключатель автозапуска с ярлыком на диске
     void loginEntry() =>
-        File(p.join(dir.path, 'config', 'autostart', 'keqdroid.desktop'))
+        File(p.join(dir.path, 'config', 'autostart', 'etesaL.desktop'))
           ..createSync(recursive: true)
           ..writeAsStringSync(
-            LinuxAutostart.contentFor('/opt/keqdroid/keqdroid'),
+            LinuxAutostart.contentFor('/opt/etesaL/etesaL'),
           );
 
     // каждый шаг записи ждёт настоящего ввода-вывода, а продолжение после него идёт только на кадре
