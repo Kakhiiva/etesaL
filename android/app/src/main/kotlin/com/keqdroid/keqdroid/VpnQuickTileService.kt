@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
@@ -249,7 +249,7 @@ class VpnQuickTileService : TileService() {
         retryCount = 0
         retryHandler?.removeCallbacks(retryRunnable)
 
-        tileObj.label = "keqdroid"
+        tileObj.label = "etesaL"
         
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             tileObj.icon = android.graphics.drawable.Icon.createWithResource(this, TILE_ICON_RES)
