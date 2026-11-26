@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/app/app.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/services/exit_ip_service.dart';
-import 'package:keqdroid/shared/ui/connected_status_chip.dart';
-import 'package:keqdroid/shared/ui/server_avatar.dart';
+import 'package:etesaL/app/app.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/services/exit_ip_service.dart';
+import 'package:etesaL/shared/ui/connected_status_chip.dart';
+import 'package:etesaL/shared/ui/server_avatar.dart';
 
 // Чип Подключено к …: флаг выхода той же формы, что флаги серверов, а
 // адрес показывается только по нажатию на флаг и ненадолго, вместо подписи.
