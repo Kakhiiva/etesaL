@@ -12,15 +12,15 @@ enum LinuxHotkeyBackend { x11, portal, none }
 class HotkeyService {
   HotkeyService._();
 
-  static const _channel = MethodChannel('keqdroid_vpn_channel');
+  static const _channel = MethodChannel('etesaL_vpn_channel');
 
   // linux/runner/global_hotkeys.cc
   @visibleForTesting
-  static const linuxChannel = MethodChannel('keqdroid/linux_hotkeys');
+  static const linuxChannel = MethodChannel('etesaL/linux_hotkeys');
 
   // macos/Runner/MacosPlatformBridge.swift
   @visibleForTesting
-  static const macosChannel = MethodChannel('keqdroid/macos_hotkeys');
+  static const macosChannel = MethodChannel('etesaL/macos_hotkeys');
 
   static bool get isSupported =>
       Platform.isWindows || Platform.isLinux || Platform.isMacOS;
