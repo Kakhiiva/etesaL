@@ -24,7 +24,7 @@ class LogEntry {
 class AppLogService {
   AppLogService._();
 
-  static const _channel = MethodChannel('keqdroid_vpn_channel');
+  static const _channel = MethodChannel('etesaL_vpn_channel');
 
   static List<AppLogSource> get sources => [
     AppLogSource.app,
@@ -76,7 +76,7 @@ class AppLogService {
 
   // null: все записи, что отдало чтение
   static Future<String> bundle({int? tailEntries = 300}) async {
-    final out = StringBuffer('# keqdroid log\n');
+    final out = StringBuffer('# etesaL log\n');
     for (final source in sources) {
       final entries = await read(source);
       final tail = tailEntries != null && entries.length > tailEntries
@@ -110,7 +110,7 @@ class AppLogService {
     final at = now ?? DateTime.now();
     String two(int v) => v.toString().padLeft(2, '0');
     final name =
-        'keqdroid-log-${at.year}-${two(at.month)}-${two(at.day)}'
+        'etesaL-log-${at.year}-${two(at.month)}-${two(at.day)}'
         '-${two(at.hour)}${two(at.minute)}.txt';
     final file = File('${dir.path}${Platform.pathSeparator}$name');
     await file.writeAsString(await bundle(tailEntries: null), flush: true);
