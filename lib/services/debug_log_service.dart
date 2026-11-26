@@ -9,7 +9,7 @@ import '../tunnel/windows_tunnel_backend.dart';
 class DebugLogService {
   DebugLogService._();
 
-  static const MethodChannel _channel = MethodChannel('keqdroid_vpn_channel');
+  static const MethodChannel _channel = MethodChannel('etesaL_vpn_channel');
 
   static Future<String> getXrayLogs({int maxLines = 300}) async {
     if (Platform.isWindows) {
