@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/shape_loading_indicator.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/shape_loading_indicator.dart';
 
 import '../models/subscription.dart';
 import '../providers/providers.dart';
 import '../services/tv_handoff.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
 
 Future<void> sendSubscriptionToTv(
   BuildContext context,
