@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
-import 'package:keqdroid/tunnel/mihomo_session_shell.dart';
-import 'package:keqdroid/tunnel/tunnel_session_request.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
+import 'package:etesaL/tunnel/mihomo_session_shell.dart';
+import 'package:etesaL/tunnel/tunnel_session_request.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
 
 TunnelSessionRequest _session(
   Map<String, dynamic> config, {
