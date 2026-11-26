@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/server_config_form.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/server_config_form.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // 12.11.2026: у vmess редактор показывал режим, extra, seed и прочее, а при сохранении молча терял.
 // Проверяем не ключи ссылки, а то, что из правки получит ядро
