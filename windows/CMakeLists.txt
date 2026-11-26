@@ -1,10 +1,10 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
-project(keqdroid LANGUAGES CXX)
+project(etesaL LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "keqdroid")
+set(BINARY_NAME "etesaL")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
@@ -85,7 +85,7 @@ set(INSTALL_BUNDLE_LIB_DIR "${CMAKE_INSTALL_PREFIX}")
 install(TARGETS ${BINARY_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}"
   COMPONENT Runtime)
 
-install(TARGETS keqdroid-tun RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}"
+install(TARGETS etesaL-tun RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}"
   COMPONENT Runtime)
 
 install(FILES "${FLUTTER_ICU_DATA_FILE}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
@@ -115,7 +115,7 @@ install(CODE "
 install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
   DESTINATION "${INSTALL_BUNDLE_DATA_DIR}" COMPONENT Runtime)
 
-# Core binaries next to keqdroid.exe. They are deliberately NOT Flutter assets:
+# Core binaries next to etesaL.exe. They are deliberately NOT Flutter assets:
 # Flutter bundles assets into every platform, which dragged these into the
 # Android APK (~150 MB dead weight). Installing them here keeps the Windows
 # build self-contained while the APK and the Linux build don't get them.
