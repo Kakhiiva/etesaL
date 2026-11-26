@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/utils/subscription_url.dart';
+import 'package:etesaL/utils/subscription_url.dart';
 
 void main() {
   group('normalizeSubscriptionUrl', () {
