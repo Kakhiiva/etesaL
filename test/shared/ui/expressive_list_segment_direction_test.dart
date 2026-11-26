@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
 
 // Сетка из двух колонок, собранная так же, как список серверов и плитки тем:
 // зазор набирают поля самих сегментов, у сетки своих отступов нет.
