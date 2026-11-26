@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_internals.dart';
-import 'package:keqdroid/providers/providers.dart';
-import 'package:keqdroid/screens/settings_tab.dart';
-import 'package:keqdroid/services/storage_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/shared/ui/expressive_group.dart';
-import 'package:keqdroid/utils/external_link.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_internals.dart';
+import 'package:etesaL/providers/providers.dart';
+import 'package:etesaL/screens/settings_tab.dart';
+import 'package:etesaL/services/storage_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/shared/ui/expressive_group.dart';
+import 'package:etesaL/utils/external_link.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 import '../helpers/test_storage.dart';
@@ -26,7 +26,7 @@ const _internals = AppInternals(
   build: BuildInfo(
     appVersion: '0.39.0',
     buildNumber: '390',
-    packageName: 'com.keqdroid.keqdroid',
+    packageName: 'com.etesaL.etesaL',
     operatingSystem: 'android',
     osVersion: 'Android 16',
     abi: 'arm64-v8a',
@@ -72,7 +72,7 @@ void main() {
     );
     expect(author.index, 0);
     expect(author.count, 4);
-    expect(find.text('Lemonochka'), findsOneWidget);
+    expect(find.text('Kakhiiva'), findsOneWidget);
     expect(find.text('Telegram chat'), findsOneWidget);
     expect(find.text('Documentation'), findsOneWidget);
     expect(find.text('GNU AGPL 3.0'), findsOneWidget);
