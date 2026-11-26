@@ -11,7 +11,7 @@ class WindowsInstall {
 
   static const setupSuffix = '-setup.exe';
 
-  // AppId из windows/installer/keqdroid.iss
+  // AppId из windows/installer/etesaL.iss
   static const _uninstallKey =
       r'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion'
       r'\Uninstall\{2F4ADD17-AA28-4805-B040-B3EE05138A9C}_is1';
