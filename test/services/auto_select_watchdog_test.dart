@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/auto_select_home.dart';
-import 'package:keqdroid/services/auto_select_watchdog.dart';
-import 'package:keqdroid/services/auto_server_select.dart';
+import 'package:etesaL/services/auto_select_home.dart';
+import 'package:etesaL/services/auto_select_watchdog.dart';
+import 'package:etesaL/services/auto_server_select.dart';
 
 // Сторож автовыбора: когда он просыпается и когда меняет сервер.
 //
