@@ -104,7 +104,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'keqdroid'**
+  /// **'etesaL'**
   String get appTitle;
 
   /// No description provided for @vpnConnectedTo.
@@ -470,7 +470,7 @@ abstract class AppLocalizations {
   /// No description provided for @routingCheatSheetBody.
   ///
   /// In en, this message translates to:
-  /// **'A route reads “who → what → where”. In Custom sites each line is a domain, an IP, a geo tag or a link to a list, and where they go is the route’s own choice: direct, via VPN or blocked.\n\n## Domains\nvk.com — the domain itself and all its subdomains\nru — anything ending in .ru (a bare word, no dot)\n.example.com and *.example.com — the same as example.com\nfull:example.com — exactly this host, no subdomains\nregexp:… — a regex, if you really need to get fancy\n\n## IP addresses\n1.2.3.4 — a single address\n10.0.0.0/8 — a whole range (CIDR)\n\n## GeoIP: by country\ngeoip:ru — every Russian IP. Swap ru for any country: us, de, cn, ua, kz…\nPlus ready-made bundles: geoip:private (LAN), geoip:telegram, geoip:google.\nNeed it by country? This is the one, geoip knows them all.\n\n## GeoSite: ready-made lists\ngeosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…\nThese aren\'t countries but service categories someone already put together for you.\nHardly any countries here (just geolocation-cn and geolocation-!cn), so by-country is really geoip\'s job.\n\n## On PC\nGeo works the same as on the phone. It just needs geoip.dat and geosite.dat sitting next to keqdroid.exe. A release build already has them there. If geo rules look ignored, check those two files first.\n\n## Order\nTop to bottom, as on the screen: blocking, specific apps, all apps. Among all apps, a new Direct route lands above Via VPN. You can change the order: press and hold a route, then drag it up or down. Your server always goes direct before anything else, or you would get a loop. Whatever matches no route follows the Everything else row.'**
+  /// **'A route reads “who → what → where”. In Custom sites each line is a domain, an IP, a geo tag or a link to a list, and where they go is the route’s own choice: direct, via VPN or blocked.\n\n## Domains\nvk.com — the domain itself and all its subdomains\nru — anything ending in .ru (a bare word, no dot)\n.example.com and *.example.com — the same as example.com\nfull:example.com — exactly this host, no subdomains\nregexp:… — a regex, if you really need to get fancy\n\n## IP addresses\n1.2.3.4 — a single address\n10.0.0.0/8 — a whole range (CIDR)\n\n## GeoIP: by country\ngeoip:ru — every Russian IP. Swap ru for any country: us, de, cn, ua, kz…\nPlus ready-made bundles: geoip:private (LAN), geoip:telegram, geoip:google.\nNeed it by country? This is the one, geoip knows them all.\n\n## GeoSite: ready-made lists\ngeosite:google, geosite:netflix, geosite:telegram, geosite:category-ads-all…\nThese aren\'t countries but service categories someone already put together for you.\nHardly any countries here (just geolocation-cn and geolocation-!cn), so by-country is really geoip\'s job.\n\n## On PC\nGeo works the same as on the phone. It just needs geoip.dat and geosite.dat sitting next to etesaL.exe. A release build already has them there. If geo rules look ignored, check those two files first.\n\n## Order\nTop to bottom, as on the screen: blocking, specific apps, all apps. Among all apps, a new Direct route lands above Via VPN. You can change the order: press and hold a route, then drag it up or down. Your server always goes direct before anything else, or you would get a loop. Whatever matches no route follows the Everything else row.'**
   String get routingCheatSheetBody;
 
   /// No description provided for @settingsRoutingItemCount.
@@ -3140,25 +3140,25 @@ abstract class AppLocalizations {
   /// No description provided for @desktopTunServiceMessage.
   ///
   /// In en, this message translates to:
-  /// **'TUN mode runs through the keqdroid service. It is installed once: Windows asks for permission, and after that TUN turns on without it and without a restart.'**
+  /// **'TUN mode runs through the etesaL service. It is installed once: Windows asks for permission, and after that TUN turns on without it and without a restart.'**
   String get desktopTunServiceMessage;
 
   /// No description provided for @desktopTunServiceUpdateMessage.
   ///
   /// In en, this message translates to:
-  /// **'The app was updated, and the keqdroid service for TUN needs updating too. Windows asks for permission.'**
+  /// **'The app was updated, and the etesaL service for TUN needs updating too. Windows asks for permission.'**
   String get desktopTunServiceUpdateMessage;
 
   /// No description provided for @desktopTunServiceMessageMacos.
   ///
   /// In en, this message translates to:
-  /// **'TUN mode runs through the keqdroid service. It is installed once: macOS asks for an administrator password, and after that TUN turns on without it and without a restart.'**
+  /// **'TUN mode runs through the etesaL service. It is installed once: macOS asks for an administrator password, and after that TUN turns on without it and without a restart.'**
   String get desktopTunServiceMessageMacos;
 
   /// No description provided for @desktopTunServiceUpdateMessageMacos.
   ///
   /// In en, this message translates to:
-  /// **'The app was updated, and the keqdroid service for TUN needs updating too. macOS asks for an administrator password.'**
+  /// **'The app was updated, and the etesaL service for TUN needs updating too. macOS asks for an administrator password.'**
   String get desktopTunServiceUpdateMessageMacos;
 
   /// No description provided for @desktopTunServiceInstall.
@@ -3680,7 +3680,7 @@ abstract class AppLocalizations {
   /// No description provided for @tvReceiveHint.
   ///
   /// In en, this message translates to:
-  /// **'Scan the code in keqdroid on your phone. The phone and the TV must be on the same Wi-Fi network.'**
+  /// **'Scan the code in etesaL on your phone. The phone and the TV must be on the same Wi-Fi network.'**
   String get tvReceiveHint;
 
   /// No description provided for @tvReceiveWaiting.
@@ -3926,7 +3926,7 @@ abstract class AppLocalizations {
   /// No description provided for @errorPolkitMissingAction.
   ///
   /// In en, this message translates to:
-  /// **'Install polkit together with an authentication agent, run the app as root (sudo -E keqdroid), or switch to Proxy mode in settings.'**
+  /// **'Install polkit together with an authentication agent, run the app as root (sudo -E etesaL), or switch to Proxy mode in settings.'**
   String get errorPolkitMissingAction;
 
   /// No description provided for @errorPolkitNoAgentTitle.
@@ -6290,13 +6290,13 @@ abstract class AppLocalizations {
   /// No description provided for @backupTransferNotOurCode.
   ///
   /// In en, this message translates to:
-  /// **'This is not a keqdroid backup code'**
+  /// **'This is not a etesaL backup code'**
   String get backupTransferNotOurCode;
 
   /// No description provided for @backupTransferUnreachable.
   ///
   /// In en, this message translates to:
-  /// **'The device does not answer. Both must be on the same Wi-Fi network, and on a computer keqdroid must be allowed in the firewall'**
+  /// **'The device does not answer. Both must be on the same Wi-Fi network, and on a computer etesaL must be allowed in the firewall'**
   String get backupTransferUnreachable;
 
   /// No description provided for @backupTransferExpired.
@@ -6314,7 +6314,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupFromReleaseBuild.
   ///
   /// In en, this message translates to:
-  /// **'This backup was made by a keqdroid release, and this build does not have its key'**
+  /// **'This backup was made by a etesaL release, and this build does not have its key'**
   String get backupFromReleaseBuild;
 }
 
