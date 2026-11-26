@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/connections_poll_stats.dart';
-import 'package:keqdroid/services/memory_watch.dart';
+import 'package:etesaL/core/connections_poll_stats.dart';
+import 'package:etesaL/services/memory_watch.dart';
 
 const _mb = 1024 * 1024;
 
