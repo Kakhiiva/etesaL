@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/multi_ping_config.dart';
-import 'package:keqdroid/utils/proxy_chain.dart';
-import 'package:keqdroid/utils/route_servers.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/multi_ping_config.dart';
+import 'package:etesaL/utils/proxy_chain.dart';
+import 'package:etesaL/utils/route_servers.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // цепочка на mihomo: узлы связаны dialer-proxy (adapter/outbound/base.go), выход остаётся proxy
 const _fi =
