@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
 
 // Выбранный язык обязан пережить перезапуск: настройки сохраняются в JSON и
 // читаются обратно. Фарси проходил только первую половину: выбрать его было
