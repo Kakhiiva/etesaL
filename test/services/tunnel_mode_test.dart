@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/services/tunnel_session_builder.dart';
-import 'package:keqdroid/tunnel/connection_mode.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/services/tunnel_session_builder.dart';
+import 'package:etesaL/tunnel/connection_mode.dart';
 
 void main() {
   group('режим подключения', () {
