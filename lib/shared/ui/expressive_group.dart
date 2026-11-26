@@ -2,9 +2,9 @@ library;
 
 import 'package:flutter/material.dart';
 
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/expressive_elements.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive_elements.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 class ExpressiveGroup extends StatelessWidget {
   final List<Widget> children;
