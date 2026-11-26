@@ -4,10 +4,10 @@ project(runner LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "keqdroid")
+set(BINARY_NAME "etesaL")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
-set(APPLICATION_ID "com.keqdroid.keqdroid")
+set(APPLICATION_ID "com.etesaL.etesaL")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
@@ -123,7 +123,7 @@ install(CODE "
 install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
   DESTINATION "${INSTALL_BUNDLE_DATA_DIR}" COMPONENT Runtime)
 
-# Core binaries next to the keqdroid executable. NOT Flutter assets (that bundled
+# Core binaries next to the etesaL executable. NOT Flutter assets (that bundled
 # them into every platform, incl. a ~150 MB Android APK). Installing them here
 # keeps the Linux build self-contained while the APK and Windows build skip them.
 # xray runs everything written in xray terms, proxy and TUN; mihomo runs Clash
