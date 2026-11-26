@@ -35,7 +35,7 @@ class MainFlutterWindow: NSWindow {
       return false
     }
     let marker = appSupport
-      .appendingPathComponent("com.keqdroid.keqdroid", isDirectory: true)
+      .appendingPathComponent("com.etesaL.etesaL", isDirectory: true)
       .appendingPathComponent("autostart-in-tray")
     return FileManager.default.fileExists(atPath: marker.path)
   }
