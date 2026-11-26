@@ -12,7 +12,7 @@
   "geodata-mode": true,
   "geo-auto-update": false,
   "find-process-mode": "strict",
-  "keqdroid-owner-guard": "all",
+  "etesaL-owner-guard": "all",
   "sniffer": {
     "enable": true,
     "parse-pure-ip": true,
@@ -83,7 +83,7 @@
     }
   ],
   "rules": [
-    "AND,((IN-TYPE,TUN),(PROCESS-NAME,keqdroid:outside-vpn)),REJECT",
+    "AND,((IN-TYPE,TUN),(PROCESS-NAME,etesaL:outside-vpn)),REJECT",
     "AND,((NOT,((IN-TYPE,TUN))),(DOMAIN,www.cloudflare.com)),proxy",
     "DOMAIN-SUFFIX,ads.example,REJECT",
     "GEOSITE,category-ads-all,REJECT",
