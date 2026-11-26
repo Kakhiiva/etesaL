@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/platform/platform_bootstrap.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/platform/platform_bootstrap.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 // Фокус пульта на телевизоре: элемент заливается инверсным цветом темы и
 // подрастает на 5%. Главное, что здесь стережётся: фокус не пропадает в
