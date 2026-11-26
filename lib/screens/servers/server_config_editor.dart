@@ -4,14 +4,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/shared/ui/app_theme.dart';
-import 'package:keqdroid/shared/ui/expressive.dart';
-import 'package:keqdroid/shared/ui/expressive_button_group.dart';
-import 'package:keqdroid/shared/ui/expressive_elements.dart';
-import 'package:keqdroid/shared/ui/haptics.dart';
-import 'package:keqdroid/shared/ui/shape_loading_indicator.dart';
-import 'package:keqdroid/shared/ui/scrolled_under.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/shared/ui/app_theme.dart';
+import 'package:etesaL/shared/ui/expressive.dart';
+import 'package:etesaL/shared/ui/expressive_button_group.dart';
+import 'package:etesaL/shared/ui/expressive_elements.dart';
+import 'package:etesaL/shared/ui/haptics.dart';
+import 'package:etesaL/shared/ui/shape_loading_indicator.dart';
+import 'package:etesaL/shared/ui/scrolled_under.dart';
 
 import '../../models/server_item.dart';
 import '../../models/server_name_utils.dart';
@@ -26,9 +26,9 @@ import '../../utils/server_field_rules.dart';
 import 'clash_node_fields.dart';
 import 'editor_layers.dart';
 import 'xhttp_extra_fields.dart';
-import 'package:keqdroid/shared/ui/liquid_toast.dart';
-import 'package:keqdroid/shared/ui/smooth_scroll.dart';
-import 'package:keqdroid/shared/ui/tv_focus.dart';
+import 'package:etesaL/shared/ui/liquid_toast.dart';
+import 'package:etesaL/shared/ui/smooth_scroll.dart';
+import 'package:etesaL/shared/ui/tv_focus.dart';
 
 class ServerConfigEditorScreen extends ConsumerStatefulWidget {
   final String serverId;
