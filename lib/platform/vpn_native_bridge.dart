@@ -12,7 +12,7 @@ import '../utils/system_accent.dart';
 class VpnNativeBridge {
   VpnNativeBridge._();
 
-  static const channel = MethodChannel('keqdroid_vpn_channel');
+  static const channel = MethodChannel('etesaL_vpn_channel');
 
   static bool get supportsNotificationLaunch => Platform.isAndroid;
   static bool get supportsDeepLinks =>
