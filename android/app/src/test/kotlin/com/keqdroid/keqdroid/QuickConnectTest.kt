@@ -1,6 +1,6 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
-import com.keqdroid.keqdroid.QuickConnect.Route
+import com.etesaL.etesaL.QuickConnect.Route
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
