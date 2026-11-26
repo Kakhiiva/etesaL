@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/traffic_split.dart';
-import 'package:keqdroid/services/traffic_split_store.dart';
+import 'package:etesaL/models/traffic_split.dart';
+import 'package:etesaL/services/traffic_split_store.dart';
 import 'package:path/path.dart' as p;
 
 // Каталог подсовывается через [TrafficSplitStore.directoryOverride] тем же
