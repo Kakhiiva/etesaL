@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/tunnel/app_routing_mode.dart';
-import 'package:keqdroid/utils/config_gen.dart';
-import 'package:keqdroid/utils/exit_ip_probe.dart';
-import 'package:keqdroid/utils/mihomo_config_gen.dart';
-import 'package:keqdroid/utils/socks5_credentials.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/tunnel/app_routing_mode.dart';
+import 'package:etesaL/utils/config_gen.dart';
+import 'package:etesaL/utils/exit_ip_probe.dart';
+import 'package:etesaL/utils/mihomo_config_gen.dart';
+import 'package:etesaL/utils/socks5_credentials.dart';
 
 // Флаг страны в статусе узнаёт выход запросом через локальный вход ядра.
 // Пользовательские правила такой запрос трогать не должны: с Всё остальное
@@ -111,7 +111,7 @@ void main() {
           socksPort: 2080,
           httpPort: 2081,
           tun: const MihomoTunOptions(device: 'tun-keqdis', stack: 'gvisor'),
-          appProcessName: 'keqdroid.exe',
+          appProcessName: 'etesaL.exe',
           windows: true,
         ),
       );
@@ -145,15 +145,15 @@ void main() {
           httpPort: 2081,
           tun: const MihomoTunOptions(device: 'tun-keqdis', stack: 'gvisor'),
           routingMode: AppRoutingMode.allProxy,
-          appProcessName: 'keqdroid.exe',
+          appProcessName: 'etesaL.exe',
           windows: true,
         ),
       );
-      expect(rules, isNot(contains('PROCESS-NAME,keqdroid.exe,DIRECT')));
+      expect(rules, isNot(contains('PROCESS-NAME,etesaL.exe,DIRECT')));
       expect(
         rules,
         contains(
-          r'AND,((IN-TYPE,TUN),(PROCESS-NAME-REGEX,^keqdroid\x2eexe$)),DIRECT',
+          r'AND,((IN-TYPE,TUN),(PROCESS-NAME-REGEX,^etesaL\x2eexe$)),DIRECT',
         ),
       );
     });
@@ -167,13 +167,13 @@ void main() {
           const AppSettings(),
           socksPort: 2080,
           tun: const MihomoTunOptions(device: 'tun-keqdis', stack: 'gvisor'),
-          appProcessName: 'keqdroid (1).exe',
+          appProcessName: 'etesaL (1).exe',
           windows: true,
         ),
       );
       final own = rules.singleWhere((r) => r.startsWith('AND,((IN-TYPE,TUN)'));
       expect(own, isNot(contains(' (1)')));
-      expect(own, contains(r'keqdroid\x20\x281\x29\x2eexe'));
+      expect(own, contains(r'etesaL\x20\x281\x29\x2eexe'));
     });
   });
 }
