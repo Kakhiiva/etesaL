@@ -26,7 +26,7 @@ class MacosBackgroundService with WindowListener, TrayListener {
   bool _quitting = false;
   final ValueNotifier<bool> uiVisible = ValueNotifier(true);
 
-  String _showLabel = 'Show keqdroid';
+  String _showLabel = 'Show etesaL';
   String _quitLabel = 'Quit';
   String _connectLabel = 'Connect';
   String _disconnectLabel = 'Disconnect';
