@@ -12,7 +12,7 @@ class BackupKeyUnavailable implements Exception {
 
   @override
   String toString() =>
-      'This backup was made by a keqdroid release, and this build does not '
+      'This backup was made by a etesaL release, and this build does not '
       'carry the release backup key';
 }
 
@@ -33,7 +33,7 @@ class BackupCrypto {
 
   static final _aes = AesGcm.with256bits();
   static final _hkdf = Hkdf(hmac: Hmac.sha256(), outputLength: 32);
-  static final _info = utf8.encode('keqdroid backup v1');
+  static final _info = utf8.encode('etesaL backup v1');
 
   static bool isSealed(List<int> bytes) {
     if (bytes.length < _headerLength + _nonceLength + _macLength) return false;
@@ -64,7 +64,7 @@ class BackupCrypto {
     required List<int> Function(int keyId) keyFor,
   }) async {
     if (!isSealed(sealed)) {
-      throw const FormatException('Not an encrypted keqdroid backup');
+      throw const FormatException('Not an encrypted etesaL backup');
     }
     final version = sealed[4];
     if (version != _version) {
@@ -153,7 +153,7 @@ class BackupKeys {
 
   // сборки без секрета (собранные самостоятельно, тесты): ключ открытый, копия из них читается любой сборкой
   static final List<int> dev = hashes.sha256
-      .convert(utf8.encode('keqdroid public backup key 1'))
+      .convert(utf8.encode('etesaL public backup key 1'))
       .bytes;
 
   static int get writeKeyId =>
