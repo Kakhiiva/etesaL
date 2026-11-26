@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/windows_tun_service.dart';
+import 'package:etesaL/services/windows_tun_service.dart';
 
-const _channel = MethodChannel('keqdroid/tun_service');
+const _channel = MethodChannel('etesaL/tun_service');
 
 Future<void> _fromNative(String method, Map<String, Object?> args) =>
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
