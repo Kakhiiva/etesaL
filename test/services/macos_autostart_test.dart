@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/macos_autostart.dart';
+import 'package:etesaL/services/macos_autostart.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
@@ -9,10 +9,10 @@ void main() {
   final realExecutable = MacosAutostart.executablePath;
 
   setUp(() {
-    tmp = Directory.systemTemp.createTempSync('keq_macos_autostart_');
+    tmp = Directory.systemTemp.createTempSync('etesaL_macos_autostart_');
     MacosAutostart.homeOverride = tmp.path;
     MacosAutostart.executablePath = () =>
-        '/Applications/keqdroid.app/Contents/MacOS/keqdroid';
+        '/Applications/etesaL.app/Contents/MacOS/etesaL';
     MacosAutostart.captureLaunchArgs(const []);
   });
 
@@ -24,9 +24,9 @@ void main() {
   });
 
   test('generates valid LaunchAgent plist with XML-escaped executable path', () {
-    final plist = MacosAutostart.plistFor('/Applications/A & B/keqdroid');
+    final plist = MacosAutostart.plistFor('/Applications/A & B/etesaL');
     expect(plist, contains('<string>${MacosAutostart.label}</string>'));
-    expect(plist, contains('<string>/Applications/A &amp; B/keqdroid</string>'));
+    expect(plist, contains('<string>/Applications/A &amp; B/etesaL</string>'));
     expect(plist, contains('<string>${MacosAutostart.flag}</string>'));
     expect(plist, contains('<key>RunAtLoad</key>'));
   });
@@ -41,9 +41,9 @@ void main() {
     );
     expect(plistFile.existsSync(), isTrue);
 
-    MacosAutostart.executablePath = () => '/Users/u/Apps/keqdroid';
+    MacosAutostart.executablePath = () => '/Users/u/Apps/etesaL';
     await MacosAutostart.refresh();
-    expect(plistFile.readAsStringSync(), contains('/Users/u/Apps/keqdroid'));
+    expect(plistFile.readAsStringSync(), contains('/Users/u/Apps/etesaL'));
 
     expect(await MacosAutostart.setEnabled(false), isTrue);
     expect(MacosAutostart.isEnabled(), isFalse);
