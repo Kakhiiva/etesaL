@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/utils/app_locale.dart';
-import 'package:keqdroid/utils/bidi.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/utils/app_locale.dart';
+import 'package:etesaL/utils/bidi.dart';
 
 void main() {
   group('Farsi locale', () {
