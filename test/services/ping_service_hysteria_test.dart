@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/services/ping_service.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/services/ping_service.dart';
 
 void main() {
   test('Hy2 with obfs uses URL ping even when settings say TCP', () {
