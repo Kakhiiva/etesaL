@@ -1,4 +1,4 @@
-package com.keqdroid.keqdroid
+package com.etesaL.etesaL
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -945,7 +945,7 @@ class KeqdisVpnService : VpnService() {
             // Пустышка из нашей /30, а не публичный резолвер. С 8.8.8.8 Private DNS в режиме Автоматически находил DoT
             // на 853, а перехват ловит только 53, и весь системный DNS уходил мимо. Здесь на 853 отвечать некому
             .addDnsServer(TUN_DNS_ADDRESS)
-            .setSession("keqdroid")
+            .setSession("etesaL")
             .setBlocking(false)
         if (ipv6 != null) {
             b.addAddress(ipv6.first, ipv6.second).addRoute("::", 0)
