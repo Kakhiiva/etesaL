@@ -1,31 +1,31 @@
-# keqdroid
+# etesaL
 
-Клиент прокси и VPN для Android, Android TV, Windows, Linux и macOS на основе Xray-core и mihomo. keqdroid объединяет в одном приложении управление подписками, конфигурациями серверов и маршрутизацией трафика.
+Клиент прокси и VPN для Android, Android TV, Windows, Linux и macOS на основе Xray-core и mihomo. etesaL объединяет в одном приложении управление подписками, конфигурациями серверов и маршрутизацией трафика.
 
-[![Релиз](https://img.shields.io/github/v/release/Lemonochka/keqdroid?label=release)](https://github.com/Lemonochka/keqdroid/releases)
-[![Сборка](https://img.shields.io/github/actions/workflow/status/Lemonochka/keqdroid/ci.yml?branch=master&label=build)](https://github.com/Lemonochka/keqdroid/actions/workflows/ci.yml)
+[![Релиз](https://img.shields.io/github/v/release/Kakhiiva/etesaL?label=release)](https://github.com/Kakhiiva/etesaL/releases)
+[![Сборка](https://img.shields.io/github/actions/workflow/status/Kakhiiva/etesaL/ci.yml?branch=master&label=build)](https://github.com/Kakhiiva/etesaL/actions/workflows/ci.yml)
 [![Лицензия](https://img.shields.io/badge/license-AGPL--3.0-blue)](LICENSE)
-[![Telegram](https://img.shields.io/badge/Telegram-chat-26A5E4?logo=telegram&logoColor=white)](https://t.me/keqdroid)
+[![Telegram](https://img.shields.io/badge/Telegram-chat-26A5E4?logo=telegram&logoColor=white)](https://t.me/etesaL)
 
 [English](README.md) | Русский
 
-keqdroid не предоставляет серверы. Для работы нужна подписка или конфигурация сервера от выбранного вами провайдера. Ответственность за соблюдение законов вашей страны лежит на вас.
+etesaL не предоставляет серверы. Для работы нужна подписка или конфигурация сервера от выбранного вами провайдера. Ответственность за соблюдение законов вашей страны лежит на вас.
 
 https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
 
 ## Скачать
 
-Сборки публикуются на странице [Releases](https://github.com/Lemonochka/keqdroid/releases).
+Сборки публикуются на странице [Releases](https://github.com/Kakhiiva/etesaL/releases).
 
 | Платформа | Пакет |
 |-----------|-------|
-| Android 7.0 и новее, Android TV | `keqdroid-<версия>-android.apk` |
-| Android 7.0 и новее, 32-битная прошивка | `keqdroid-<версия>-armeabi-v7a-android.apk` |
-| Windows x64 | `keqdroid-windows-x64-<версия>-setup.exe` (установщик) |
-| Windows x64 | `keqdroid-windows-x64-<версия>.zip` (portable) |
+| Android 7.0 и новее, Android TV | `etesaL-<версия>-android.apk` |
+| Android 7.0 и новее, 32-битная прошивка | `etesaL-<версия>-armeabi-v7a-android.apk` |
+| Windows x64 | `etesaL-windows-x64-<версия>-setup.exe` (установщик) |
+| Windows x64 | `etesaL-windows-x64-<версия>.zip` (portable) |
 | Linux x86_64 | `.AppImage`, `.deb`, `.rpm`, `.tar.gz`, `PKGBUILD` |
-| macOS 13 и новее, Apple Silicon | `keqdroid-<версия>-macos-arm64.dmg` |
-| macOS 13 и новее, Intel | `keqdroid-<версия>-macos-x86_64.dmg` |
+| macOS 13 и новее, Apple Silicon | `etesaL-<версия>-macos-arm64.dmg` |
+| macOS 13 и новее, Intel | `etesaL-<версия>-macos-x86_64.dmg` |
 
 В каждом релизе есть файл `SHA256SUMS` с хешами всех файлов и `SHA256SUMS.sig` с его подписью. Встроенный механизм обновления проверяет и то и другое перед установкой.
 
@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
 
 **Серверы и подписки**
 
-- Подписки с обновлением по расписанию, добавление по URL или из панели провайдера по ссылке `keqdroid://`
+- Подписки с обновлением по расписанию, добавление по URL или из панели провайдера по ссылке `etesaL://`
 - Добавление серверов из ссылок, файлов, буфера обмена и QR-кодов
 - Цепочки прокси через несколько серверов в заданном порядке
 - Автоматический выбор сервера внутри подписки с возможностью исключить отдельные серверы
@@ -92,19 +92,19 @@ https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
 | Android | VPN | Весь трафик устройства идёт через туннель | Разрешение VPN при первом подключении |
 | Android | Прокси | Локальный прокси SOCKS и HTTP на `127.0.0.1` | Не требуются |
 | Windows | Прокси | Системный прокси | Не требуются |
-| Windows | TUN | Весь трафик идёт через виртуальный адаптер | Администратор один раз, для установки службы keqdroid |
+| Windows | TUN | Весь трафик идёт через виртуальный адаптер | Администратор один раз, для установки службы etesaL |
 | Linux | Прокси | Системный прокси в GNOME и KDE, в других средах настраивается вручную | Не требуются |
 | Linux | TUN | Весь трафик идёт через виртуальный адаптер | Root через `pkexec` или «TUN без пароля» в разделе «Настройки → Дополнительно → Разрешения» |
 | macOS | Прокси | Системный прокси через `networksetup` | Не требуются |
-| macOS | TUN | Весь трафик идёт через адаптер `utun` | Администратор один раз, для установки службы keqdroid |
+| macOS | TUN | Весь трафик идёт через адаптер `utun` | Администратор один раз, для установки службы etesaL |
 
 **Android.** Подключением можно управлять из уведомления, плитки быстрых настроек, виджета на рабочем столе и ярлыков на значке приложения. Маршрутизация по приложениям и перехват DNS работают только в режиме VPN. Активная сессия VPN восстанавливается после обновления приложения и перезагрузки устройства.
 
-**Android TV.** Приложением управляют с пульта. Подписку можно передать из keqdroid на телефоне, отсканировав QR-код на телевизоре.
+**Android TV.** Приложением управляют с пульта. Подписку можно передать из etesaL на телефоне, отсканировав QR-код на телевизоре.
 
-**Windows.** Установщик ставит приложение в Program Files и может удалить его вместе с данными, портабельная версия запускается из любой папки. Приложение может запускаться вместе с системой, подключаться автоматически и работать в трее. Настройки хранятся в `%APPDATA%\com.keqdroid\keqdroid\`, обе версии пользуются ими.
+**Windows.** Установщик ставит приложение в Program Files и может удалить его вместе с данными, портабельная версия запускается из любой папки. Приложение может запускаться вместе с системой, подключаться автоматически и работать в трее. Настройки хранятся в `%APPDATA%\com.etesaL\etesaL\`, обе версии пользуются ими.
 
-**Linux.** Приложение может запускаться при входе в систему и подключаться автоматически. В Arch Linux установка выполняется командой `makepkg -si` с файлом `PKGBUILD` из релиза. В NixOS добавьте `github:Lemonochka/keqdroid/nix` во входы flake и включите `inputs.keqdroid.packages.x86_64-linux.default` в `environment.systemPackages`.
+**Linux.** Приложение может запускаться при входе в систему и подключаться автоматически. В Arch Linux установка выполняется командой `makepkg -si` с файлом `PKGBUILD` из релиза. В NixOS добавьте `github:Kakhiiva/etesaL/nix` во входы flake и включите `inputs.etesaL.packages.x86_64-linux.default` в `environment.systemPackages`.
 
 **macOS.** Есть отдельные сборки для Apple Silicon и Intel. Приложение может запускаться при входе в систему, подключаться автоматически и оставаться в строке меню.
 
@@ -118,17 +118,17 @@ https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
 
 ## Документация
 
-Подробная документация: [kequinq.art/docs/keqdroid](https://kequinq.art/docs/keqdroid/)
+Подробная документация: [kequinq.art/docs/etesaL](https://kequinq.art/docs/etesaL/)
 
-- [Маршрутизация](https://kequinq.art/docs/keqdroid/routing) и [DNS](https://kequinq.art/docs/keqdroid/dns)
-- [Режимы подключения и раздельное туннелирование](https://kequinq.art/docs/keqdroid/modes)
-- [Xray или mihomo](https://kequinq.art/docs/keqdroid/xray-or-mihomo) и [группы mihomo](https://kequinq.art/docs/keqdroid/mihomo-groups)
-- [Автоматический выбор сервера](https://kequinq.art/docs/keqdroid/auto) и [проверки серверов](https://kequinq.art/docs/keqdroid/ping)
-- Для провайдеров: [заголовки подписки](https://kequinq.art/docs/keqdroid/provider/headers) и [ссылки](https://kequinq.art/docs/keqdroid/provider/links)
+- [Маршрутизация](https://kequinq.art/docs/etesaL/routing) и [DNS](https://kequinq.art/docs/etesaL/dns)
+- [Режимы подключения и раздельное туннелирование](https://kequinq.art/docs/etesaL/modes)
+- [Xray или mihomo](https://kequinq.art/docs/etesaL/xray-or-mihomo) и [группы mihomo](https://kequinq.art/docs/etesaL/mihomo-groups)
+- [Автоматический выбор сервера](https://kequinq.art/docs/etesaL/auto) и [проверки серверов](https://kequinq.art/docs/etesaL/ping)
+- Для провайдеров: [заголовки подписки](https://kequinq.art/docs/etesaL/provider/headers) и [ссылки](https://kequinq.art/docs/etesaL/provider/links)
 
 ## Приватность
 
-У keqdroid нет собственных серверов, приложение не собирает статистику использования. Оно обращается:
+У etesaL нет собственных серверов, приложение не собирает статистику использования. Оно обращается:
 
 - **к подпискам, серверам и спискам правил, которые вы добавили.** Запрос подписки содержит идентификатор устройства, название и версию ОС и модель устройства: по ним панели подписок ограничивают число устройств. Отключается в разделе «Настройки → Дополнительно»: *Отдавать HWID устройства*;
 - **к GitHub** (`api.github.com`, `github.com`): проверка обновлений при запуске и возвращении в приложение, загрузка обновлений и полной geo-базы на Android по вашему запросу;
@@ -144,10 +144,10 @@ https://github.com/user-attachments/assets/e1f899dd-4f2c-4ca2-896c-1da64a3a5645
 
 Сборки macOS подписаны ad-hoc и не проходят нотаризацию Apple.
 
-- Авторы и ревьюеры: [Lemonochka](https://github.com/Lemonochka)
-- Подтверждает подпись: [Lemonochka](https://github.com/Lemonochka)
+- Авторы и ревьюеры: [Kakhiiva](https://github.com/Kakhiiva)
+- Подтверждает подпись: [Kakhiiva](https://github.com/Kakhiiva)
 
-Релизы после 0.35.0 собираются из этого репозитория в [GitHub Actions](.github/workflows/release.yml). Команда `gh attestation verify <файл> --repo Lemonochka/keqdroid` подтверждает, что файл получен этой сборкой. Подписываются `keqdroid.exe` и установщик; вложенные `xray.exe` и `mihomo.exe` собраны из исходного кода Xray-core и mihomo.
+Релизы после 0.35.0 собираются из этого репозитория в [GitHub Actions](.github/workflows/release.yml). Команда `gh attestation verify <файл> --repo Kakhiiva/etesaL` подтверждает, что файл получен этой сборкой. Подписываются `etesaL.exe` и установщик; вложенные `xray.exe` и `mihomo.exe` собраны из исходного кода Xray-core и mihomo.
 
 ## Безопасность
 
@@ -167,8 +167,8 @@ flutter build macos --release    # macOS; сначала соберите ядр
 
 ## Сообщество
 
-Вопросы и обсуждение: [чат в Telegram](https://t.me/keqdroid).
+Вопросы и обсуждение: [чат в Telegram](https://t.me/etesaL).
 
 ## Лицензия
 
-keqdroid распространяется по лицензии [AGPL-3.0](LICENSE). Встроенные ядра распространяются под своими лицензиями: Xray-core (MPL-2.0) и mihomo (GPL-3.0).
+etesaL распространяется по лицензии [AGPL-3.0](LICENSE). Встроенные ядра распространяются под своими лицензиями: Xray-core (MPL-2.0) и mihomo (GPL-3.0).
