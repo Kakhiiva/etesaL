@@ -1,17 +1,17 @@
-# keqdroid Contributor License Agreement
+# etesaL Contributor License Agreement
 
 Version 1.1, 23 November 2026
 
-This agreement is between you and Lemonochka, the owner of the GitHub account
-https://github.com/Lemonochka and of the keqdroid project (the "Maintainer").
+This agreement is between you and Kakhiiva, the owner of the GitHub account
+https://github.com/Kakhiiva and of the etesaL project (the "Maintainer").
 It sets out the rights you give the Maintainer in what you contribute to
-keqdroid. You keep the copyright in your contributions.
+etesaL. You keep the copyright in your contributions.
 
 ## 1. Definitions
 
 "You" means the person who accepts this agreement.
 
-"Project" means keqdroid, developed at https://github.com/Lemonochka/keqdroid,
+"Project" means etesaL, developed at https://github.com/Kakhiiva/etesaL,
 and any later version or new location of it.
 
 "Contribution" means any code, documentation, translation, image or other
@@ -98,7 +98,7 @@ including those made before You accepted it.
 You accept this agreement by posting, from Your GitHub account, a comment with
 the following text on a pull request in the Project repository:
 
-    I have read the keqdroid CLA and I agree to its terms
+    I have read the etesaL CLA and I agree to its terms
 
 You agree that this comment is Your signature, that it identifies You through
 Your GitHub account, and that this agreement is concluded in written
