@@ -1,7 +1,7 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/services/subscription_accent_service.dart';
+import 'package:etesaL/services/subscription_accent_service.dart';
 
 // Серверы подписки перекрашиваются под её карточку. Проверяем ровно то, из-за
 // чего эта затея могла бы испортить экран: контраст, чужеродный цвет и
