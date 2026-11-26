@@ -6,7 +6,7 @@
 #include <functional>
 #include <string>
 
-namespace keqdroid_portal {
+namespace etesaL_portal {
 
 constexpr char kBus[] = "org.freedesktop.portal.Desktop";
 constexpr char kPath[] = "/org/freedesktop/portal/desktop";
@@ -27,6 +27,6 @@ using Done = std::function<void(guint response, GVariant* results)>;
 void Call(const char* interface_name, const char* method, GVariant* parameters,
           const std::string& token, Done done);
 
-}  // namespace keqdroid_portal
+}  // namespace etesaL_portal
 
 #endif  // RUNNER_PORTAL_REQUEST_H_
