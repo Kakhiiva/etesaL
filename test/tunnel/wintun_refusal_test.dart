@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/core/exceptions.dart';
-import 'package:keqdroid/l10n/app_localizations.dart';
-import 'package:keqdroid/tunnel/tun_failure_hints.dart';
-import 'package:keqdroid/tunnel/wintun_adapters.dart';
-import 'package:keqdroid/tunnel/wintun_retry.dart';
-import 'package:keqdroid/utils/desktop_tun.dart';
-import 'package:keqdroid/utils/error_messages.dart';
+import 'package:etesaL/core/exceptions.dart';
+import 'package:etesaL/l10n/app_localizations.dart';
+import 'package:etesaL/tunnel/tun_failure_hints.dart';
+import 'package:etesaL/tunnel/wintun_adapters.dart';
+import 'package:etesaL/tunnel/wintun_retry.dart';
+import 'package:etesaL/utils/desktop_tun.dart';
+import 'package:etesaL/utils/error_messages.dart';
 
 // 27.10.2026 Windows раз за разом отказывала в TUN-адаптере (код 31 в
 // диспетчере устройств) обоим ядрам, а со следующей попытки пускала. Пользовательница
