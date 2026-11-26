@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:keqdroid/models/app_settings.dart';
-import 'package:keqdroid/models/server_item.dart';
-import 'package:keqdroid/models/tun_settings.dart';
-import 'package:keqdroid/services/ping_service.dart';
-import 'package:keqdroid/services/vpn_engine.dart';
-import 'package:keqdroid/tunnel/tunnel_backend.dart';
-import 'package:keqdroid/tunnel/vpn_backend.dart';
+import 'package:etesaL/models/app_settings.dart';
+import 'package:etesaL/models/server_item.dart';
+import 'package:etesaL/models/tun_settings.dart';
+import 'package:etesaL/services/ping_service.dart';
+import 'package:etesaL/services/vpn_engine.dart';
+import 'package:etesaL/tunnel/tunnel_backend.dart';
+import 'package:etesaL/tunnel/vpn_backend.dart';
 
 import '../helpers/fake_tunnel_backend.dart';
 import '../helpers/test_storage.dart';
