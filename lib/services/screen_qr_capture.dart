@@ -22,11 +22,11 @@ class ScreenQrCapture {
 
   // linux/runner/screen_capture.cc
   @visibleForTesting
-  static const linuxChannel = MethodChannel('keqdroid/linux_screen');
+  static const linuxChannel = MethodChannel('etesaL/linux_screen');
 
   // macos/Runner/MacosPlatformBridge.swift
   @visibleForTesting
-  static const macosChannel = MethodChannel('keqdroid/macos_screen');
+  static const macosChannel = MethodChannel('etesaL/macos_screen');
 
   static bool? _linuxAvailable;
 
